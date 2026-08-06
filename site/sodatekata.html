@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex">
+<title>3 AIの育て方｜生成AI研修</title>
+<link rel="stylesheet" href="style.css">
+<style>
+.pr { background: #f4f4f2; border: 1px solid var(--line); padding: 16px 20px; font-size: 14px; line-height: 1.9; margin: 12px 0; white-space: pre-wrap; font-family: "Hiragino Sans", sans-serif; }
+.pr b { color: var(--accent); }
+.step { display: flex; gap: 14px; margin: 14px 0; }
+.step .no { font-family: Georgia; font-size: 22px; color: var(--accent); flex: none; width: 1.3em; }
+</style>
+</head>
+<body>
+
+<nav class="global"><div class="inner">
+  <span class="site">🏫 生成AI研修（碩田）</span>
+  <a href="index.html">はじめに</a>
+  <a href="kihon.html">1 AIの基本</a>
+  <a href="prompt.html">2 プロンプト</a>
+  <a class="here" href="sodatekata.html">3 AIの育て方</a>
+  <a href="katsuyourei.html">4 外﨑の実例</a>
+  <a href="kokugo.html">5 国語・研究主任</a>
+  <a href="shakai.html">6 社会科</a>
+</div></nav>
+
+<div class="page" style="max-width:780px">
+<div class="crumb"><a href="index.html">はじめに</a> › 3 AIの育て方</div>
+
+<h1>3　AIの育て方</h1>
+<p class="h1sub">AIは「使う」ものから「育てる」ものへ。といっても難しいことではなく、<strong>毎回同じことを言わなくて済むようにする</strong>、それだけです。</p>
+
+<h2>育て方の5歩</h2>
+<div class="step"><span class="no">1</span><div><strong>会話で直す。</strong>1回目の出力は下書きです。「もっと短く」「その2番だけくわしく」と注文をつけて2〜3往復。ここで直った言い回しが、あなたの好みのデータになります。</div></div>
+<div class="step"><span class="no">2</span><div><strong>効いた型を保存する。</strong>うまくいったプロンプトは、メモ帳でもドキュメントでもよいので1か所に貯める。次からコピペで済みます。</div></div>
+<div class="step"><span class="no">3</span><div><strong>前提を常設する（Gem）。</strong>毎回書いていた前提——学年・教科・文体・読み手——を、専用の部屋に覚えさせます。Geminiなら「Gem」という機能で、指示文を保存した自分専用のAIが作れます。<strong>部屋は用途別に</strong>（お便り用・授業案用を混ぜない）。</div></div>
+<div class="step"><span class="no">4</span><div><strong>手本を渡す。</strong>「私が書いたこの2枚と同じ調子で」と、<strong>自分の作った文章・プリント</strong>を手本として渡すと、出力が一気に自分の色になります。渡してよいのは自作物だけ、が鉄則です（教科書・市販物は渡さない）。</div></div>
+<div class="step"><span class="no">5</span><div><strong>「任せない」を決める。</strong>育てるほど何でも頼みたくなります。そこで一枚だけ札を持っておく：<strong>任せる・自分でやる・そもそも頼まない。</strong>子どもの評価の中身、保護者への大事な言葉、自分で考えたい仕事は「頼まない」でいい。この札が言えるようになったら、もう中級者です。</div></div>
+
+<h2>Gemの作り方（5分）</h2>
+<p>Gemini の「Gem」から新規作成 → 名前をつける → 指示文の欄に、2章の4部品をそのまま書いて保存。以後、そのGemを開くだけで前提込みで話が始まります。</p>
+<div class="pr"><b>Gemの指示文の骨格（コピーして書き換え）</b>
+あなたは〔碩田学園・小学校〕の〔学年通信〕づくりを手伝う編集係です。
+【いつもの前提】
+・読み手：〔保護者〕
+・文体：ですます調。あたたかく、大げさにしない
+・長さの基本：〔150字前後〕
+・子どもの名前・成績など個人の情報は扱いません。入っていたら指摘してください
+【毎回すること】
+・出力は2案
+・最後に「確認した方がよい事実（日付・持ち物など）」を1行で添える</div>
+<p class="ni" style="font-size:13px; color:var(--sub)">※最後の1行がミソです。<strong>確認の習慣をAIの側に組み込む</strong>——これが「育てる」ということの中身です。</p>
+
+<h2>育てるとどうなるか</h2>
+<p>全国の公表事例では、事前に作ったプロンプトを再利用した学校で指導案作成が90分→約30分に、生徒ごとにプロンプトを工夫した特別支援学級で20名以上の所見の素案が1か月→1週間になっています（文科省事業の公表例）。<strong>速くなるだけでなく、「これまで以上に一人ひとりの様子を細やかに見取れるようになった」</strong>という質の変化が報告されているのが、いちばん大事なところです。</p>
+
+<div class="next">
+  <a href="prompt.html"><b>← 2 プロンプト</b></a>
+  <a href="katsuyourei.html"><b>4 外﨑の実例 →</b>実際に回っているもの</a>
+</div>
+
+</div>
+<footer class="site"><div class="inner">生成AI研修（2026.8.10）　外﨑顯博（飯塚市立菰田小学校／LiFE with）</div></footer>
+</body>
+</html>
