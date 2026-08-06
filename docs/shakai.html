@@ -1,75 +1,149 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ja">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex">
-<title>6 社会科の先生へ｜生成AI研修</title>
+<title>社会科の先生へ｜碩田学園 生成AI研修</title>
+<script>document.documentElement.className += ' js';</script>
 <link rel="stylesheet" href="style.css">
-<style>
-.pr { background: #f4f4f2; border: 1px solid var(--line); padding: 16px 20px; font-size: 14px; line-height: 1.9; margin: 12px 0; white-space: pre-wrap; font-family: "Hiragino Sans", sans-serif; }
-.pr b { color: var(--accent); }
-.step { display: flex; gap: 14px; margin: 12px 0; }
-.step .no { font-family: Georgia; font-size: 20px; color: var(--accent); flex: none; width: 1.3em; }
-</style>
 </head>
 <body>
 
-<nav class="global"><div class="inner">
-  <span class="site">🏫 生成AI研修（碩田）</span>
-  <a href="index.html">はじめに</a>
-  <a href="kihon.html">1 AIの基本</a>
-  <a href="prompt.html">2 プロンプト</a>
-  <a href="sodatekata.html">3 AIの育て方</a>
-  <a href="katsuyourei.html">4 外﨑の実例</a>
-  <a href="kokugo.html">5 国語・研究主任</a>
-  <a class="here" href="shakai.html">6 社会科</a>
-</div></nav>
+<!-- ===== top bar ===== -->
+<header class="bar">
+  <div class="wrap">
+    <div class="brand"><a href="index.html">碩田学園　生成AI研修</a></div>
+    <nav class="nav">
+      <a href="index.html#nagare">流れ</a>
+      <a href="index.html#tsukuru">つくる</a>
+      <a href="kokugo.html">国語・研究主任</a>
+      <a href="shakai.html" class="active">社会科</a>
+      <a class="go-gemini" href="https://gemini.google.com/app" target="_blank" rel="noopener">Geminiを開く</a>
+    </nav>
+  </div>
+</header>
 
-<div class="page" style="max-width:780px">
-<div class="crumb"><a href="index.html">はじめに</a> › 6 社会科の先生へ</div>
+<div class="wrap"><div class="crumb"><a href="index.html">はじめに</a> › 社会科の先生へ</div></div>
 
-<h1>6　社会科の先生へ</h1>
-<p class="h1sub">これまで作ってこられた教材が、いちばんの資産です。今日はそれを<strong>①手本にして増やす　②台帳にする　③サイトにする　④授業の壁打ち相手を育てる</strong>、の4段でいきます。</p>
+<!-- ===== hero ===== -->
+<div class="page-hero">
+  <div class="wrap">
+    <div class="kicker-ja">個別の時間　PAGE 2</div>
+    <h1>社会科の先生へ</h1>
+    <p class="tagsub">これまで作ってこられた教材が、いちばんの資産です。①手本にして増やす　②台帳にする　③サイトにする　④授業の壁打ち相手を育てる、の4段でいきます。きょうは①だけで十分です。</p>
+  </div>
+</div>
 
-<h2>① 自作教材を手本にして量産する</h2>
-<p>先にいちばん大事なことを。<strong>この方法が使えるのは、ご自身が作られた教材だからです。</strong>自作物は自分に権利があるので、AIに丸ごと渡して「同じ型で作って」と言えます（教科書・市販教材ではできません）。長年の自作プリントは、そのまま「あなた専用の教材工場の手本」になります。</p>
-<div class="step"><span class="no">1</span><div><strong>1枚選ぶ。</strong>いちばん出来がよいと思う自作プリントを1枚。テキスト化します（Wordならそのまま、紙ならスマホで撮って文字起こし）。</div></div>
-<div class="step"><span class="no">2</span><div><strong>型を言葉にさせる。</strong>下の型で、プリントの「設計」をAIに言語化させます。ここで出てくるのが、先生が長年手で作ってきた暗黙の型です。</div></div>
-<div class="step"><span class="no">3</span><div><strong>同じ型で別単元を作らせる。</strong>型が言葉になれば、あとは単元を差し替えるだけ。</div></div>
-<div class="step"><span class="no">4</span><div><strong>検品は先生。</strong>社会科は数字と固有名詞の教科です。資料の年次・統計・地名は必ず一次資料（教科書・自治体資料・統計サイト）で確認。ここだけは渡せません。</div></div>
-<div class="pr"><b>型｜自作プリントの設計の言語化 → 量産</b>
-次のプリントは私が自作した社会科の教材です（権利は私にあります）。
+<!-- ===== 進め方 ===== -->
+<section>
+  <div class="wrap reveal">
+    <h2>この時間の進め方</h2>
+    <div class="flow">
+      <div class="step">
+        <div class="t">STEP</div><div class="n">1</div>
+        <h3>自信作を1枚選ぶ</h3>
+        <p>いちばん出来がよいと思う自作プリントを1枚だけ。頭に思い浮かべるところからで結構です。</p>
+      </div>
+      <div class="step">
+        <div class="t">STEP</div><div class="n">2</div>
+        <h3>設計を言葉にさせる</h3>
+        <p>下の型で、プリントの「設計」をAIに言語化させます。長年手で作ってきた暗黙の型が、言葉になります。</p>
+      </div>
+      <div class="step">
+        <div class="t">STEP</div><div class="n">3</div>
+        <h3>別単元で作らせる</h3>
+        <p>型が言葉になれば、あとは単元を差し替えるだけ。検品だけは先生の仕事として残ります。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 1 量産 ===== -->
+<section class="band">
+  <div class="wrap reveal">
+    <h2><span class="secno">1</span>自作教材を手本にして量産する</h2>
+    <p class="lead">先にいちばん大事なことを。この方法が使えるのは、ご自身が作られた教材だからです。自作物は自分に権利があるので、AIに丸ごと渡して「同じ型で作って」と言えます（教科書・市販教材ではできません）。長年の自作プリントは、そのまま「あなた専用の教材工場の手本」になります。</p>
+    <div class="menu">
+      <div class="head"><span class="badge">＊</span><h3>手順は4つ</h3><span class="lv">最初の1枚は15分</span></div>
+      <div class="body">
+        <ol class="steps">
+          <li>1枚選ぶ。いちばん出来がよいと思う自作プリントを1枚、テキスト化します（Wordならそのまま、紙ならスマホで撮って文字起こし）。</li>
+          <li>型を言葉にさせる。下の型で、プリントの「設計」をAIに言語化させます。</li>
+          <li>同じ型で別単元を作らせる。型が言葉になれば、あとは単元の差し替えだけです。</li>
+          <li>検品は先生。社会科は数字と固有名詞の教科です。資料の年次・統計・地名は必ず一次資料（教科書・自治体資料・統計サイト）で確認します。ここだけは渡せません。</li>
+        </ol>
+      </div>
+    </div>
+    <div class="prompt">
+      <div class="ph"><span class="ttl">型｜自作プリントの設計の言語化 → 量産</span><button class="copy" type="button">コピー</button></div>
+      <pre>次のプリントは私が自作した社会科の教材です（権利は私にあります）。
 【手順1】このプリントの設計を言語化してください：
 ①ねらい ②問いの並べ方の型 ③資料の使わせ方 ④解答欄の形式 ⑤難度の階段
 【手順2】その設計のまま、単元〔　〕版を作ってください。
 条件：使う資料は「教科書p.〔　〕の〔グラフ名〕を見て」のように参照指示にとどめ、
 資料そのものは作らないでください（実物は私が用意します）。
-プリント本文：〔貼り付け〕</div>
-<p class="ni" style="font-size:13px;color:var(--sub)">※「資料は参照指示にとどめる」が肝です。AIに統計を作らせると数字が創作になります。<strong>資料は本物、設問はAIと</strong>、の分業です。</p>
+プリント本文：〔貼り付け〕</pre>
+      <div class="pa"><button class="copyopen" type="button" data-url="https://gemini.google.com/app">コピーしてGeminiを開く</button></div>
+    </div>
+    <div class="tip"><b>「資料は参照指示にとどめる」が肝です。</b>AIに統計を作らせると、数字が創作になります。資料は本物、設問はAIと。この分業だけは崩さないでください。</div>
+  </div>
+</section>
 
-<h2>② 教材のデータベース化 — 台帳が先、フォルダは後</h2>
-<p>量産が始まると、次の敵は「どこに何があるか分からない」です。凝ったシステムは要りません。<strong>スプレッドシート1枚の台帳</strong>から始めます。</p>
-<table>
-  <tr><th>列</th><th>例</th></tr>
-  <tr><td class="c1">学年／単元</td><td>6年／江戸の文化</td></tr>
-  <tr><td class="c1">種類</td><td>導入プリント・資料読み取り・確認テスト・ワークシート</td></tr>
-  <tr><td class="c1">ねらい（1行）</td><td>浮世絵から庶民の暮らしを読み取る</td></tr>
-  <tr><td class="c1">ファイルへのリンク</td><td>Driveのリンク</td></tr>
-  <tr><td class="c1">使った回数・手応え</td><td>◎○△と一言</td></tr>
-</table>
-<p>既存プリントの束をテキスト化して「この一覧から台帳の行を作って」とAIに整理させると、初期登録が一気に進みます。<strong>台帳の並び自体が、そのまま年間指導計画の点検表になる</strong>のがこの方式の余禄です。</p>
+<!-- ===== 2 台帳 ===== -->
+<section>
+  <div class="wrap reveal">
+    <h2><span class="secno">2</span>教材のデータベース化：台帳が先、フォルダは後</h2>
+    <p class="lead">量産が始まると、次の敵は「どこに何があるか分からない」です。凝ったシステムは要りません。スプレッドシート1枚の台帳から始めます。</p>
+    <div class="tbl-scroll">
+      <table class="tools">
+        <thead><tr><th style="width:11em">列</th><th>例</th></tr></thead>
+        <tbody>
+          <tr><td class="name">学年／単元</td><td>6年／江戸の文化</td></tr>
+          <tr><td class="name">種類</td><td>導入プリント・資料読み取り・確認テスト・ワークシート</td></tr>
+          <tr><td class="name">ねらい（1行）</td><td>浮世絵から庶民の暮らしを読み取る</td></tr>
+          <tr><td class="name">ファイルへのリンク</td><td>Driveのリンク</td></tr>
+          <tr><td class="name">使った回数・手応え</td><td>◎○△と一言</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="margin-top:16px">既存プリントの束をテキスト化して「この一覧から台帳の行を作って」とAIに整理させると、初期登録が一気に進みます。台帳の並び自体が、そのまま年間指導計画の点検表になるのが、この方式の余禄です。</p>
+  </div>
+</section>
 
-<h2>③ Webサイト化 — 公開は最後の段でいい</h2>
-<div class="step"><span class="no">1</span><div><strong>まずDriveの共有フォルダ</strong>（学年内・校内限定）。台帳のリンク先を整えるだけ。今日から可能。</div></div>
-<div class="step"><span class="no">2</span><div><strong>次にGoogleサイト</strong>（校内限定公開）。台帳から「単元ごとの棚」ページを作る。見た目ができると、使われ方が変わります。</div></div>
-<div class="step"><span class="no">3</span><div><strong>その先に、外への公開</strong>。ここは著作権の総点検（資料の写り込み・出典）が必要になるので、急がない。私のSchool Stockはこの段の実例です。やる気になったら伴走します。</div></div>
+<!-- ===== 3 サイト化 ===== -->
+<section class="band">
+  <div class="wrap reveal">
+    <h2><span class="secno">3</span>Webサイト化：公開は最後の段でいい</h2>
+    <div class="grid c3">
+      <div class="cell">
+        <div class="cn">1</div>
+        <h3>まずDriveの共有フォルダ</h3>
+        <p>学年内・校内限定。台帳のリンク先を整えるだけです。きょうから可能です。</p>
+      </div>
+      <div class="cell">
+        <div class="cn">2</div>
+        <h3>次にGoogleサイト</h3>
+        <p>校内限定公開。台帳から「単元ごとの棚」ページを作ります。見た目ができると、使われ方が変わります。</p>
+      </div>
+      <div class="cell">
+        <div class="cn">3</div>
+        <h3>その先に、外への公開</h3>
+        <p>ここは著作権の総点検（資料の写り込み・出典）が必要になるので、急がない。私のSchool Stockはこの段の実例です。やる気になったら伴走します。</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-<h2>④ 授業改善の壁打ち相手を育てる（Gem）</h2>
-<p>社会科の授業案を見せると「いいですね」しか言わないAIは役に立ちません。<strong>問い返してくるAI</strong>を作ります。</p>
-<div class="pr"><b>Gemの指示文｜社会科の壁打ち役（コピーして書き換え）</b>
-あなたは小学校社会科の授業づくりの壁打ち相手です。
-【前提】社会科の見方・考え方（位置や空間・時期や時間・事象の相互関係）を大切にする。
+<!-- ===== 4 壁打ちGem ===== -->
+<section>
+  <div class="wrap reveal">
+    <h2><span class="secno">4</span>授業改善の壁打ち相手を育てる（Gem）</h2>
+    <p class="lead">社会科の授業案を見せると「いいですね」しか言わないAIは役に立ちません。問い返してくるAIを作ります。当日のワークCの手順そのままで、5分で常設できます。</p>
+    <div class="prompt">
+      <div class="ph"><span class="ttl">Gemの指示文｜社会科の壁打ち役（コピーして書き換え）</span><button class="copy" type="button">コピー</button></div>
+      <pre>あなたは小学校社会科の授業づくりの壁打ち相手です。
+【前提】社会科の見方・考え方(位置や空間・時期や時間・事象の相互関係)を大切にする。
 教師の意図を尊重し、代案の押しつけをしない。
 【毎回すること】私が授業の構想を話したら、次の4つだけ返す：
 ①この授業で子どもが最後に言えるようになる一文は何か（問い返し）
@@ -77,15 +151,34 @@
 ③問いの主語が教師になっていないか
 ④確認した方がよい事実・統計（あれば）
 ほめ言葉は不要。質問は一度に2つまで。
-【守ること】児童の個人情報は扱わない。実在の統計・年号は「要確認」と付けて出す。</div>
-<p>ポイントは「ほめ言葉は不要」と書くことです。生成AIは基本的に肯定から入る癖があるので、<strong>壁打ち相手には最初から役を与えて</strong>おきます。授業のあとに「今日の実際」を話して振り返り相手にすると、さらに育ちます。</p>
+【守ること】児童の個人情報は扱わない。実在の統計・年号は「要確認」と付けて出す。</pre>
+      <div class="pa"><button class="copyopen" type="button" data-url="https://gemini.google.com/gems/create">コピーしてGemの作成画面を開く</button></div>
+    </div>
+    <div class="tip"><b>ポイントは「ほめ言葉は不要」と書くことです。</b>生成AIは肯定から入る癖があるので、壁打ち相手には最初から役を与えておきます。授業のあとに「今日の実際」を話して振り返り相手にすると、さらに育ちます。</div>
+    <div class="extra">
+      <div>
+        <div class="ex-k">きょうの一歩の例</div>
+        <p>手本にする自信作を1枚決める。台帳の列を5つだけ書く。壁打ちGemを作って、二学期最初の単元の構想をひとつ話してみる。どれもこの時間の中でできる大きさです。</p>
+      </div>
+    </div>
+    <div class="next">
+      <a href="kokugo.html"><b>← 国語科・研究主任の先生へ</b>となりのページ</a>
+      <a href="index.html#kobetsu"><b>はじめにもどる →</b>個別の時間</a>
+    </div>
+  </div>
+</section>
 
-<div class="next">
-  <a href="kokugo.html"><b>← 5 国語・研究主任</b></a>
-  <a href="index.html"><b>はじめにもどる →</b></a>
-</div>
+<!-- ===== footer ===== -->
+<footer>
+  <div class="wrap">
+    <div class="foot-base">
+      <div><span class="lw">碩田学園　生成AI研修</span>　令和8年8月10日</div>
+      <div>© 2026 外﨑顯博</div>
+    </div>
+    <div class="note-local">本ページの文章はすべて資料作成者の自作です。児童生徒の個人情報、学校内部の資料、教科書の紙面は掲載していません。</div>
+  </div>
+</footer>
 
-</div>
-<footer class="site"><div class="inner">生成AI研修（2026.8.10）　外﨑顯博（飯塚市立菰田小学校／LiFE with）</div></footer>
+<script src="script.js"></script>
 </body>
 </html>

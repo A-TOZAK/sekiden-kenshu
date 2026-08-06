@@ -1,79 +1,159 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ja">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex">
-<title>5 国語科・研究主任の先生へ｜生成AI研修</title>
+<title>国語科・研究主任の先生へ｜碩田学園 生成AI研修</title>
+<script>document.documentElement.className += ' js';</script>
 <link rel="stylesheet" href="style.css">
-<style>
-.pr { background: #f4f4f2; border: 1px solid var(--line); padding: 16px 20px; font-size: 14px; line-height: 1.9; margin: 12px 0; white-space: pre-wrap; font-family: "Hiragino Sans", sans-serif; }
-.pr b { color: var(--accent); }
-</style>
 </head>
 <body>
 
-<nav class="global"><div class="inner">
-  <span class="site">🏫 生成AI研修（碩田）</span>
-  <a href="index.html">はじめに</a>
-  <a href="kihon.html">1 AIの基本</a>
-  <a href="prompt.html">2 プロンプト</a>
-  <a href="sodatekata.html">3 AIの育て方</a>
-  <a href="katsuyourei.html">4 外﨑の実例</a>
-  <a class="here" href="kokugo.html">5 国語・研究主任</a>
-  <a href="shakai.html">6 社会科</a>
-</div></nav>
+<!-- ===== top bar ===== -->
+<header class="bar">
+  <div class="wrap">
+    <div class="brand"><a href="index.html">碩田学園　生成AI研修</a></div>
+    <nav class="nav">
+      <a href="index.html#nagare">流れ</a>
+      <a href="index.html#tsukuru">つくる</a>
+      <a href="kokugo.html" class="active">国語・研究主任</a>
+      <a href="shakai.html">社会科</a>
+      <a class="go-gemini" href="https://gemini.google.com/app" target="_blank" rel="noopener">Geminiを開く</a>
+    </nav>
+  </div>
+</header>
 
-<div class="page" style="max-width:780px">
-<div class="crumb"><a href="index.html">はじめに</a> › 5 国語科・研究主任の先生へ</div>
+<div class="wrap"><div class="crumb"><a href="index.html">はじめに</a> › 国語科・研究主任の先生へ</div></div>
 
-<h1>5　国語科・研究主任の先生へ</h1>
-<p class="h1sub">3つに絞りました：<strong>①教材づくり　②研究主任の校務　③研修だより</strong>。どれか1つでいいです。</p>
+<!-- ===== hero ===== -->
+<div class="page-hero">
+  <div class="wrap">
+    <div class="kicker-ja">個別の時間　PAGE 1</div>
+    <h1>国語科・研究主任の先生へ</h1>
+    <p class="tagsub">3つに絞りました。①教材づくり　②研究主任の校務　③研修だより。どれかひとつでいいです。気になるところから読み、そのままボタンでためせます。</p>
+  </div>
+</div>
 
-<h2>① 教材づくり — 「本文ごと自作」が国語の勝ち筋</h2>
-<p>国語でAIを使う最大の壁は教科書の本文（他人の著作物）です。答えはシンプルで、<strong>本文そのものをAIと一緒に書いてしまう</strong>こと。読みの力は自作の文章でも育てられます。私はこの方式で読解プリントを115枚作りました。</p>
-<div class="pr"><b>型｜読解用の本文＋設問（説明文）</b>
-あなたは小学校国語の教材作成者です。
+<!-- ===== 進め方 ===== -->
+<section>
+  <div class="wrap reveal">
+    <h2>この時間の進め方</h2>
+    <div class="flow">
+      <div class="step">
+        <div class="t">STEP</div><div class="n">1</div>
+        <h3>ひとつ選ぶ</h3>
+        <p>下の3つから、二学期にいちばん効きそうなものをひとつ。全部やる必要はありません。</p>
+      </div>
+      <div class="step">
+        <div class="t">STEP</div><div class="n">2</div>
+        <h3>その場でためす</h3>
+        <p>型をコピーして、Geminiに貼り付けて送ります。出てきたものへの注文まで、この時間の中でどうぞ。</p>
+      </div>
+      <div class="step">
+        <div class="t">STEP</div><div class="n">3</div>
+        <h3>Gemにするか決める</h3>
+        <p>続けて使いそうなら、ページ末尾の「研究主任の右腕」をGemにして常設します。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 1 教材づくり ===== -->
+<section class="band">
+  <div class="wrap reveal">
+    <h2><span class="secno">1</span>教材づくり：「本文ごと自作」が国語の勝ち筋</h2>
+    <p class="lead">国語でAIを使う最大の壁は、教科書の本文（他人の著作物）です。答えはシンプルで、本文そのものをAIと一緒に書いてしまうこと。読みの力は、自作の文章でも育てられます。私はこの方式で読解プリントを115枚作りました。</p>
+    <div class="prompt">
+      <div class="ph"><span class="ttl">型｜読解用の本文＋設問（説明文）</span><button class="copy" type="button">コピー</button></div>
+      <pre>あなたは小学校国語の教材作成者です。
 〔4〕年生向けの説明文を〔400〕字で書いてください。
 題材：〔子どもの生活に身近なもの。例＝かさ、給食、信号機〕
 条件：〔4年生までに習う漢字のみ。段落は3つ。問いかけの一文を最後に〕
 そのあと、この本文について、次の型の設問を作ってください：
 ①言葉の意味（選択式）②「なぜ」を問う（本文から抜き出し）③要点を一文でまとめる（記述）
-最後に解答例もつけてください。</div>
-<p class="ni" style="font-size:13px;color:var(--sub)">※出てきた本文は必ず一度声に出して読んでください。学年の実態に合わないときは「もう1学年下の語彙で」と注文。<strong>漢字の学年配当の最終確認だけは人の仕事</strong>です。</p>
+最後に解答例もつけてください。</pre>
+      <div class="pa"><button class="copyopen" type="button" data-url="https://gemini.google.com/app">コピーしてGeminiを開く</button></div>
+    </div>
+    <div class="tip"><b>検品はここだけ人の仕事：</b>出てきた本文は、必ず一度声に出して読んでください。学年の実態に合わないときは「もう1学年下の語彙で」と注文します。漢字の学年配当の最終確認だけは、人の仕事です。</div>
+  </div>
+</section>
 
-<h2>② 研究主任の校務 — 「考える前の下ごしらえ」を渡す</h2>
-<p>研究主任の仕事は、文書そのものより「観点の整理」に時間を取られます。そこを渡します。</p>
-<table>
-  <tr><th style="width:13em">仕事</th><th>渡し方</th></tr>
-  <tr><td class="c1">研究要項・研究計画の下書き</td><td>昨年度の要項（自校の自作文書）を手本に渡して「今年度の研究主題〔　〕で同じ体裁の骨子を」。<strong>中身の判断は自分、体裁と初稿はAI</strong></td></tr>
-  <tr><td class="c1">指導案検討会の論点出し</td><td>検討する指導案の「ねらいと展開の要点」を自分のメモにして渡し、「協議の柱を3つ、それぞれ賛成側と心配側の意見の例つきで」。会が締まります</td></tr>
-  <tr><td class="c1">研究アンケートの整理</td><td>自由記述を（名前を外して）貼り、「①よかった点②困り③次回への要望に分類して、それぞれ原文のまま並べて」。<strong>解釈と結論は自分で</strong></td></tr>
-</table>
+<!-- ===== 2 研究主任の校務 ===== -->
+<section>
+  <div class="wrap reveal">
+    <h2><span class="secno">2</span>研究主任の校務：「考える前の下ごしらえ」を渡す</h2>
+    <p class="lead">研究主任の仕事は、文書そのものより「観点の整理」に時間を取られます。そこを渡します。</p>
+    <div class="tbl-scroll">
+      <table class="tools">
+        <thead><tr><th style="width:14em">仕事</th><th>渡し方</th></tr></thead>
+        <tbody>
+          <tr><td class="name">研究要項・研究計画の下書き</td><td>昨年度の要項（自校の自作文書）を手本に渡して「今年度の研究主題〔　〕で同じ体裁の骨子を」。中身の判断は自分、体裁と初稿はAI。</td></tr>
+          <tr><td class="name">指導案検討会の論点出し</td><td>検討する指導案の「ねらいと展開の要点」を自分のメモにして渡し、「協議の柱を3つ、それぞれ賛成側と心配側の意見の例つきで」。会が締まります。</td></tr>
+          <tr><td class="name">研究アンケートの整理</td><td>自由記述を（名前を外して）貼り、「①よかった点②困り③次回への要望に分類して、それぞれ原文のまま並べて」。解釈と結論は自分で。</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
 
-<h2>③ 研修だより — 月1で回る型</h2>
-<p>研修の学びは、出しっぱなしだと消えます。私は校内研修のあとに1枚ものの「研修だより」を出しています。型はこうです：<strong>主題（大きく）→今回のひとネタ1つだけ→やってみた先生の声1行→次回予告</strong>。1枚に1ネタ。欲張らないのが続くコツでした。</p>
-<div class="pr"><b>型｜研修だよりの下書き</b>
-あなたは校内研修の「研修だより」の編集係です。
+<!-- ===== 3 研修だより ===== -->
+<section class="band">
+  <div class="wrap reveal">
+    <h2><span class="secno">3</span>研修だより：月1で回る型</h2>
+    <p class="lead">研修の学びは、出しっぱなしだと消えます。私は校内研修のあとに1枚ものの「研修だより」を出しています。型はこうです。主題（大きく）→今回のひとネタ1つだけ→やってみた先生の声1行→次回予告。1枚に1ネタ。欲張らないのが続くコツでした。</p>
+    <div class="prompt">
+      <div class="ph"><span class="ttl">型｜研修だよりの下書き</span><button class="copy" type="button">コピー</button></div>
+      <pre>あなたは校内研修の「研修だより」の編集係です。
 読み手は本校の先生方。ですます調。押しつけない。1枚に1ネタだけ。
 次のメモから、A4半分の記事の下書きを作ってください。
 構成：見出し（15字以内）→本文（200字）→「まずこれだけ」（1行）
-メモ：〔今回の研修の中身・出た質問・自分が伝えたいこと〕</div>
-<p>これをGem化（3章）して「研修だより係」を作っておくと、<strong>研修当日の放課後に10分で発行</strong>できます。鮮度が命の文書なので、この速さ自体が価値です。</p>
+メモ：〔今回の研修の中身・出た質問・自分が伝えたいこと〕</pre>
+      <div class="pa"><button class="copyopen" type="button" data-url="https://gemini.google.com/app">コピーしてGeminiを開く</button></div>
+    </div>
+    <p style="margin-top:16px">これを下のGemにしておくと、研修当日の放課後に10分で発行できます。鮮度が命の文書なので、この速さ自体が価値です。</p>
+  </div>
+</section>
 
-<h2>おすすめのGem「研究主任の右腕」</h2>
-<div class="pr"><b>Gemの指示文（コピーして書き換え）</b>
-あなたは小学校の研究主任の補佐役です。
+<!-- ===== Gem ===== -->
+<section>
+  <div class="wrap reveal">
+    <h2><span class="secno">＋</span>おすすめのGem「研究主任の右腕」</h2>
+    <p class="lead">①〜③をひとつの部屋にまとめた指示文です。当日のワークCの手順そのままで、5分で常設できます。</p>
+    <div class="prompt">
+      <div class="ph"><span class="ttl">Gemの指示文（コピーして書き換え）</span><button class="copy" type="button">コピー</button></div>
+      <pre>あなたは小学校の研究主任の補佐役です。
 【前提】本校の研究主題：〔　〕／研究教科：国語科／読み手は本校の教職員
-【できること】①要項・提案文書の骨子づくり ②協議の柱と論点の整理 ③研修だよりの下書き ④アンケート自由記述の分類
-【守ること】児童・教職員の個人名は扱わない。判断や結論を出さず、材料の整理までにとどめる。出力の最後に「確認した方がよい点」を1行つける。</div>
+【できること】①要項・提案文書の骨子づくり ②協議の柱と論点の整理
+③研修だよりの下書き ④アンケート自由記述の分類
+【守ること】児童・教職員の個人名は扱わない。判断や結論を出さず、
+材料の整理までにとどめる。出力の最後に「確認した方がよい点」を1行つける。</pre>
+      <div class="pa"><button class="copyopen" type="button" data-url="https://gemini.google.com/gems/create">コピーしてGemの作成画面を開く</button></div>
+    </div>
+    <div class="extra">
+      <div>
+        <div class="ex-k">きょうの一歩の例</div>
+        <p>このGemを作って名前をつける。読解の本文を1本だけ作ってみる。昨年度の要項を1本、テキストで手元に用意する。どれもこの時間の中でできる大きさです。</p>
+      </div>
+    </div>
+    <div class="next">
+      <a href="index.html#kobetsu"><b>← はじめにもどる</b>個別の時間</a>
+      <a href="shakai.html"><b>社会科の先生へ →</b>となりのページ</a>
+    </div>
+  </div>
+</section>
 
-<div class="next">
-  <a href="katsuyourei.html"><b>← 4 外﨑の実例</b></a>
-  <a href="shakai.html"><b>6 社会科の先生へ →</b></a>
-</div>
+<!-- ===== footer ===== -->
+<footer>
+  <div class="wrap">
+    <div class="foot-base">
+      <div><span class="lw">碩田学園　生成AI研修</span>　令和8年8月10日</div>
+      <div>© 2026 外﨑顯博</div>
+    </div>
+    <div class="note-local">本ページの文章はすべて資料作成者の自作です。児童生徒の個人情報、学校内部の資料、教科書の紙面は掲載していません。</div>
+  </div>
+</footer>
 
-</div>
-<footer class="site"><div class="inner">生成AI研修（2026.8.10）　外﨑顯博（飯塚市立菰田小学校／LiFE with）</div></footer>
+<script src="script.js"></script>
 </body>
 </html>

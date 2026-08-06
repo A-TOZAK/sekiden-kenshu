@@ -1,73 +1,517 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ja">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex">
-<title>生成AI研修（2026.8.10）｜先生のための、AIとの歩き方</title>
+<title>碩田学園 生成AI研修（令和8年8月10日）｜先生のための、AIとの歩き方</title>
+<meta name="description" content="碩田学園 生成AI研修。聞いて終わりではなく、つくって持ち帰るワークショップ型の研修です。型を3本と、自分専用のGemをひとつ。">
+<script>document.documentElement.className += ' js';</script>
 <link rel="stylesheet" href="style.css">
-<style>
-.hero { max-width: 780px; margin: 0 auto; padding: 56px 24px 10px; }
-.hero .kicker { font-size: 12.5px; letter-spacing: .18em; color: var(--sub); font-weight: 600; }
-.hero h1 { font-size: 30px; line-height: 1.7; margin: 10px 0 8px; }
-.hero .sub { font-size: 15px; color: var(--sub); }
-.page { max-width: 780px; }
-.flow td.c1 { font-family: Georgia; color: var(--accent); font-size: 17px; }
-</style>
 </head>
 <body>
 
-<nav class="global"><div class="inner">
-  <span class="site">🏫 生成AI研修（碩田）</span>
-  <a class="here" href="index.html">はじめに</a>
-  <a href="kihon.html">1 AIの基本</a>
-  <a href="prompt.html">2 プロンプト</a>
-  <a href="sodatekata.html">3 AIの育て方</a>
-  <a href="katsuyourei.html">4 外﨑の実例</a>
-  <a href="kokugo.html">5 国語・研究主任</a>
-  <a href="shakai.html">6 社会科</a>
-</div></nav>
+<!-- ===== top bar ===== -->
+<header class="bar">
+  <div class="wrap">
+    <div class="brand">碩田学園　生成AI研修</div>
+    <nav class="nav">
+      <a href="#nagare">流れ</a>
+      <a href="#yakusoku">お約束</a>
+      <a href="#kihon">基本</a>
+      <a href="#tsukuru">つくる</a>
+      <a href="#jitsurei">実例</a>
+      <a href="#kobetsu">個別</a>
+      <a href="#shiryo">資料</a>
+      <a href="#qa">Q&amp;A</a>
+      <a class="go-gemini" href="https://gemini.google.com/app" target="_blank" rel="noopener">Geminiを開く</a>
+    </nav>
+  </div>
+</header>
 
+<!-- ===== hero ===== -->
 <div class="hero">
-  <div class="kicker">2026年8月10日　生成AI研修</div>
-  <h1>プロンプトを覚えて帰る研修では、<br>ありません。</h1>
-  <p class="sub">持ち帰っていただくのは、明日から回る「型」を数本と、ご自身の次の一歩をひとつ。それだけです。</p>
+  <div class="wrap">
+    <div class="kicker-ja">令和8年8月10日（月）　碩田学園　生成AI研修</div>
+    <h1>聞いて終わりではなく、<br>つくって持ち帰る研修です。</h1>
+    <p class="tagsub">持ち帰っていただくのは、明日から回る型を3本と、ご自身のGeminiに住む「自分専用の係」をひとつ。手を動かす時間をいちばん長く取ります。研修が終わったあとも、このサイトはずっと開けます。忘れてかまいません。忘れたら、また開いてください。</p>
+    <div class="meta">
+      <span>日時 <b>令和8年8月10日（月）</b></span>
+      <span>会場 <b>碩田学園</b></span>
+      <span>担当 <b>外﨑顯博（飯塚市立菰田小学校）</b></span>
+    </div>
+  </div>
 </div>
 
-<div class="page">
+<!-- ===== 1 本日の流れ ===== -->
+<section id="nagare">
+  <div class="wrap reveal">
+    <h2><span class="secno">1</span>本日の流れ</h2>
+    <p class="lead">このサイトは、お三方のための研修サイトです。前半は共通、後半はお一人ずつのページに分かれます。話を聞く時間は短く、手を動かす時間を長く。その場で書き取っていただく必要はありません。</p>
+    <div class="flow">
+      <div class="step">
+        <div class="t">第1部</div><div class="n">1</div>
+        <h3>そろえる</h3>
+        <p>AIの基本を短く。なぜ堂々と間違えるのか、何が得意で何が苦手か、何を入れてはいけないか。まとまった話はここだけです。</p>
+      </div>
+      <div class="step">
+        <div class="t">第2部</div><div class="n">2</div>
+        <h3>つくる</h3>
+        <p>ワークは3つ。型を1本ためす、注文をつけて直す、自分専用のGemを作る。最後に、となりの先生と見せ合う2分を取ります。</p>
+      </div>
+      <div class="step">
+        <div class="t">第3部</div><div class="n">3</div>
+        <h3>自分の仕事へ</h3>
+        <p>お一人ずつのページで、ご自身の仕事に引きつけます。最後に「きょうの一歩」をひとつ決めて終わります。</p>
+      </div>
+    </div>
+    <div class="tip"><b>本日の到達点：</b>「型を1本ためした」「自分のGemがひとつできた」「きょうの一歩が決まった」。この3つがそろえば十分です。</div>
+  </div>
+</section>
 
-<div class="lead">
-<p>このサイトは、お三方のための研修サイトです。前半（1〜3）は共通の土台、後半（5・6）は<strong>お一人ずつの仕事に合わせた個別ページ</strong>になっています。研修が終わったあとも、このサイトはずっと開けます。忘れてかまいません。忘れたら、また開いてください。</p>
-</div>
+<!-- ===== 2 お約束 ===== -->
+<section id="yakusoku" class="band">
+  <div class="wrap reveal">
+    <h2><span class="secno">2</span>さきに、お約束</h2>
+    <p class="lead">守る線は3本だけです。この線さえ守れば、あとは安心してたくさん試せます。使う道具は、学校・自治体で認められているものの範囲で。</p>
+    <div class="grid c3">
+      <div class="cell">
+        <div class="cn">1</div>
+        <h3>児童生徒のこと</h3>
+        <p>名前・成績・作品・家庭のことは入れません。</p>
+        <p class="d">必要なときは「Aさん」に置き換え、特徴だけを自分の言葉で書きます。</p>
+      </div>
+      <div class="cell">
+        <div class="cn">2</div>
+        <h3>教科書・市販教材</h3>
+        <p>教科書・市販教材・過去問の本文は入れません。</p>
+        <p class="d">要点を自分の言葉のメモにしてから渡します。自作のメモやプリントは自由に使えます。</p>
+      </div>
+      <div class="cell">
+        <div class="cn">3</div>
+        <h3>学校の内部文書</h3>
+        <p>内部文書と、同僚・保護者の個人情報は入れません。</p>
+        <p class="d">迷ったら入れない。これがいちばん確実です。</p>
+      </div>
+    </div>
+    <div class="tip"><b>入れてよいもの：</b>自分が作った文章・プリント、学習指導要領、公開されている資料。時間の削減は全国で実例が出ています（指導案90分→約30分、20名以上の所見の素案1か月→1週間など・文科省事業の公表例）。線を守ることと、効果を出すことは両立します。</div>
+  </div>
+</section>
 
-<h2>今日の流れ</h2>
-<table class="flow">
-  <tr><th style="width:3em"></th><th>内容</th><th style="width:11em">ページ</th></tr>
-  <tr><td class="c1">1</td><td>AIの基本 — なぜ堂々と間違えるのか。何が得意で何が苦手か。入れてはいけないもの</td><td><a href="kihon.html">AIの基本</a></td></tr>
-  <tr><td class="c1">2</td><td>プロンプトの作り方 — 覚えるのは「4つの部品」だけ。あとは差し替え</td><td><a href="prompt.html">プロンプト</a></td></tr>
-  <tr><td class="c1">3</td><td>AIの育て方 — 1回使って終わりにしない。自分用に覚えさせる（Gem）</td><td><a href="sodatekata.html">AIの育て方</a></td></tr>
-  <tr><td class="c1">4</td><td>外﨑の実例 — 実際に回っているものをお見せします</td><td><a href="katsuyourei.html">外﨑の実例</a></td></tr>
-  <tr><td class="c1">5</td><td>個別の時間① — 国語科・研究主任の先生へ（教材づくり・校務・研修だより）</td><td><a href="kokugo.html">国語・研究主任</a></td></tr>
-  <tr><td class="c1">6</td><td>個別の時間② — 社会科の先生へ（自作教材の量産・台帳化・サイト化・授業改善のGem）</td><td><a href="shakai.html">社会科</a></td></tr>
-</table>
+<!-- ===== 3 AIの基本 ===== -->
+<section id="kihon">
+  <div class="wrap reveal">
+    <h2><span class="secno">3</span>AIの基本（第1部）</h2>
+    <p class="lead">まとまった話はこの節だけです。覚えることは3つ。①なぜ間違えるか　②何が得意で何が苦手か　③プロンプトは4つの部品でできている、です。</p>
 
-<h2>先にお約束（これだけは守る線）</h2>
-<div class="lead">
-<p>🙅 <strong>生成AIに入れないもの</strong>：①児童生徒の名前・成績・作品・家庭のこと　②教科書・市販教材・過去問の本文　③学校の内部文書。<br>
-迷ったら入れない。必要なら、要点を<strong>自分の言葉のメモ</strong>にしてから渡します。この線さえ守れば、あとは安心してたくさん試せます。使う道具は、学校・自治体で認められているものの範囲で。</p>
-</div>
+    <div class="grid c2">
+      <div class="cell">
+        <div class="cn">1</div>
+        <h3>なぜ、堂々と間違えるのか</h3>
+        <p>生成AIは、調べて答えているのではありません。「次に来そうな言葉」を予測して文を作っています。だから文はきれいなのに、中身が事実と違うことがあります。うそをつこうとしているのではなく、仕組みがそうなっています。</p>
+        <p class="d" style="margin-top:8px">最初の習慣はこれだけです。日付・名前・数字・出典は、確かめてから使う。文章の上手さと、事実の正しさは別ものです。</p>
+      </div>
+      <div class="cell">
+        <div class="cn">2</div>
+        <h3>上手い下手より、効くもの</h3>
+        <p>プロンプトの上手い下手より、「今日、何が終わればうれしいか」を一文で言えることのほうが効きます。「AIで何かできませんか」ではなく「学年通信の行事予定の表を作りたい」。ここが言えれば、あとは型に流し込むだけです。</p>
+        <p class="d" style="margin-top:8px">使った量のあとに発想は出てきます。だから本日は、たくさん使える型を置いていきます。</p>
+      </div>
+    </div>
 
-<h2>印刷物</h2>
-<p>当日の配布資料（A4×2枚）はこちら：<a href="haifu_shiryo.pdf"><strong>配布資料をダウンロード（PDF）</strong></a>。1枚目＝型3本と守る線、2枚目＝お一人ずつの次の一歩。</p>
+    <h3 style="margin-top:44px">何が得意で、何が苦手か</h3>
+    <div class="tbl-scroll">
+      <table class="tools">
+        <thead><tr><th>得意（安心して任せられる）</th><th>苦手（人が持つ）</th></tr></thead>
+        <tbody>
+          <tr><td>文章のたたき台（お便り・案内・要項の下書き）</td><td>事実の保証（日付・固有名詞・出典）</td></tr>
+          <tr><td>言い換え・要約・ふくらませ（同じ内容を別の言い方で）</td><td>正確な計算・図やグラフの中の数字</td></tr>
+          <tr><td>案をたくさん出す（発問・レク・単元の導入）</td><td>目の前の子どもに合うかの判断（先生の専門）</td></tr>
+          <tr><td>型に沿った量産（同じ形式の問題・文例）</td><td>学級・学校の事情（職員室で通るか）</td></tr>
+          <tr><td>観点を変えた点検（抜け・漏れ・別の見方の指摘）</td><td>責任を取ること（最後に判断するのは人）</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="extra">
+      <div>
+        <div class="ex-k">全国の実態</div>
+        <p>全国の生成AIパイロット校の分析でも、先生の使い方の1位は<b>文書のたたき台づくり</b>、次いで「計画・案の作成」「問題づくり」でした（52校・266事例の分析より）。特別なことをしなくていい、ということです。</p>
+      </div>
+    </div>
 
-<h2>ひとつだけ、先に種明かし</h2>
-<p>生成AIの研修は、ふつう「使い方」を教えて終わります。でも全国の統計を見ると、いま学校で起きている詰まりは、使い方ではありません。<strong>校務で生成AIを使う学校は8割を超えたのに、教職員の半数以上が使っている学校はまだ2割弱</strong>（中央教育審議会・2026年6月）。つまり「使える人がぽつぽついる」から先へ、どう進むか。今日の後半の個別の時間は、そのための時間です。</p>
+    <h3 style="margin-top:44px">プロンプトは4つの部品</h3>
+    <p class="sub" style="margin-top:6px">ゼロから書きません。4つの部品でできた型を持ってきて、〔　〕だけ差し替えます。</p>
+    <div class="tbl-scroll">
+      <table class="tools">
+        <thead><tr><th style="width:9em">部品</th><th>役目</th><th>例</th></tr></thead>
+        <tbody>
+          <tr><td class="name">① 役割</td><td>誰として答えるかを決める</td><td>「あなたは小学校の学年通信の編集係です」</td></tr>
+          <tr><td class="name">② 条件</td><td>前提・制約を伝える</td><td>「読み手は保護者。ですます調。専門用語を使わない」</td></tr>
+          <tr><td class="name">③ 出力の形</td><td>どんな形で出すかを決める</td><td>「見出し＋本文3文＋持ち物の箇条書き」</td></tr>
+          <tr><td class="name">④ 〔差し替え〕</td><td>毎回変わる中身を入れる場所</td><td>「〔行事名〕〔日時〕〔持ち物〕」</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
 
-<div class="next">
-  <a href="kihon.html"><b>はじめる →</b>1 AIの基本</a>
-</div>
+<!-- ===== 4 つくる ===== -->
+<section id="tsukuru" class="band">
+  <div class="wrap reveal">
+    <h2><span class="secno">4</span>手を動かす（第2部・本日の主役）</h2>
+    <p class="lead">ここからが本日の中心です。じゅんびを入れて4つ、順番にいきます。それぞれのプロンプトは、ボタンひとつでコピーできます。「コピーしてGeminiを開く」を押すと、コピーと同時にGeminiが開きます。手が止まったら、その場でお声がけください。</p>
 
-</div>
-<footer class="site"><div class="inner">生成AI研修（2026.8.10）　外﨑顯博（飯塚市立菰田小学校／LiFE with）<br>このサイトに児童生徒・学校の内部情報は含まれていません。</div></footer>
+    <!-- じゅんび -->
+    <div class="menu">
+      <div class="head"><span class="badge">0</span><h3>じゅんび：Geminiを開く</h3><span class="lv">2分</span></div>
+      <div class="body">
+        <ol class="steps">
+          <li>下のボタンから Gemini を開きます（学校のGoogleアカウントでログイン）。</li>
+          <li>画面の入力欄に「こんにちは」と送ってみます。</li>
+          <li>返事が来たら、じゅんび完了です。</li>
+        </ol>
+        <div class="act" style="margin-top:14px"><a class="btn primary" href="https://gemini.google.com/app" target="_blank" rel="noopener">Geminiを開く</a></div>
+        <div class="tip"><b>開けないときは：</b>ログイン中のアカウントをご確認ください。それでもうまくいかないときは、おとなりの画面をのぞく形でご参加ください。同じことはあとで、このサイトからいつでもできます。</div>
+      </div>
+    </div>
+
+    <!-- A -->
+    <div class="menu">
+      <div class="head"><span class="badge">A</span><h3>ワークA：型を1本、そのままためす</h3><span class="lv">10分</span></div>
+      <div class="body">
+        <ol class="steps">
+          <li>下の「型1」を、ボタンでコピーします。例文が入れてあるので、まずは貼り付けてそのまま送信してみてください。</li>
+          <li>2回目は、〔　〕の中身をご自身の仕事に差し替えて送ります。</li>
+          <li>出てきた2案から、良い方を選びます。「選ぶのは、直すより速い」が実感できたら成功です。</li>
+        </ol>
+        <div class="prompt">
+          <div class="ph"><span class="ttl">型1｜お便り・案内のたたき台</span><button class="copy" type="button">コピー</button></div>
+          <pre>あなたは小学校のお便りの編集係です。
+読み手は〔保護者〕。ですます調で、あたたかく、しかし大げさにしない。
+次のメモをもとに、〔150〕字の本文を2案作ってください。
+メモ：〔遠足の予定。雨天時は校内でレク。お弁当と水筒。しおりは金曜配布〕</pre>
+          <div class="pa"><button class="copyopen" type="button" data-url="https://gemini.google.com/app">コピーしてGeminiを開く</button></div>
+        </div>
+        <div class="tip"><b>つまずき対策：</b>ぼんやり頼むと、ぼんやり返ってきます。学年・読み手・長さを〔　〕に入れるだけで、返ってくるものが変わります。メモの中身はぜんぶ自分の言葉で。個人名は入れません。</div>
+      </div>
+    </div>
+
+    <!-- B -->
+    <div class="menu">
+      <div class="head"><span class="badge">B</span><h3>ワークB：注文をつけて、自分の好みに寄せる</h3><span class="lv">5分</span></div>
+      <div class="body">
+        <ol class="steps">
+          <li>ワークAの続きの画面で、そのまま注文をつけます。「もっと短く」「その2案目だけくわしく」「話し言葉に近く」。</li>
+          <li>2〜3往復して、言い回しを自分の好みに寄せます。1回目の出力は、まだ下書きです。</li>
+          <li>効いた注文をメモしておきます。次のワークCで、そのままGemの材料になります。</li>
+        </ol>
+        <div class="tip"><b>直すときは、言葉を飾らずに部品を足します。</b>長すぎるなら③に「3文で」。かたいなら②に「話し言葉に近く」。ずれるなら④に入れた中身を疑う。これだけで大半は直ります。</div>
+      </div>
+    </div>
+
+    <!-- C -->
+    <div class="menu">
+      <div class="head"><span class="badge">C</span><h3>ワークC：自分専用のGemを作る</h3><span class="lv">15分</span></div>
+      <div class="body">
+        <p style="font-size:15px">毎回書いていた前提（学年・教科・文体・読み手）を、専用の部屋に覚えさせます。Geminiの「Gem」という機能です。ここまでのワークでためしたこと・効いた注文が、そのまま指示文の材料になります。</p>
+        <ol class="steps" style="margin-top:12px">
+          <li>下の「Gemの指示文」をコピーします。</li>
+          <li>Geminiの左のメニューから「Gem」→「Gemを作成」を開きます（下のボタンからも開けます）。</li>
+          <li>指示文の欄に貼り付け、〔　〕をご自身用に書き換えます。ワークBで効いた注文があれば、1行足します。</li>
+          <li>名前をつけて保存し、ためしにひとつ話しかけてみます。</li>
+          <li>部屋は用途別に作ります。お便り用と授業案用を混ぜないのが長持ちのコツです。</li>
+        </ol>
+        <div class="prompt">
+          <div class="ph"><span class="ttl">Gemの指示文の骨格（コピーして書き換え）</span><button class="copy" type="button">コピー</button></div>
+          <pre>あなたは〔碩田学園〕の〔学年通信〕づくりを手伝う編集係です。
+【いつもの前提】
+・読み手：〔保護者〕
+・文体：ですます調。あたたかく、大げさにしない
+・長さの基本：〔150字前後〕
+・子どもの名前・成績など個人の情報は扱いません。入っていたら指摘してください
+【毎回すること】
+・出力は2案
+・最後に「確認した方がよい事実（日付・持ち物など）」を1行で添える</pre>
+          <div class="pa"><button class="copyopen" type="button" data-url="https://gemini.google.com/gems/create">コピーしてGemの作成画面を開く</button></div>
+        </div>
+        <div class="tip"><b>最後の1行がミソです。</b>確認の習慣をAIの側に組み込む。これが、AIを「使う」から「育てる」に変わる中身です。</div>
+      </div>
+    </div>
+
+    <!-- 見せ合い -->
+    <div class="menu">
+      <div class="head"><span class="badge">＊</span><h3>最後に、見せ合いの2分</h3><span class="lv">一度、崩してもらう</span></div>
+      <div class="body">
+        <ol class="steps">
+          <li>作ったGem（またはためした型）を、一言で紹介します。</li>
+          <li>聞いた側は、うまくいかなさそうなところをひとつ返します。学級の実態、時間、どれでも。</li>
+          <li>返された点を、Gemの指示文に1行足せないか考えます。足せたら、そのGemは一段強くなります。</li>
+        </ol>
+        <div class="tip"><b>ここがいちばん効く2分です。</b>一人で作ったGemより、一度だれかに崩されたGemのほうが、二学期も回り続けます。</div>
+      </div>
+    </div>
+
+    <h3 style="margin-top:44px">持ち帰る型は、あと2本</h3>
+    <p class="sub" style="margin-top:6px">当日ためす時間がなくても、この2本はそのまま持ち帰れます。どちらも〔　〕の差し替えだけで使えます。</p>
+    <div class="prompt">
+      <div class="ph"><span class="ttl">型2｜案をたくさん出させる（発問・活動・レク）</span><button class="copy" type="button">コピー</button></div>
+      <pre>あなたは小学校〔6〕年〔社会〕の授業づくりの相談相手です。
+単元〔　〕の導入で、子どもが「調べたい」と思う問いかけの案を10個、
+短い一文でください。教室ですぐ使える言い方で。
+実在の資料が要るものには（要資料）と付けてください。</pre>
+      <div class="pa"><button class="copyopen" type="button" data-url="https://gemini.google.com/app">コピーしてGeminiを開く</button></div>
+    </div>
+    <div class="prompt">
+      <div class="ph"><span class="ttl">型3｜自分の文章の点検役</span><button class="copy" type="button">コピー</button></div>
+      <pre>次の文章は私が書いた〔学年通信の下書き〕です。
+①誤字・わかりにくい箇所　②読み手（保護者）が不安になりそうな言い回し
+③抜けている情報、の3点だけ指摘してください。
+書き直しはしないでください。
+文章：〔　〕</pre>
+      <div class="pa"><button class="copyopen" type="button" data-url="https://gemini.google.com/app">コピーしてGeminiを開く</button></div>
+    </div>
+    <p style="margin-top:16px">型3が意外と効きます。書かせるのではなく、点検させる。自分の文章のまま、目だけ借りる使い方です。もっと型がほしくなったら、<a href="https://a-tozak.github.io/ai-prompt-library/" target="_blank" rel="noopener"><b>AIプロンプトライブラリ</b></a>（仕事系と、学年・教科系）へ。ぜんぶ〔　〕差し替え式です。まずは1本を選んで、1週間同じ型を使い続けるのがおすすめです。乗り換えないのがコツです。</p>
+  </div>
+</section>
+
+<!-- ===== 5 実例 ===== -->
+<section id="jitsurei">
+  <div class="wrap reveal">
+    <h2><span class="secno">5</span>外﨑の実例</h2>
+    <p class="lead">「ここまでできる」の上限を先にお見せする時間です。ぜんぶ真似しなくてかまいません。どれかひとつの「入口」だけ持ち帰ってください。</p>
+
+    <div class="shelf">
+      <a class="sh" href="https://a-tozak.github.io/School_Stock/" target="_blank" rel="noopener">
+        <div class="tag">公開中｜無料・登録不要</div>
+        <h3>School Stock（無料教材の棚）</h3>
+        <p>国語の読解プリント115枚（小1〜6・自作本文）、算数の演習88単元、実態別の算数、理科、動く解説教材など。すべて生成AIとの分業で作った自作教材です。「AIで作った教材の完成形」の見本として。</p>
+        <span class="go">サイトを開く</span>
+      </a>
+      <a class="sh" href="https://a-tozak.github.io/ai-prompt-library/" target="_blank" rel="noopener">
+        <div class="tag">公開中｜型の棚</div>
+        <h3>AIプロンプトライブラリ</h3>
+        <p>〔　〕差し替え式の型の棚。仕事系と、学年・教科系。きょうの型3本の続きはここにあります。仕事や教科に合わせた型を選べます。</p>
+        <span class="go">サイトを開く</span>
+      </a>
+      <div class="sh">
+        <div class="tag">紙｜現物を持参します</div>
+        <h3>研修だより</h3>
+        <p>校内研修のあとに月数回出している1枚ものです。研修当日の放課後に10分で発行できる型で作っています。作り方は「国語・研究主任」のページに置きました。</p>
+      </div>
+    </div>
+
+    <h3 style="margin-top:44px">回っている仕組み（話でお見せします）</h3>
+    <div class="tbl-scroll">
+      <table class="tools">
+        <thead><tr><th style="width:14em">仕組み</th><th>何をしているか</th></tr></thead>
+        <tbody>
+          <tr><td class="name">教材の生産ライン</td><td>問題の中身（本文・設問）だけを書けば、組版・ふりがな・解答面・確認画像まで自動で出る仕組み。AIの役目は「文章を書く」から「型に部品を納める」へ。体裁は人でなく仕組みが守ります。</td></tr>
+          <tr><td class="name">座席表づくりのWebアプリ</td><td>条件（前の方がよい・離したい・組ませたい）を入れて座席案を出す自作アプリ。作ったのはAI、要件を言葉にしたのが私。プログラミングの知識より「何がしたいかを言い切ること」が肝でした。</td></tr>
+          <tr><td class="name">振り返りの学習分析</td><td>フォームで集めた振り返りを観点別に整理して「明日の授業の冒頭で拾う言葉」の候補まで出す仕組み。成績には使いません。次の授業に生かす形成的評価の専用です。</td></tr>
+          <tr><td class="name">検品の仕組み</td><td>AIの出力を信じない、を根性でなく工程でやります。一次資料を先に見る。数字・固有名詞は機械で検査する。公開前にチェックの関門を置く。失敗もたくさんしました。器具の図を2回作り直した話などは当日に。</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="extra">
+      <div>
+        <div class="ex-k">正直な背景</div>
+        <p>私は私的な研究活動として複数のAIサービスに課金して使い倒しています。ただ、普段の学校の仕事に必要なのはそのレベルではありません。きょうの型3本とGemひとつは、無料の範囲で十分に回ります。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 6 個別 ===== -->
+<section id="kobetsu" class="band">
+  <div class="wrap reveal">
+    <h2><span class="secno">6</span>自分の仕事へ（第3部・個別の時間）</h2>
+    <p class="lead">ここからは、お一人ずつの時間です。ご自身のページを開いて、いちばん気になるところから読み始めてください。この時間もワークの続きです。どのプロンプトにもコピーのボタンを付けているので、読みながらその場でためせます。</p>
+
+    <div class="doors">
+      <a class="door" href="kokugo.html">
+        <div class="k">PAGE 1</div>
+        <h3>国語科・研究主任の先生へ</h3>
+        <p>3つに絞りました。どれかひとつでいいです。</p>
+        <ul>
+          <li>教材づくり：「本文ごと自作」が国語の勝ち筋</li>
+          <li>研究主任の校務：「考える前の下ごしらえ」を渡す</li>
+          <li>研修だより：月1で回る型。放課後10分で発行</li>
+          <li>おすすめGem「研究主任の右腕」つき</li>
+        </ul>
+        <span class="go">ページを開く</span>
+      </a>
+      <a class="door" href="shakai.html">
+        <div class="k">PAGE 2</div>
+        <h3>社会科の先生へ</h3>
+        <p>これまで作ってこられた教材が、いちばんの資産です。</p>
+        <ul>
+          <li>自作教材を手本にして量産する</li>
+          <li>台帳にする：スプレッドシート1枚から</li>
+          <li>サイトにする：公開は最後の段でいい</li>
+          <li>授業の壁打ちGem：「ほめ言葉は不要」と役を与える</li>
+        </ul>
+        <span class="go">ページを開く</span>
+      </a>
+    </div>
+
+    <div class="extra">
+      <div>
+        <div class="ex-k">決めて終わる</div>
+        <p>最後に「きょうの一歩」をひとつだけ決めます。2分でできる大きさまで小さくするのがコツです。例：型1をブックマークする。Gemに名前をつける。台帳の列を5つ書く。配布資料のおもて面に記入欄があります。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 7 配布資料 ===== -->
+<section id="shiryo">
+  <div class="wrap reveal">
+    <h2><span class="secno">7</span>配布資料</h2>
+    <p class="lead">当日お配りする資料（A4×2枚）です。1枚目は型3本と守る線、そして「きょうの一歩」の記入欄。2枚目はお一人ずつの「次の一歩」です。白黒印刷でそのまま使える体裁にしています。</p>
+    <div class="take">
+      <div class="qr"><img src="qr/sekita_qr.png" alt="本ページのQRコード"></div>
+      <div>
+        <h3>碩田学園 生成AI研修 配布資料</h3>
+        <p>スマートフォンでこのQRコードを読み取ると、本ページがそのまま開きます。配布資料は下のボタンからご覧いただけます。印刷はA4・両面で。カラーでなくてかまいません。</p>
+        <div class="url">https://a-tozak.github.io/sekita-kenshu/</div>
+        <div class="act">
+          <a class="btn primary" href="haifu_shiryo.pdf" target="_blank" rel="noopener">配布資料PDFを開く</a>
+          <a class="btn" href="haifu_shiryo.pdf" download="碩田学園_生成AI研修_配布資料_令和8年8月10日.pdf">ダウンロード</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 8 よくある質問 ===== -->
+<section id="qa" class="band">
+  <div class="wrap reveal">
+    <h2><span class="secno">8</span>よくある質問</h2>
+    <div class="qa">
+      <div class="row">
+        <div class="q">無料の範囲でできますか</div>
+        <div class="a">はい。きょうの型3本とGemひとつは、無料の範囲で回ります。課金が要るのは、私のように大量の教材を作り続ける場合だけです。</div>
+      </div>
+      <div class="row">
+        <div class="q">何から始めればよいですか</div>
+        <div class="a">二学期の最初の単元か、次に書く文書をひとつ決めて、その1場面だけで型1を使ってみてください。新しいことを増やすのではなく、いまある仕事に足す形がいちばん続きます。</div>
+      </div>
+      <div class="row">
+        <div class="q">間違った答えが出てきます</div>
+        <div class="a">仕組み上、なくなりません。日付・名前・数字・出典は確かめてから使う、を工程にしてください。確かめる工程さえあれば、怖がる必要はありません。</div>
+      </div>
+      <div class="row">
+        <div class="q">プロンプトを考えるのが苦手です</div>
+        <div class="a">ゼロから書かなくてよいように、型を置いています。覚えるのは4つの部品だけで、あとは〔　〕の差し替えです。型の棚（AIプロンプトライブラリ）もそのまま使えます。</div>
+      </div>
+      <div class="row">
+        <div class="q">子どもに使わせてもよいですか</div>
+        <div class="a">自由に入力させる形は早い、と考えています。まず先生の仕事で使って勘所をつかむのが先です。子どもに使わせるときは、使う場面とたずね方をこちらで用意する形から。実例は参考リンクの「生き物図かん」をご覧ください。</div>
+      </div>
+      <div class="row">
+        <div class="q">このサイトはいつまで見られますか</div>
+        <div class="a">残します。忘れてかまいません。忘れたら、また開いてください。研修のあとに出てきた疑問も、メールでいつでもどうぞ。</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 9 参考リンク ===== -->
+<section id="sanko">
+  <div class="wrap reveal">
+    <h2><span class="secno">9</span>参考リンク</h2>
+    <p class="lead">本研修で紹介したものと、関連する資料の一覧です。いずれも本人が作成し、公開しているものです。</p>
+    <div class="tbl-scroll">
+      <table class="tools">
+        <thead><tr><th>名称</th><th>内容</th></tr></thead>
+        <tbody>
+          <tr><td class="name"><a href="https://gemini.google.com/app" target="_blank" rel="noopener">Gemini</a></td><td>本日使う生成AI。学校のGoogleアカウントでログインして使います。</td></tr>
+          <tr><td class="name"><a href="https://a-tozak.github.io/School_Stock/" target="_blank" rel="noopener">School Stock（教材資料サイト）</a></td><td>教科のプリント、支援の資料、校務の道具、実践アイデア、教材研究ノート。登録不要・無料。</td></tr>
+          <tr><td class="name"><a href="https://a-tozak.github.io/ai-prompt-library/" target="_blank" rel="noopener">AIプロンプトライブラリ</a></td><td>校務と授業で使える型の集約。そのまま貼り付けて使えます。</td></tr>
+          <tr><td class="name"><a href="https://a-tozak.github.io/ikimono-zukan-gemini/" target="_blank" rel="noopener">生き物図かん 学習サポートサイト</a></td><td>4年国語。児童が生成AIを使う際の、たずね方を限定した形の実例。</td></tr>
+          <tr><td class="name"><a href="https://a-tozak.github.io/kids-social-studies-prompt-library/" target="_blank" rel="noopener">子どものためのプロンプトライブラリ</a></td><td>社会科で子どもが使うたずね方を、選べる形に整理したページ。</td></tr>
+          <tr><td class="name"><a href="https://note.com/tozaki_edu" target="_blank" rel="noopener">note（実践の記録）</a></td><td>教材づくりや授業実践の記録。うまくいかなかったところも書いています。</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="take">
+      <div class="qr"><img src="qr/qr_schoolstock.png" alt="教材資料サイトのQRコード"></div>
+      <div>
+        <h3>教材資料サイト（School Stock）</h3>
+        <p>スマートフォンでこのQRコードを読み取ると、そのまま開きます。授業でも宿題でも、同僚の先生にお渡しいただいてもかまいません。印刷が必要な日に、開いて選んで刷るだけで使えます。</p>
+        <div class="url">https://a-tozak.github.io/School_Stock/</div>
+        <div class="act">
+          <a class="btn primary" href="https://a-tozak.github.io/School_Stock/" target="_blank" rel="noopener">サイトを開く</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="author">
+      <img src="author.jpg" alt="外﨑顯博" loading="lazy">
+      <div class="author-body">
+        <h3 class="author-name">外﨑 顯博 <span>とざき あきひろ</span></h3>
+        <p>飯塚市立菰田小学校 4年担任・ICT教育担当・研究主任。Google Educators Group Chikuho 共同リーダー。教材とツールは無料・登録不要で公開しています（School Stock）。実践の記録は note に、うまくいかなかったところも含めて書いています。研修のあとに出てきた疑問も、下のいずれかからお寄せください。</p>
+        <div class="author-links">
+          <a href="https://a-tozak.github.io/School_Stock/" target="_blank" rel="noopener">School Stock ↗</a>
+          <a href="https://note.com/tozaki_edu" target="_blank" rel="noopener">note ↗</a>
+          <a href="mailto:EdtechChikuho@gmail.com">メール ↗</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="owari">
+      <h3>おわりに</h3>
+      <p>きょう決めていただきたいのは、大きな計画ではありません。きょうの一歩をひとつだけです。試すと決めても、今回は見送ると決めても、決まっていれば十分です。資料とリンクは本ページに残しますので、必要なときにご利用ください。試してみて止まった箇所があれば、いつでもお知らせください。</p>
+    </div>
+
+    <div class="tanto">
+      <div class="r"><span class="l">担当・資料作成</span>外﨑 顯博（飯塚市立菰田小学校／LiFE with）</div>
+      <div class="r"><span class="l">問い合わせ</span>EdtechChikuho@gmail.com</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== footer ===== -->
+<footer>
+  <div class="wrap">
+    <nav class="site-map" aria-label="サイトマップ">
+      <div class="sm-col">
+        <div class="sm-h">本ページの内容</div>
+        <a href="#nagare">1 本日の流れ</a>
+        <a href="#yakusoku">2 さきに、お約束</a>
+        <a href="#kihon">3 AIの基本</a>
+        <a href="#tsukuru">4 手を動かす（ワークA・B・C）</a>
+        <a href="#jitsurei">5 外﨑の実例</a>
+        <a href="#kobetsu">6 自分の仕事へ</a>
+        <a href="#shiryo">7 配布資料</a>
+        <a href="#qa">8 よくある質問</a>
+        <a href="#sanko">9 参考リンク</a>
+      </div>
+      <div class="sm-col">
+        <div class="sm-h">個別のページ</div>
+        <a href="kokugo.html">国語科・研究主任の先生へ</a>
+        <a href="shakai.html">社会科の先生へ</a>
+        <a href="haifu_shiryo.pdf" target="_blank" rel="noopener">配布資料（PDF）</a>
+        <a href="https://gemini.google.com/app" target="_blank" rel="noopener">Gemini</a>
+      </div>
+      <div class="sm-col">
+        <div class="sm-h">研修の概要</div>
+        <span>碩田学園 生成AI研修</span>
+        <span>令和8年8月10日（月）</span>
+        <span>会場　碩田学園</span>
+        <span>担当　外﨑顯博（LiFE with）</span>
+      </div>
+    </nav>
+    <div class="foot-base">
+      <div><span class="lw">碩田学園　生成AI研修</span>　令和8年8月10日</div>
+      <div>© 2026 外﨑顯博</div>
+    </div>
+    <div class="note-local">本ページの文章・図版・配布資料はすべて資料作成者の自作です。児童生徒の個人情報、学校内部の資料、教科書の紙面は掲載していません。</div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
