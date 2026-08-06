@@ -44,10 +44,14 @@ header.bar{position:sticky; top:0; z-index:50; background:rgba(255,255,255,.92);
 
 /* hero */
 .hero{padding:54px 0 42px; border-bottom:2px solid var(--ink)}
+.hero .wrap{display:grid; grid-template-columns:1.05fr .95fr; gap:24px 48px; align-items:center}
+.hero .hero-art{align-self:center}
+.hero .hero-art img{display:block; width:100%; height:auto}
 .hero h1{font-size:clamp(27px,4.4vw,42px); line-height:1.34; letter-spacing:.01em}
 .hero .tagsub{margin-top:20px; font-size:16.5px; max-width:44em; color:var(--ink)}
 .hero .meta{margin-top:30px; display:flex; flex-wrap:wrap; gap:8px 26px; font-size:14.5px; color:var(--sub); align-items:center}
 .hero .meta b{color:var(--ink)}
+@media(max-width:860px){ .hero .wrap{grid-template-columns:1fr} .hero .hero-art{order:2; max-width:420px; margin:0 auto} }
 
 /* flow（3部構成） */
 .flow{display:grid; grid-template-columns:repeat(3,1fr); gap:14px; margin-top:40px}
@@ -117,6 +121,38 @@ a.door:hover{text-decoration:none; background:var(--wash)}
 .door .go{margin-top:16px; font-size:14px; font-weight:800; color:var(--accent)}
 .door .go::after{content:" →"}
 @media(max-width:760px){ .doors{grid-template-columns:1fr} }
+
+/* 個別カードの扉絵 */
+.door .thumb{margin:-26px -26px 16px; border-bottom:1px solid var(--line); background:var(--wash)}
+.door .thumb img{display:block; width:100%; aspect-ratio:3/2; object-fit:cover}
+
+/* 教材資料のサムネイル一覧 */
+.sgal{display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin-top:30px}
+.scard{display:flex; flex-direction:column; border:1px solid var(--line); background:var(--paper); color:var(--ink); text-decoration:none; transition:border-color .18s, transform .18s}
+.scard:hover{border-color:var(--moss); text-decoration:none; transform:translateY(-2px)}
+.scard .th{display:block; aspect-ratio:4/5; overflow:hidden; background:#fff; border-bottom:1px solid var(--line)}
+.scard .th img{width:100%; height:100%; object-fit:contain; background:#fff; display:block}
+.scard .bd{display:flex; flex-direction:column; flex:1; padding:16px 16px 18px}
+.scard .tag{font-size:11.5px; font-weight:800; letter-spacing:.04em; color:var(--moss); margin-bottom:6px}
+.scard b{font-size:16px; line-height:1.45; color:var(--black); margin-bottom:6px}
+.scard .d{font-size:13px; color:var(--sub); line-height:1.75; flex:1}
+.scard .mt{margin-top:12px; font-size:12.5px; font-weight:700; color:var(--accent)}
+.scard .mt::after{content:" →"}
+@media(max-width:900px){ .sgal{grid-template-columns:repeat(2,1fr)} }
+@media(max-width:600px){ .sgal{grid-template-columns:1fr} }
+
+/* つながる先 */
+.connect{display:grid; grid-template-columns:repeat(4,1fr); gap:16px; margin-top:30px}
+.connect .c{border:1px solid var(--line); border-top:3px solid var(--moss); padding:20px 20px 22px; background:var(--paper); color:inherit; display:flex; flex-direction:column}
+a.c:hover{text-decoration:none; background:var(--wash)}
+.band a.c:hover{background:#efefec}
+.connect .c .k{font-size:11.5px; letter-spacing:.06em; color:var(--moss); font-weight:800}
+.connect .c h3{margin:6px 0 6px; font-size:17px}
+.connect .c p{font-size:13px; color:var(--sub); flex:1}
+.connect .c .go{margin-top:12px; font-size:13px; font-weight:700; color:var(--accent)}
+.connect .c .go::after{content:" →"}
+@media(max-width:900px){ .connect{grid-template-columns:repeat(2,1fr)} }
+@media(max-width:520px){ .connect{grid-template-columns:1fr} }
 
 /* QRつきの持ち帰り箱 */
 .take{display:grid; grid-template-columns:auto 1fr; gap:28px; align-items:center; border:1px solid var(--line); background:var(--paper); padding:26px 28px; margin-top:30px}

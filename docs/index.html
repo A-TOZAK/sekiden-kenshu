@@ -21,6 +21,7 @@
       <a href="#kihon">基本</a>
       <a href="#tsukuru">つくる</a>
       <a href="#jitsurei">実例</a>
+      <a href="#stock">教材</a>
       <a href="#kobetsu">個別</a>
       <a href="#shiryo">資料</a>
       <a href="#qa">Q&amp;A</a>
@@ -32,14 +33,17 @@
 <!-- ===== hero ===== -->
 <div class="hero">
   <div class="wrap">
-    <div class="kicker-ja">令和8年8月10日（月）　碩田学園　生成AI研修</div>
-    <h1>聞いて終わりではなく、<br>つくって持ち帰る研修です。</h1>
-    <p class="tagsub">持ち帰っていただくのは、明日から回る型を3本と、ご自身のGeminiに住む「自分専用の係」をひとつ。手を動かす時間をいちばん長く取ります。研修が終わったあとも、このサイトはずっと開けます。忘れてかまいません。忘れたら、また開いてください。</p>
-    <div class="meta">
-      <span>日時 <b>令和8年8月10日（月）</b></span>
-      <span>会場 <b>碩田学園</b></span>
-      <span>担当 <b>外﨑顯博（飯塚市立菰田小学校）</b></span>
+    <div class="hero-body">
+      <div class="kicker-ja">令和8年8月10日（月）　碩田学園　生成AI研修</div>
+      <h1>聞いて終わりではなく、<br>つくって持ち帰る研修です。</h1>
+      <p class="tagsub">持ち帰っていただくのは、明日から回る型を3本と、ご自身のGeminiに住む「自分専用の係」をひとつ。手を動かす時間をいちばん長く取ります。研修が終わったあとも、このサイトはずっと開けます。忘れてかまいません。忘れたら、また開いてください。</p>
+      <div class="meta">
+        <span>日時 <b>令和8年8月10日（月）</b></span>
+        <span>会場 <b>碩田学園</b></span>
+        <span>担当 <b>外﨑顯博（飯塚市立菰田小学校）</b></span>
+      </div>
     </div>
+    <div class="hero-art"><img src="img/hero.webp" alt="机でノートに書く先生の水彩画。ノートパソコンとマグカップ" width="1400" height="933"></div>
   </div>
 </div>
 
@@ -126,7 +130,7 @@
         <tbody>
           <tr><td>文章のたたき台（お便り・案内・要項の下書き）</td><td>事実の保証（日付・固有名詞・出典）</td></tr>
           <tr><td>言い換え・要約・ふくらませ（同じ内容を別の言い方で）</td><td>正確な計算・図やグラフの中の数字</td></tr>
-          <tr><td>案をたくさん出す（発問・レク・単元の導入）</td><td>目の前の子どもに合うかの判断（先生の専門）</td></tr>
+          <tr><td>案をたくさん出す（発問・レク・単元の導入）</td><td>目の前の生徒に合うかの判断（先生の専門）</td></tr>
           <tr><td>型に沿った量産（同じ形式の問題・文例）</td><td>学級・学校の事情（職員室で通るか）</td></tr>
           <tr><td>観点を変えた点検（抜け・漏れ・別の見方の指摘）</td><td>責任を取ること（最後に判断するのは人）</td></tr>
         </tbody>
@@ -145,7 +149,7 @@
       <table class="tools">
         <thead><tr><th style="width:9em">部品</th><th>役目</th><th>例</th></tr></thead>
         <tbody>
-          <tr><td class="name">① 役割</td><td>誰として答えるかを決める</td><td>「あなたは小学校の学年通信の編集係です」</td></tr>
+          <tr><td class="name">① 役割</td><td>誰として答えるかを決める</td><td>「あなたは中学校の学年通信の編集係です」</td></tr>
           <tr><td class="name">② 条件</td><td>前提・制約を伝える</td><td>「読み手は保護者。ですます調。専門用語を使わない」</td></tr>
           <tr><td class="name">③ 出力の形</td><td>どんな形で出すかを決める</td><td>「見出し＋本文3文＋持ち物の箇条書き」</td></tr>
           <tr><td class="name">④ 〔差し替え〕</td><td>毎回変わる中身を入れる場所</td><td>「〔行事名〕〔日時〕〔持ち物〕」</td></tr>
@@ -186,10 +190,10 @@
         </ol>
         <div class="prompt">
           <div class="ph"><span class="ttl">型1｜お便り・案内のたたき台</span><button class="copy" type="button">コピー</button></div>
-          <pre>あなたは小学校のお便りの編集係です。
+          <pre>あなたは中学校のお便りの編集係です。
 読み手は〔保護者〕。ですます調で、あたたかく、しかし大げさにしない。
 次のメモをもとに、〔150〕字の本文を2案作ってください。
-メモ：〔遠足の予定。雨天時は校内でレク。お弁当と水筒。しおりは金曜配布〕</pre>
+メモ：〔校外学習の予定。雨天時は行程を一部変更。お弁当と水筒。しおりは金曜配布〕</pre>
           <div class="pa"><button class="copyopen" type="button" data-url="https://gemini.google.com/app">コピーしてGeminiを開く</button></div>
         </div>
         <div class="tip"><b>つまずき対策：</b>ぼんやり頼むと、ぼんやり返ってきます。学年・読み手・長さを〔　〕に入れるだけで、返ってくるものが変わります。メモの中身はぜんぶ自分の言葉で。個人名は入れません。</div>
@@ -228,7 +232,7 @@
 ・読み手：〔保護者〕
 ・文体：ですます調。あたたかく、大げさにしない
 ・長さの基本：〔150字前後〕
-・子どもの名前・成績など個人の情報は扱いません。入っていたら指摘してください
+・生徒の名前・成績など個人の情報は扱いません。入っていたら指摘してください
 【毎回すること】
 ・出力は2案
 ・最後に「確認した方がよい事実（日付・持ち物など）」を1行で添える</pre>
@@ -255,8 +259,8 @@
     <p class="sub" style="margin-top:6px">当日ためす時間がなくても、この2本はそのまま持ち帰れます。どちらも〔　〕の差し替えだけで使えます。</p>
     <div class="prompt">
       <div class="ph"><span class="ttl">型2｜案をたくさん出させる（発問・活動・レク）</span><button class="copy" type="button">コピー</button></div>
-      <pre>あなたは小学校〔6〕年〔社会〕の授業づくりの相談相手です。
-単元〔　〕の導入で、子どもが「調べたい」と思う問いかけの案を10個、
+      <pre>あなたは中学校〔2〕年〔社会〕の授業づくりの相談相手です。
+単元〔　〕の導入で、生徒が「調べたい」と思う問いかけの案を10個、
 短い一文でください。教室ですぐ使える言い方で。
 実在の資料が要るものには（要資料）と付けてください。</pre>
       <div class="pa"><button class="copyopen" type="button" data-url="https://gemini.google.com/app">コピーしてGeminiを開く</button></div>
@@ -281,11 +285,11 @@
     <p class="lead">「ここまでできる」の上限を先にお見せする時間です。ぜんぶ真似しなくてかまいません。どれかひとつの「入口」だけ持ち帰ってください。</p>
 
     <div class="shelf">
-      <a class="sh" href="https://a-tozak.github.io/School_Stock/" target="_blank" rel="noopener">
+      <a class="sh" href="#stock">
         <div class="tag">公開中｜無料・登録不要</div>
         <h3>School Stock（無料教材の棚）</h3>
-        <p>国語の読解プリント115枚（小1〜6・自作本文）、算数の演習88単元、実態別の算数、理科、動く解説教材など。すべて生成AIとの分業で作った自作教材です。「AIで作った教材の完成形」の見本として。</p>
-        <span class="go">サイトを開く</span>
+        <p>国語の読解プリント115枚（小1〜6・自作本文）、算数の演習88単元、理科、動く解説教材など。すべて生成AIとの分業で作った自作教材です。「AIで作った教材の完成形」の見本として、次の節でくわしく紹介します。</p>
+        <span class="go">教材資料の節へ</span>
       </a>
       <a class="sh" href="https://a-tozak.github.io/ai-prompt-library/" target="_blank" rel="noopener">
         <div class="tag">公開中｜型の棚</div>
@@ -322,14 +326,125 @@
   </div>
 </section>
 
-<!-- ===== 6 個別 ===== -->
-<section id="kobetsu" class="band">
+<!-- ===== 6 教材資料 ===== -->
+<section id="stock" class="band">
   <div class="wrap reveal">
-    <h2><span class="secno">6</span>自分の仕事へ（第3部・個別の時間）</h2>
+    <h2><span class="secno">6</span>そのまま使える教材資料</h2>
+    <p class="lead">小学校向けに作ってきた教材資料を、Web上に整理して公開しています（作成・公開はいずれも本人によるものです）。登録やログインは不要で、開いて選び、印刷するだけで使えます。解答付きで、あわせて1,300枚以上あります。よく使われているものを9つ並べました。「先生のPDF道具箱」と「支援カード」は、校種を問わずそのまま使えます。</p>
+
+    <div class="sgal">
+      <a class="scard" href="https://a-tozak.github.io/School_Stock/prints/kokugo/" target="_blank" rel="noopener">
+        <span class="th"><img src="img/stock/kokugo.webp" alt="国語プリントの表紙" loading="lazy"></span>
+        <span class="bd">
+          <span class="tag">国語｜1〜6年</span>
+          <b>国語プリント</b>
+          <span class="d">読解・言葉・作文・聞き取りの4分野。本文はすべて自作です。解答付き。</span>
+          <span class="mt">全259枚</span>
+        </span>
+      </a>
+      <a class="scard" href="https://a-tozak.github.io/School_Stock/prints/sansu-ensyu/" target="_blank" rel="noopener">
+        <span class="th"><img src="img/stock/sansu.webp" alt="算数プリントの表紙" loading="lazy"></span>
+        <span class="bd">
+          <span class="tag">算数｜2〜6年</span>
+          <b>算数プリント（レベル別演習）</b>
+          <span class="d">1単元が基礎・標準・応用・思考力・まとめの5枚。実態に応じて刷り分けられます。</span>
+          <span class="mt">全88単元</span>
+        </span>
+      </a>
+      <a class="scard" href="https://a-tozak.github.io/School_Stock/prints/rika/" target="_blank" rel="noopener">
+        <span class="th"><img src="img/stock/rika.webp" alt="理科プリントの表紙" loading="lazy"></span>
+        <span class="bd">
+          <span class="tag">理科｜中学年から</span>
+          <b>理科プリント</b>
+          <span class="d">基礎的な知識と技能をおさえる1枚もの。解答は2枚目に赤字で入れています。</span>
+          <span class="mt">全38枚</span>
+        </span>
+      </a>
+      <a class="scard" href="https://a-tozak.github.io/School_Stock/prints/shakai/" target="_blank" rel="noopener">
+        <span class="th"><img src="img/stock/shakai.webp" alt="社会プリントの表紙" loading="lazy"></span>
+        <span class="bd">
+          <span class="tag">社会｜3〜6年</span>
+          <b>社会プリント</b>
+          <span class="d">グラフ・表・年表・雨温図の読み取りの練習に。資料はすべて自作です。</span>
+          <span class="mt">全51枚</span>
+        </span>
+      </a>
+      <a class="scard" href="https://a-tozak.github.io/School_Stock/prints/atama/" target="_blank" rel="noopener">
+        <span class="th"><img src="img/stock/atama.webp" alt="あたまのじゅんび運動の表紙" loading="lazy"></span>
+        <span class="bd">
+          <span class="tag">すきま5分｜全学年</span>
+          <b>あたまのじゅんび運動</b>
+          <span class="d">学習の前に頭をあたためる課題です。3段階から子どもが選べます。</span>
+          <span class="mt">全468枚・12か月分</span>
+        </span>
+      </a>
+      <a class="scard" href="https://a-tozak.github.io/School_Stock/prints/taiiku/" target="_blank" rel="noopener">
+        <span class="th"><img src="img/stock/taiiku.webp" alt="体育 学習カードの表紙" loading="lazy"></span>
+        <span class="bd">
+          <span class="tag">体育｜低中高</span>
+          <b>体育 学習カード</b>
+          <span class="d">単元のはじめに配るカードと、毎時間のふり返りカードの2本立てです。</span>
+          <span class="mt">全31枚</span>
+        </span>
+      </a>
+      <a class="scard" href="https://a-tozak.github.io/School_Stock/shien/" target="_blank" rel="noopener">
+        <span class="th"><img src="img/stock/shien.webp" alt="支援カードの表紙" loading="lazy"></span>
+        <span class="bd">
+          <span class="tag">支援｜全教科</span>
+          <b>支援カード</b>
+          <span class="d">つまずきのある子が自分を助けるための合言葉カード。研究で効果が確かめられた手立てを教室の形にしています。</span>
+          <span class="mt">全35枚</span>
+        </span>
+      </a>
+      <a class="scard" href="https://a-tozak.github.io/shakai-kotoba-jiten/" target="_blank" rel="noopener">
+        <span class="th"><img src="img/stock/kotoba.webp" alt="社会科ことば辞典の表紙" loading="lazy"></span>
+        <span class="bd">
+          <span class="tag">道具｜3〜6年</span>
+          <b>社会科ことば辞典</b>
+          <span class="d">社会科の言葉を図で引ける辞典です。ふり返り・自主学習・用語の説明に。</span>
+          <span class="mt">全378語</span>
+        </span>
+      </a>
+      <a class="scard" href="https://a-tozak.github.io/School_Stock/tools/pdf-toolbox/" target="_blank" rel="noopener">
+        <span class="th"><img src="img/stock/pdf.webp" alt="先生のPDF道具箱の表紙" loading="lazy"></span>
+        <span class="bd">
+          <span class="tag">道具｜校務</span>
+          <b>先生のPDF道具箱</b>
+          <span class="d">PDFの結合・打ち替え・2面付け。処理はPCの中だけで完結し、通信を行いません。</span>
+          <span class="mt">通信なし・導入作業なし</span>
+        </span>
+      </a>
+    </div>
+
+    <div class="take">
+      <div class="qr"><img src="qr/qr_schoolstock.png" alt="教材資料サイトのQRコード"></div>
+      <div>
+        <h3>教材資料サイト（School Stock）</h3>
+        <p>スマートフォンでこのQRコードを読み取ると、そのまま開きます。ブックマークしておき、印刷が必要な日にご利用ください。授業でも宿題でも、同僚の先生にお渡しいただいてもかまいません。このほかに、算数の実態別プリント、教材研究ノート、授業に使える素材なども置いています。</p>
+        <div class="url">https://a-tozak.github.io/School_Stock/</div>
+        <div class="act">
+          <a class="btn primary" href="https://a-tozak.github.io/School_Stock/" target="_blank" rel="noopener">サイトを開く</a>
+        </div>
+      </div>
+    </div>
+    <div class="extra">
+      <div>
+        <div class="ex-k">中学校版について</div>
+        <p>この棚は小学校向けに作ってきたものです。「これの中学校版がほしい」という教材があれば、お知らせください。教材の中身だけを差し替えて量産できる生産ラインがあるので、同じ作り方で作れます。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 7 個別 ===== -->
+<section id="kobetsu">
+  <div class="wrap reveal">
+    <h2><span class="secno">7</span>自分の仕事へ（第3部・個別の時間）</h2>
     <p class="lead">ここからは、お一人ずつの時間です。ご自身のページを開いて、いちばん気になるところから読み始めてください。この時間もワークの続きです。どのプロンプトにもコピーのボタンを付けているので、読みながらその場でためせます。</p>
 
     <div class="doors">
       <a class="door" href="kokugo.html">
+        <div class="thumb"><img src="img/door_kokugo.webp" alt="本とプリントのフラットイラスト" loading="lazy"></div>
         <div class="k">PAGE 1</div>
         <h3>国語科・研究主任の先生へ</h3>
         <p>3つに絞りました。どれかひとつでいいです。</p>
@@ -342,6 +457,7 @@
         <span class="go">ページを開く</span>
       </a>
       <a class="door" href="shakai.html">
+        <div class="thumb"><img src="img/door_shakai.webp" alt="地図とグラフのフラットイラスト" loading="lazy"></div>
         <div class="k">PAGE 2</div>
         <h3>社会科の先生へ</h3>
         <p>これまで作ってこられた教材が、いちばんの資産です。</p>
@@ -364,10 +480,10 @@
   </div>
 </section>
 
-<!-- ===== 7 配布資料 ===== -->
-<section id="shiryo">
+<!-- ===== 8 配布資料 ===== -->
+<section id="shiryo" class="band">
   <div class="wrap reveal">
-    <h2><span class="secno">7</span>配布資料</h2>
+    <h2><span class="secno">8</span>配布資料</h2>
     <p class="lead">当日お配りする資料（A4×2枚）です。1枚目は型3本と守る線、そして「きょうの一歩」の記入欄。2枚目はお一人ずつの「次の一歩」です。白黒印刷でそのまま使える体裁にしています。</p>
     <div class="take">
       <div class="qr"><img src="qr/sekita_qr.png" alt="本ページのQRコード"></div>
@@ -384,10 +500,10 @@
   </div>
 </section>
 
-<!-- ===== 8 よくある質問 ===== -->
-<section id="qa" class="band">
+<!-- ===== 9 よくある質問 ===== -->
+<section id="qa">
   <div class="wrap reveal">
-    <h2><span class="secno">8</span>よくある質問</h2>
+    <h2><span class="secno">9</span>よくある質問</h2>
     <div class="qa">
       <div class="row">
         <div class="q">無料の範囲でできますか</div>
@@ -406,8 +522,8 @@
         <div class="a">ゼロから書かなくてよいように、型を置いています。覚えるのは4つの部品だけで、あとは〔　〕の差し替えです。型の棚（AIプロンプトライブラリ）もそのまま使えます。</div>
       </div>
       <div class="row">
-        <div class="q">子どもに使わせてもよいですか</div>
-        <div class="a">自由に入力させる形は早い、と考えています。まず先生の仕事で使って勘所をつかむのが先です。子どもに使わせるときは、使う場面とたずね方をこちらで用意する形から。実例は参考リンクの「生き物図かん」をご覧ください。</div>
+        <div class="q">生徒に使わせてもよいですか</div>
+        <div class="a">自由に入力させる形は早い、と考えています。まず先生の仕事で使って勘所をつかむのが先です。生徒に使わせるときは、使う場面とたずね方をこちらで用意する形から。学校・自治体のルールの範囲で。実例（小学校のものですが、考え方は同じです）は参考リンクの「生き物図かん」をご覧ください。</div>
       </div>
       <div class="row">
         <div class="q">このサイトはいつまで見られますか</div>
@@ -417,10 +533,10 @@
   </div>
 </section>
 
-<!-- ===== 9 参考リンク ===== -->
-<section id="sanko">
+<!-- ===== 10 参考リンク・つながる先 ===== -->
+<section id="sanko" class="band">
   <div class="wrap reveal">
-    <h2><span class="secno">9</span>参考リンク</h2>
+    <h2><span class="secno">10</span>参考リンクと、つながる先</h2>
     <p class="lead">本研修で紹介したものと、関連する資料の一覧です。いずれも本人が作成し、公開しているものです。</p>
     <div class="tbl-scroll">
       <table class="tools">
@@ -429,23 +545,41 @@
           <tr><td class="name"><a href="https://gemini.google.com/app" target="_blank" rel="noopener">Gemini</a></td><td>本日使う生成AI。学校のGoogleアカウントでログインして使います。</td></tr>
           <tr><td class="name"><a href="https://a-tozak.github.io/School_Stock/" target="_blank" rel="noopener">School Stock（教材資料サイト）</a></td><td>教科のプリント、支援の資料、校務の道具、実践アイデア、教材研究ノート。登録不要・無料。</td></tr>
           <tr><td class="name"><a href="https://a-tozak.github.io/ai-prompt-library/" target="_blank" rel="noopener">AIプロンプトライブラリ</a></td><td>校務と授業で使える型の集約。そのまま貼り付けて使えます。</td></tr>
-          <tr><td class="name"><a href="https://a-tozak.github.io/ikimono-zukan-gemini/" target="_blank" rel="noopener">生き物図かん 学習サポートサイト</a></td><td>4年国語。児童が生成AIを使う際の、たずね方を限定した形の実例。</td></tr>
-          <tr><td class="name"><a href="https://a-tozak.github.io/kids-social-studies-prompt-library/" target="_blank" rel="noopener">子どものためのプロンプトライブラリ</a></td><td>社会科で子どもが使うたずね方を、選べる形に整理したページ。</td></tr>
-          <tr><td class="name"><a href="https://note.com/tozaki_edu" target="_blank" rel="noopener">note（実践の記録）</a></td><td>教材づくりや授業実践の記録。うまくいかなかったところも書いています。</td></tr>
+          <tr><td class="name"><a href="https://a-tozak.github.io/School_Stock/tools/pdf-toolbox/" target="_blank" rel="noopener">先生のPDF道具箱</a></td><td>PDFの結合・打ち替え・2面付け・縦書きの書き込み。通信を行わないため校務文書にも使えます。</td></tr>
+          <tr><td class="name"><a href="https://a-tozak.github.io/takata-kenshu/workspace/" target="_blank" rel="noopener">Google Workspace 使い方ガイド（図解）</a></td><td>ドキュメント・スプレッドシート・スライド・フォーム・Classroom・ドライブの図解。別の研修用に作ったものですが、そのまま使えます。</td></tr>
+          <tr><td class="name"><a href="https://a-tozak.github.io/ikimono-zukan-gemini/" target="_blank" rel="noopener">生き物図かん 学習サポートサイト</a></td><td>小4国語の実例。児童が生成AIを使う際の、たずね方を限定した形。考え方は中学校でも同じです。</td></tr>
+          <tr><td class="name"><a href="https://a-tozak.github.io/kids-social-studies-prompt-library/" target="_blank" rel="noopener">子どものためのプロンプトライブラリ</a></td><td>小学校社会科で子どもが使うたずね方を、選べる形に整理したページ。</td></tr>
         </tbody>
       </table>
     </div>
 
-    <div class="take">
-      <div class="qr"><img src="qr/qr_schoolstock.png" alt="教材資料サイトのQRコード"></div>
-      <div>
-        <h3>教材資料サイト（School Stock）</h3>
-        <p>スマートフォンでこのQRコードを読み取ると、そのまま開きます。授業でも宿題でも、同僚の先生にお渡しいただいてもかまいません。印刷が必要な日に、開いて選んで刷るだけで使えます。</p>
-        <div class="url">https://a-tozak.github.io/School_Stock/</div>
-        <div class="act">
-          <a class="btn primary" href="https://a-tozak.github.io/School_Stock/" target="_blank" rel="noopener">サイトを開く</a>
-        </div>
-      </div>
+    <h3 style="margin-top:44px">つながる先</h3>
+    <p class="sub" style="margin-top:6px">研修のあとの続きは、この4つのどこからでも。疑問・感想・「ここで止まった」の一言、いつでもどうぞ。</p>
+    <div class="connect">
+      <a class="c" href="https://note.com/tozaki_edu" target="_blank" rel="noopener">
+        <div class="k">読みもの</div>
+        <h3>note</h3>
+        <p>教材づくりや授業実践の記録。うまくいかなかったところも書いています。</p>
+        <span class="go">開く</span>
+      </a>
+      <a class="c" href="https://x.com/Tozaki_edu" target="_blank" rel="noopener">
+        <div class="k">日々の発信</div>
+        <h3>X（旧Twitter）</h3>
+        <p>新しい教材や気づきを、毎日短く発信しています。教材の公開はここが最速です。</p>
+        <span class="go">開く</span>
+      </a>
+      <a class="c" href="https://lin.ee/Tay8XPQ" target="_blank" rel="noopener">
+        <div class="k">1対1で相談</div>
+        <h3>公式LINE</h3>
+        <p>研修のあとの質問・相談はこちらから。他の方には見えない1対1のトークです。</p>
+        <span class="go">友だち追加</span>
+      </a>
+      <a class="c" href="https://line.me/ti/g2/FRICO2MfuNChAlRed3dlgW3X5YyFqyuhNR_nZw?utm_source=invitation&utm_medium=link_copy&utm_campaign=default" target="_blank" rel="noopener">
+        <div class="k">先生のコミュニティ</div>
+        <h3>GEG Chikuho</h3>
+        <p>ICT活用を学び合う先生のグループ（190名超）。地域を問わず参加できます。</p>
+        <span class="go">参加する</span>
+      </a>
     </div>
 
     <div class="author">
@@ -456,6 +590,8 @@
         <div class="author-links">
           <a href="https://a-tozak.github.io/School_Stock/" target="_blank" rel="noopener">School Stock ↗</a>
           <a href="https://note.com/tozaki_edu" target="_blank" rel="noopener">note ↗</a>
+          <a href="https://x.com/Tozaki_edu" target="_blank" rel="noopener">X ↗</a>
+          <a href="https://lin.ee/Tay8XPQ" target="_blank" rel="noopener">公式LINE ↗</a>
           <a href="mailto:EdtechChikuho@gmail.com">メール ↗</a>
         </div>
       </div>
@@ -484,17 +620,21 @@
         <a href="#kihon">3 AIの基本</a>
         <a href="#tsukuru">4 手を動かす（ワークA・B・C）</a>
         <a href="#jitsurei">5 外﨑の実例</a>
-        <a href="#kobetsu">6 自分の仕事へ</a>
-        <a href="#shiryo">7 配布資料</a>
-        <a href="#qa">8 よくある質問</a>
-        <a href="#sanko">9 参考リンク</a>
+        <a href="#stock">6 そのまま使える教材資料</a>
+        <a href="#kobetsu">7 自分の仕事へ</a>
+        <a href="#shiryo">8 配布資料</a>
+        <a href="#qa">9 よくある質問</a>
+        <a href="#sanko">10 参考リンクと、つながる先</a>
       </div>
       <div class="sm-col">
-        <div class="sm-h">個別のページ</div>
+        <div class="sm-h">個別のページ・つながる先</div>
         <a href="kokugo.html">国語科・研究主任の先生へ</a>
         <a href="shakai.html">社会科の先生へ</a>
         <a href="haifu_shiryo.pdf" target="_blank" rel="noopener">配布資料（PDF）</a>
         <a href="https://gemini.google.com/app" target="_blank" rel="noopener">Gemini</a>
+        <a href="https://note.com/tozaki_edu" target="_blank" rel="noopener">note</a>
+        <a href="https://x.com/Tozaki_edu" target="_blank" rel="noopener">X（旧Twitter）</a>
+        <a href="https://lin.ee/Tay8XPQ" target="_blank" rel="noopener">公式LINE</a>
       </div>
       <div class="sm-col">
         <div class="sm-h">研修の概要</div>
