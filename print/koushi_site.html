@@ -1,0 +1,80 @@
+<!DOCTYPE html><html lang="ja"><head><meta charset="UTF-8"><title>講師用 サイト構成</title><style>
+@page{size:A4 portrait;margin:0}
+:root{--ink:#15181c;--line:#c9c9c4;--sub:#767b83;--accent:#22406e;--wash:#f5f5f3}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:"UDデジタル教科書体 ProN","UDデジタル教科書体 Pro","UDデジタル教科書体 StdN","BIZ UDGothic","Hiragino Sans",sans-serif;color:var(--ink);font-feature-settings:"palt"}
+.sheet{width:210mm;height:297mm;padding:12mm 14mm 11mm;page-break-after:always;position:relative}
+.sheet:last-child{page-break-after:auto}
+.k{font-size:3.2mm;letter-spacing:.12em;color:var(--sub)}
+h1{font-size:6.6mm;font-weight:800;margin:1.5mm 0 3mm}
+h2{font-size:4.4mm;font-weight:800;border-left:1.6mm solid var(--accent);padding-left:2.5mm;margin:4mm 0 1.5mm}
+p,li{font-size:3.5mm;line-height:1.7}
+table{width:100%;border-collapse:collapse;margin:1mm 0}
+th{border-top:.4mm solid var(--ink);border-bottom:.2mm solid var(--ink);padding:1.3mm 1.8mm;text-align:left;font-size:3.1mm}
+td{border-bottom:.18mm solid var(--line);padding:1.3mm 1.8mm;font-size:3.3mm;line-height:1.6;vertical-align:top}
+.c1{font-weight:700;white-space:nowrap}
+.note{font-size:3.1mm;color:var(--sub)}
+footer{position:absolute;bottom:6mm;left:14mm;right:14mm;font-size:2.9mm;color:var(--sub);display:flex;justify-content:space-between}
+</style></head><body>
+<div class="sheet">
+  <div class="k">碩田学園　生成AI研修　講師用（本人用・配らない）　サイトの構成と中身（1／2）</div>
+  <h1>研修サイトの全体像　a-tozak.github.io/sekiden-kenshu</h1>
+
+  <h2>本編（1本道）＝スライドと同じ順番</h2>
+  <table>
+    <tr><th style="width:34mm">節（スライド）</th><th>中身</th><th style="width:52mm">話すこと・ひとこと</th></tr>
+    <tr><td class="c1">1 流れ／2 お約束<br>（S1〜2）</td><td>問い3つの宣言。データとして入れないほうがよいもの3つ</td><td>「きょうはこの3つの問いを一緒に解きます」</td></tr>
+    <tr><td class="c1">3 問い1 基本<br>（S3〜6）</td><td>次の言葉の予測＝堂々と間違える／<b>文脈と目的とゴール</b>（学級通信の例・500字か書き出し30字か）／得意と苦手の表</td><td>「大事なのはプロンプトの上手い下手より、文脈を渡すこと」</td></tr>
+    <tr><td class="c1">4 地図（S7）</td><td>5段階×3機能の系統表。操作は3分の1</td><td>「先生方の経験が、決める・見きわめるでそのまま強みになります」</td></tr>
+    <tr><td class="c1">5 現在地（S8）</td><td>15項目チェック。Web上で「現在地を見る」ボタン→段階の見立てと次の一歩が出る</td><td>紙のワークシートでも可。◯はひとつ</td></tr>
+    <tr><td class="c1">6 問い2（S9〜15）</td><td>①<b>中学校 Geminiプロンプト集</b>から型を1本→②注文をつける（3〜4回）→③Gemを作る。型2〜4（案出し・点検役・プロンプトを作るためのプロンプト）</td><td>「1回でうまくいくことは、私でもほぼないです」</td></tr>
+    <tr><td class="c1">7 見取り図（S16〜17）</td><td>やりたいこと9行×道具×段階。Gemini＝作る／Gemini Notebook＝資料から引く</td><td>「道具は2つで足ります」</td></tr>
+    <tr><td class="c1">8 じっくり試す<br>（S18〜20）</td><td>3枚の扉＝国語・研究主任／社会科／学校の仕事（お三方共通）</td><td>ここからは対話。号刀先生の進路の話→社会の事例集Web化</td></tr>
+    <tr><td class="c1">9〜10 実例・教材</td><td>School Stock（小学校向け1,300枚）・地域教材事例集・アイデア村・研修だより（紙）</td><td>「ここまでできる、の見本です」</td></tr>
+    <tr><td class="c1">11 キーワード辞典</td><td>Gemini／Gemini Notebook／Workspace6種／共有権限／プロンプト集＝図解＋はじめの3歩つき</td><td>「忘れたら☰メニューからここへ」</td></tr>
+    <tr><td class="c1">12〜13 資料・アンケート（S21〜22）</td><td>配布資料・ワークシートのPDF／アンケート（QR＋ボタン・3分）</td><td>「まず始めてみる。2週間後ごろに連絡します」</td></tr>
+    <tr><td class="c1">14〜15 Q&A・リンク（S23）</td><td>無料の範囲／どのAI／生徒に使わせるか（共有の機会を設ける）／活用ライブラリ等</td><td>結び「忘れたら、また開いてください」</td></tr>
+  </table>
+
+  <h2>当日のサイト操作（ヘッダー）</h2>
+  <p>☰メニュー＝全ページの一覧　／　「文字 標準・1.5倍・2倍」＝本文だけ拡大　／　「QR」＝サイトのQRがその場に大きく出る（最初にこれで配る）　／　右下の緑ボタン＝相談窓口（公式LINE）</p>
+
+  <footer><span>碩田学園 生成AI研修（令和8年8月10日）</span><span>講師用・非配布</span></footer>
+</div>
+
+<div class="sheet">
+  <div class="k">碩田学園　生成AI研修　講師用（本人用・配らない）　サイトの構成と中身（2／2）</div>
+  <h1>個別ページと辞典の中身</h1>
+
+  <h2>国語科・研究主任の先生へ（kokugo）</h2>
+  <table>
+    <tr><td class="c1" style="width:34mm">教材づくり</td><td>本文から自分で書いてしまう（型あり）。実物＝School Stock国語プリント115枚へのリンクを埋め込み済み</td></tr>
+    <tr><td class="c1">研究主任の校務</td><td>要項の骨子・協議の柱・アンケート分類（渡し方の表）</td></tr>
+    <tr><td class="c1">研修だより</td><td>1枚1ネタの型。当日の放課後に発行できる速さが価値</td></tr>
+    <tr><td class="c1">右腕Gem</td><td>①〜③をひとまとめにした指示文（コピーしてGem作成）</td></tr>
+  </table>
+
+  <h2>社会科の先生へ（shakai）</h2>
+  <table>
+    <tr><td class="c1" style="width:34mm">自作教材の量産</td><td>自信作1枚→設計を言語化→別単元へ。「資料は参照指示にとどめる」が肝</td></tr>
+    <tr><td class="c1">台帳→サイト化</td><td>スプレッドシート台帳→Googleサイト→外部公開。<b>地域教材事例集Web版の実物スクショつき</b></td></tr>
+    <tr><td class="c1">相談相手Gem</td><td>「ほめ言葉は不要」と役を与える壁の指示文</td></tr>
+  </table>
+
+  <h2>学校の仕事へ＝お三方共通（gakko）</h2>
+  <table>
+    <tr><td class="c1" style="width:34mm">進路指導</td><td>号刀先生（札幌新陽）の実践要約→碩田版＝県内高校の要項をGemini Notebookへ。型2本（条件さがし・三者面談のその場資料）。生徒名は入れない・最終確認は原本</td></tr>
+    <tr><td class="c1">仕事の分解</td><td>「結局自分で直した方が早い」の正体。分解プロンプト＋ワークシートうら面</td></tr>
+    <tr><td class="c1">自動化の階段</td><td>7段（GASは5段目）。外﨑の実例＝通信・時間割・時数アプリ／座席表の見取り</td></tr>
+    <tr><td class="c1">組織に手渡す</td><td>同じ質問3回→A4半分の紙。説明書の下書きプロンプト</td></tr>
+  </table>
+
+  <h2>キーワード辞典（jiten）＝10項目</h2>
+  <p>Gemini（Gem含む）／Gemini Notebook（旧NotebookLM）／ドキュメント／スプレッドシート／スライド／フォーム／Classroom／ドライブ／共有権限のしくみ（閲覧者→コメント→編集者）／プロンプト集。各ページに「はじめの3歩」（どこを開いて何を押すか）つき。</p>
+
+  <h2>紙とリンク</h2>
+  <p>紙＝配布資料2枚＋ワークシート2枚（すべてUDデジタル教科書体）。外部リンク＝中学校 Geminiプロンプト集／School Stock／活用ライブラリ／アイデア村／アンケートフォーム。</p>
+
+  <footer><span>碩田学園 生成AI研修（令和8年8月10日）</span><span>講師用・非配布</span></footer>
+</div>
+</body></html>
