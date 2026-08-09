@@ -158,7 +158,7 @@ document.querySelectorAll('.prompt').forEach(box=>{
   const brand=bar.querySelector('.brand');
   if(brand&&brand.nextSibling) bar.insertBefore(box,brand.nextSibling); else bar.appendChild(box);
   function apply(z){
-    document.documentElement.style.zoom=(z==1?'':z);
+    document.querySelectorAll('section, .hero, .page-hero, footer, .crumb, .fig, .concept2, .perm2').forEach(el=>el.style.zoom=(z==1?'':z));
     box.querySelectorAll('.fsb').forEach(b=>b.classList.toggle('on',b.dataset.z==z));
     try{localStorage.setItem('sekiden_fs',z)}catch(e){}
   }
