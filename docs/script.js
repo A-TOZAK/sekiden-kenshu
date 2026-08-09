@@ -1,8 +1,8 @@
 // 碩田学園 生成AI研修 共通スクリプト（ナビ現在地・reveal・プロンプトのコピー）
 
 // active nav on scroll
-const navLinks=[...document.querySelectorAll('.nav a')].filter(a=>a.getAttribute('href').startsWith('#'));
-const navMap=navLinks.map(a=>({a,el:document.querySelector(a.getAttribute('href'))})).filter(x=>x.el);
+var navLinks=[...document.querySelectorAll('.nav a')].filter(a=>a.getAttribute('href').startsWith('#'));
+var navMap=navLinks.map(a=>({a,el:document.querySelector(a.getAttribute('href'))})).filter(x=>x.el);
 if(navMap.length){
   const onScroll=()=>{
     const y=window.scrollY+90;
@@ -15,8 +15,8 @@ if(navMap.length){
 }
 
 // reveal
-const io=new IntersectionObserver(es=>es.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} }),{threshold:.08});
-document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+var _sk_io=new IntersectionObserver(es=>es.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); _sk_io.unobserve(e.target);} }),{threshold:.08});
+document.querySelectorAll('.reveal').forEach(el=>_sk_io.observe(el));
 
 // プロンプトのコピー（「コピー」と「コピーしてGeminiを開く」）
 async function copyText(pre){
@@ -38,6 +38,7 @@ async function copyText(pre){
   btn.className='menu-btn'; btn.type='button'; btn.setAttribute('aria-label','メニューを開く');
   btn.innerHTML='☰<span> メニュー</span>';
   bar.insertBefore(btn,bar.firstChild);
+  const R=location.pathname.includes('/jiten/')?'../':'';
   const wrap=document.createElement('div'); wrap.className='drawer-wrap';
   wrap.innerHTML=`<div class="drawer-bg"></div>
   <nav class="drawer" aria-label="サイト全体のメニュー">
@@ -72,6 +73,7 @@ async function copyText(pre){
     <a href="kinyurei_3nin.pdf" target="_blank" rel="noopener">記入例（実態のちがう3人）</a>
     <a href="index.html#anketo">研修アンケート</a>
   </nav>`;
+  wrap.querySelectorAll('a').forEach(a=>{const h=a.getAttribute('href');if(h&&!h.startsWith('http'))a.setAttribute('href',R+h);});
   document.body.appendChild(wrap);
   btn.addEventListener('click',()=>wrap.classList.add('open'));
   wrap.querySelector('.drawer-bg').addEventListener('click',()=>wrap.classList.remove('open'));
@@ -133,3 +135,34 @@ document.querySelectorAll('.prompt').forEach(box=>{
     });
   }
 });
+
+
+// 文字サイズ切り替え（標準/1.5倍/2倍・全ページ・localStorageで記憶）
+(function(){
+  const css=`.fs-btns{display:flex;gap:4px;align-items:center;margin-left:12px}
+.fs-btns .fsb{font-family:inherit;font-weight:800;font-size:12px;color:#767b83;background:none;border:1px solid #e6e6e3;border-radius:4px;padding:5px 9px;cursor:pointer;white-space:nowrap}
+.fs-btns .fsb.on{color:#fff;background:#22406e;border-color:#22406e}
+.menu-btn{font-weight:800;font-size:13px;color:#15181c;background:none;border:1px solid #e6e6e3;border-radius:4px;padding:6px 12px;cursor:pointer;margin-right:14px;white-space:nowrap;font-family:inherit}
+.drawer-wrap{position:fixed;inset:0;z-index:100;pointer-events:none}
+.drawer-wrap .drawer-bg{position:absolute;inset:0;background:rgba(14,15,17,.4);opacity:0;transition:opacity .25s}
+.drawer-wrap .drawer{position:absolute;top:0;left:0;bottom:0;width:min(320px,86vw);background:#fff;border-right:1px solid #e6e6e3;transform:translateX(-100%);transition:transform .25s;overflow-y:auto;padding:22px 0 40px}
+.drawer-wrap.open{pointer-events:auto}.drawer-wrap.open .drawer-bg{opacity:1}.drawer-wrap.open .drawer{transform:none}
+.drawer .dh{font-weight:800;color:#0e0f11;padding:0 22px 12px;border-bottom:1px solid #e6e6e3;margin-bottom:8px}
+.drawer .dg{font-size:11.5px;font-weight:800;letter-spacing:.06em;color:#33513f;padding:16px 22px 4px}
+.drawer a{display:block;padding:7px 22px;font-size:14px;color:#15181c;text-decoration:none}
+.drawer a:hover{background:#f6f6f4}`;
+  const st=document.createElement('style'); st.textContent=css; document.head.appendChild(st);
+  const bar=document.querySelector('header.bar .wrap'); if(!bar) return;
+  const box=document.createElement('div'); box.className='fs-btns';
+  box.innerHTML='<button class="fsb" data-z="1">文字 標準</button><button class="fsb" data-z="1.5">1.5倍</button><button class="fsb" data-z="2">2倍</button>';
+  const brand=bar.querySelector('.brand');
+  if(brand&&brand.nextSibling) bar.insertBefore(box,brand.nextSibling); else bar.appendChild(box);
+  function apply(z){
+    document.documentElement.style.zoom=(z==1?'':z);
+    box.querySelectorAll('.fsb').forEach(b=>b.classList.toggle('on',b.dataset.z==z));
+    try{localStorage.setItem('sekiden_fs',z)}catch(e){}
+  }
+  box.querySelectorAll('.fsb').forEach(b=>b.addEventListener('click',()=>apply(b.dataset.z)));
+  let z=1; try{z=localStorage.getItem('sekiden_fs')||1}catch(e){}
+  apply(z);
+})();

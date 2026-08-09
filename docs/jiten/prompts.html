@@ -74,4 +74,5 @@
 const io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.1});
 document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
 </script>
+<script src="../script.js" defer></script>
 </body></html>
