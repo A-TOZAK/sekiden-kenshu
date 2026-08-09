@@ -30,6 +30,39 @@ async function copyText(pre){
     catch(e2){ return false; }
   }
 }
+// 現在地チェック（15項目・「使う」の列で最初に外れた段階が現在地の見立て）
+const ckBox=document.getElementById('cklist');
+if(ckBox){
+  const STAGES={
+    1:{name:'言語化期',label:'目的をことばにする',step:'きょうの型1を1回ためして、出てきた事実（日付・数字・名前）をひとつ、自分で確かめてみてください。それが最初の一歩です。'},
+    2:{name:'模倣期',label:'型を借りる',step:'型を1本だけ決めて、1週間おなじ型を使い続けてみてください。効いた注文のメモが、次の段階の材料になります。'},
+    3:{name:'適合期',label:'自分の仕事に合わせる',step:'仕事をひとつ選んで手順に分解し、「任せる・自分でやる・行わない」の札を付けてみてください。配布のワークシート（うら面）がそのまま使えます。'},
+    4:{name:'構築期',label:'仕組みにする',step:'毎回書いている前提（学年・文体・読み手）をGemに常設してください。その先の自動化は「学校の仕事」のページにあります。'},
+    5:{name:'移転期',label:'組織に手渡す',step:'同じ質問が3回来たものを、A4半分の紙にしてみてください。渡す紙の下書きの型は「学校の仕事」のページにあります。'}
+  };
+  const btn=document.getElementById('ck-judge');
+  const out=document.getElementById('ck-result');
+  btn&&btn.addEventListener('click',()=>{
+    let cur=null;
+    for(const s of [1,2,3,4,5]){
+      const el=ckBox.querySelector(`input[data-stage="${s}"][data-fn="u"]`);
+      if(el && !el.checked){ cur=s; break; }
+    }
+    let h,p;
+    if(cur===null){
+      h='現在地の見立て：第5段階 移転期のただ中です';
+      p='「使う」の列がすべて○の方は、次の課題は自分の腕ではなく「手渡し方」です。同じ質問が3回来たものを紙にする、から始めてください。';
+    }else{
+      const st=STAGES[cur];
+      h=`現在地の見立て：第${cur}段階 ${st.name}（${st.label}）`;
+      p=`次の一歩：${st.step}`;
+    }
+    out.innerHTML=`<h4>${h}</h4><p>${p}</p><p style="color:var(--sub); font-size:13px; margin-top:8px">段階が人によって違うのは当然のことで、低い段階は恥ではありません。経験年数と段階は比例しません。この見立ては診断の入口であって、成績ではありません。</p>`;
+    out.classList.add('show');
+    out.scrollIntoView({behavior:'smooth',block:'nearest'});
+  });
+}
+
 document.querySelectorAll('.prompt').forEach(box=>{
   const pre=box.querySelector('pre');
   const btnCopy=box.querySelector('.copy');

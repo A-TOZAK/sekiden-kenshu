@@ -18,13 +18,13 @@
     <nav class="nav">
       <a href="#nagare">流れ</a>
       <a href="#yakusoku">お約束</a>
-      <a href="#kihon">基本</a>
+      <a href="#chizu">地図</a>
+      <a href="#genzaichi">現在地</a>
+      <a href="#tsukaimichi">使いみち</a>
       <a href="#tsukuru">つくる</a>
-      <a href="#jitsurei">実例</a>
       <a href="#stock">教材</a>
       <a href="#kobetsu">個別</a>
       <a href="#shiryo">資料</a>
-      <a href="#qa">Q&amp;A</a>
       <a class="go-gemini" href="https://gemini.google.com/app" target="_blank" rel="noopener">Geminiを開く</a>
     </nav>
   </div>
@@ -36,7 +36,7 @@
     <div class="hero-body">
       <div class="kicker-ja">令和8年8月10日（月）　碩田学園　生成AI研修</div>
       <h1>聞いて終わりではなく、<br>つくって持ち帰る研修です。</h1>
-      <p class="tagsub">持ち帰っていただくのは、明日から回る型を3本と、ご自身のGeminiに住む「自分専用の係」をひとつ。手を動かす時間をいちばん長く取ります。研修が終わったあとも、このサイトはずっと開けます。忘れてかまいません。忘れたら、また開いてください。</p>
+      <p class="tagsub">持ち帰っていただくのは3つ。ご自身の「現在地」の見立てと、明日から回る型、そしてGeminiに住む「自分専用の係」をひとつ。全員に同じ操作を教える研修ではなく、お一人ずつの現在地から次の一歩を決める研修です。研修が終わったあとも、このサイトはずっと開けます。忘れてかまいません。忘れたら、また開いてください。</p>
       <div class="meta">
         <span>日時 <b>令和8年8月10日（月）</b></span>
         <span>会場 <b>碩田学園</b></span>
@@ -55,8 +55,8 @@
     <div class="flow">
       <div class="step">
         <div class="t">第1部</div><div class="n">1</div>
-        <h3>そろえる</h3>
-        <p>AIの基本を短く。なぜ堂々と間違えるのか、何が得意で何が苦手か、何を入れてはいけないか。まとまった話はここだけです。</p>
+        <h3>地図と現在地</h3>
+        <p>AIの基本を短く。そのあと、活用力の5段階の「地図」を広げて、ご自身の現在地に印を付けます。まとまった話はここだけです。</p>
       </div>
       <div class="step">
         <div class="t">第2部</div><div class="n">2</div>
@@ -66,10 +66,10 @@
       <div class="step">
         <div class="t">第3部</div><div class="n">3</div>
         <h3>自分の仕事へ</h3>
-        <p>お一人ずつのページで、ご自身の仕事に引きつけます。最後に「きょうの一歩」をひとつ決めて終わります。</p>
+        <p>お一人ずつのページと、お三方共通の「学校の仕事」のページ。現在地に合う一歩を、ひとつ決めて終わります。</p>
       </div>
     </div>
-    <div class="tip"><b>本日の到達点：</b>「型を1本ためした」「自分のGemがひとつできた」「きょうの一歩が決まった」。この3つがそろえば十分です。</div>
+    <div class="tip"><b>本日の到達点：</b>「自分の現在地がわかった」「型を1本ためして、Gemがひとつできた」「きょうの一歩が決まった」。この3つがそろえば十分です。</div>
   </div>
 </section>
 
@@ -159,10 +159,148 @@
   </div>
 </section>
 
-<!-- ===== 4 つくる ===== -->
-<section id="tsukuru" class="band">
+<!-- ===== 4 地図 ===== -->
+<section id="chizu" class="band">
   <div class="wrap reveal">
-    <h2><span class="secno">4</span>手を動かす（第2部・本日の主役）</h2>
+    <h2><span class="secno">4</span>地図：生成AI活用力の5段階</h2>
+    <p class="lead">操作の話に入る前に、地図を1枚だけ広げます。生成AIを使いこなす力は、5つの段階を通って育ちます。きょうの研修が扱うのは「いま、ご自身が地図のどこにいて、次の一歩は何か」です。操作の技能は、この地図の3分の1にすぎません。</p>
+
+    <div class="stagemap">
+      <div class="stagemap-inner">
+        <div class="sm-note top">▼ 決める（入口の判断）──「この仕事は何が終われば終わりか」「どこまで任せるか」。どの段階でも毎回はたらく</div>
+        <div class="sm-row">
+          <div class="sm-st"><div class="no">STAGE 1</div><h4>言語化期</h4><div class="m">目的をことばにする</div></div>
+          <div class="sm-st"><div class="no">STAGE 2</div><h4>模倣期</h4><div class="m">型を借りる</div></div>
+          <div class="sm-st"><div class="no">STAGE 3</div><h4>適合期</h4><div class="m">自分の仕事に合わせる</div></div>
+          <div class="sm-st"><div class="no">STAGE 4</div><h4>構築期</h4><div class="m">仕組みにする</div></div>
+          <div class="sm-st"><div class="no">STAGE 5</div><h4>移転期</h4><div class="m">組織に手渡す</div></div>
+        </div>
+        <div class="sm-note bottom">▲ 見きわめる（出口の点検）──出てきた事実・出力・仕組みを確かめる。どの段階でも毎回はたらく</div>
+        <div class="sm-cap">進んでいくのは、まん中の「使う」の系列だけ。「決める」と「見きわめる」は梯子ではなく、全段階で毎回はたらきます。</div>
+      </div>
+    </div>
+
+    <p style="margin-top:26px; max-width:46em">この地図でいちばんお伝えしたいのは、<b>段階が低いことは恥ではない</b>、ということです。第1段階には第1段階の一人前があります（「何が終わればうれしいか」を一文で言えるのは、長い職務経験がある方ほど強い力です）。逆に、毎日使っている方が第5段階とも限りません。「あの人に聞けばよい」と頼られて負担が増えているなら、それは腕の問題ではなく「まだ手渡していない」だけです。</p>
+
+    <h3 style="margin-top:44px">5段階を、学校の仕事のことばで</h3>
+    <div class="tbl-scroll">
+      <table class="tools">
+        <thead><tr><th style="width:10em">段階</th><th>決める（入口の判断）</th><th>使う（中心の操作）</th><th>見きわめる（出口の点検）</th></tr></thead>
+        <tbody>
+          <tr>
+            <td class="name">1 言語化期<span>目安：出会いの1週間</span></td>
+            <td>今日のタスクを定義できる。<br>例）「学年通信は、行事予定が正しく入って印刷に回せたら終わり」と言える</td>
+            <td>対話で出力を直させられる。<br>例）長い下書きを「半分の長さで、保護者向けの言葉で」と注文し直す</td>
+            <td>事実を確かめてから使える。<br>例）出てきた日付・数字を、元の資料と照らしてから配る</td>
+          </tr>
+          <tr>
+            <td class="name">2 模倣期<span>目安：最初の1か月</span></td>
+            <td>どの仕事にどの型を試すか選べる。<br>例）通信の下書き・所見の観点出しなど、定型の仕事から試す</td>
+            <td>型の可変部だけ差し替えて使える。<br>例)型の〔メモ〕欄に自分のメモを入れて下書きを出す</td>
+            <td>出力から型を評価できる。<br>例）「文が固い。文体の条件を足そう」と直しどころの見当がつく</td>
+          </tr>
+          <tr>
+            <td class="name">3 適合期<span>目安：最初の1学期</span></td>
+            <td>人がやることとAIにさせることを、言葉で分けられる。<br>例）所見＝事実集めと中身の判断は人・文体の整えはAI、と分ける</td>
+            <td>型を修正し、自作の資料で文脈を与えられる。<br>例）自作のプリントや過去の通信を手本に渡し、自分の調子に合わせる</td>
+            <td>任せ所を判断し、入れない情報の線を引ける。<br>例）直しが減らない仕事は分解し直す。生徒名・成績・教科書本文は入れない</td>
+          </tr>
+          <tr>
+            <td class="name">4 構築期<span>目安：1年目</span></td>
+            <td>仕組みにする仕事を選べる。<br>例）毎週の連絡・時数集計のように、繰り返す仕事から選ぶ</td>
+            <td>Gem・GAS等で仕組みを組める。<br>例）通信のGemを常設する。集計をGASでアプリにする。NotebookLMで資料を焦点化する</td>
+            <td>仕組みを検査できる。<br>例）出力をときどき抜き取りで確かめ、ずれてきたら設計を直す</td>
+          </tr>
+          <tr>
+            <td class="name">5 移転期<span>目安：2年目以降</span></td>
+            <td>学校のどの仕事の流れから変えるかを決められる。<br>例）会議資料づくりの流れを図にし、データの所在を一覧にしてから着手する</td>
+            <td>道具と手順書を共有資産にできる。<br>例）自分のGem・アプリ・手順書を学年や分掌の共有にし、誰でも使える形に整える</td>
+            <td>運用を点検し、約束事を改訂できる。<br>例）使われ方や失敗例を集めて、手順書と校内の約束事を直す</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="tip"><b>この地図の出どころ：</b>外﨑が執筆中の実践研究論文「小学校教員による生成AI活用力の発達系統モデルの開発」（2026年8月）から、研修用に抜き出したものです。国内の生成AIパイロット校52校・266事例の調査と、自分自身の約3年の実践の記録から作りました。全員に同じ操作を教える研修では月曜日の教室が変わらない、というのがこの研究の出発点です。</div>
+  </div>
+</section>
+
+<!-- ===== 5 現在地 ===== -->
+<section id="genzaichi">
+  <div class="wrap reveal">
+    <h2><span class="secno">5</span>いまの現在地（できることチェック）</h2>
+    <p class="lead">地図の5段階×3つのはたらきを、15の「できる」に分けました。いまの正直なところに印を付けてください。付かない項目が多いほど、伸びる場所がはっきりします。となりの先生と違って当然です。合っているかどうかより、「次の一歩」を決めるために使います。</p>
+
+    <div class="ck" id="cklist">
+      <div class="ck-g">
+        <div class="ck-h"><span class="n">STAGE 1</span><h4>言語化期：目的をことばにする</h4></div>
+        <label class="ci"><input type="checkbox" data-stage="1" data-fn="k"><span class="fn">決める</span><span>AIに向かう前に「この仕事は何が終われば終わりか」を一文で言える</span></label>
+        <label class="ci"><input type="checkbox" data-stage="1" data-fn="u"><span class="fn u">使う</span><span>AIと対話を重ねて、出力を注文どおりに変えられる</span></label>
+        <label class="ci"><input type="checkbox" data-stage="1" data-fn="m"><span class="fn">見きわめる</span><span>出てきた事実（日付・数字・名前）を確かめてから使う</span></label>
+      </div>
+      <div class="ck-g">
+        <div class="ck-h"><span class="n">STAGE 2</span><h4>模倣期：型を借りる</h4></div>
+        <label class="ci"><input type="checkbox" data-stage="2" data-fn="k"><span class="fn">決める</span><span>どの仕事にどの型（プロンプト）を試すか選べる</span></label>
+        <label class="ci"><input type="checkbox" data-stage="2" data-fn="u"><span class="fn u">使う</span><span>定型の指示文の、差し替え箇所だけ変えて使える</span></label>
+        <label class="ci"><input type="checkbox" data-stage="2" data-fn="m"><span class="fn">見きわめる</span><span>出力を見て、型のどこを直せばよいか見当がつく</span></label>
+      </div>
+      <div class="ck-g">
+        <div class="ck-h"><span class="n">STAGE 3</span><h4>適合期：自分の仕事に合わせる</h4></div>
+        <label class="ci"><input type="checkbox" data-stage="3" data-fn="k"><span class="fn">決める</span><span>人がやることとAIにさせることを、言葉で分けられる</span></label>
+        <label class="ci"><input type="checkbox" data-stage="3" data-fn="u"><span class="fn u">使う</span><span>定型文を目的に合わせて足し引きできる（役割・条件・出力の形）</span></label>
+        <label class="ci"><input type="checkbox" data-stage="3" data-fn="m"><span class="fn">見きわめる</span><span>任せ所を判断でき、入れてはいけない情報を即答できる</span></label>
+      </div>
+      <div class="ck-g">
+        <div class="ck-h"><span class="n">STAGE 4</span><h4>構築期：仕組みにする</h4></div>
+        <label class="ci"><input type="checkbox" data-stage="4" data-fn="k"><span class="fn">決める</span><span>仕組みにする仕事を選べる（繰り返す仕事から）</span></label>
+        <label class="ci"><input type="checkbox" data-stage="4" data-fn="u"><span class="fn u">使う</span><span>Gem・GAS等で、繰り返す仕事を仕組みにできる</span></label>
+        <label class="ci"><input type="checkbox" data-stage="4" data-fn="m"><span class="fn">見きわめる</span><span>仕組みの出力をときどき抜き取りで確かめ、設計を直せる</span></label>
+      </div>
+      <div class="ck-g">
+        <div class="ck-h"><span class="n">STAGE 5</span><h4>移転期：組織に手渡す</h4></div>
+        <label class="ci"><input type="checkbox" data-stage="5" data-fn="k"><span class="fn">決める</span><span>学校のどの仕事の流れから変えるかを決められる</span></label>
+        <label class="ci"><input type="checkbox" data-stage="5" data-fn="u"><span class="fn u">使う</span><span>複数の手順をまとめて任せ、道具と手順書を共有の形にできる</span></label>
+        <label class="ci"><input type="checkbox" data-stage="5" data-fn="m"><span class="fn">見きわめる</span><span>使われ方や失敗例を集めて、手順書や約束事を直せる</span></label>
+      </div>
+      <div class="ck-actions">
+        <button class="btn primary" type="button" id="ck-judge">現在地を見る</button>
+        <span class="note">現在地の見立て＝<b>青い「使う」の札</b>の列で、上から最初に印が付かなかった段階です。</span>
+      </div>
+      <div class="ck-result" id="ck-result"></div>
+    </div>
+
+    <div class="tip"><b>紙でじっくりやりたい方へ：</b>同じ15項目に「仕事の分解と配分」を付けたワークシート（A4）を当日お配りします。<a href="worksheet_genzaichi.pdf" target="_blank" rel="noopener"><b>ワークシートPDF</b></a>と、経験年数も使い方もちがう3人の<a href="kinyurei_3nin.pdf" target="_blank" rel="noopener"><b>記入例PDF</b></a>（経験35年・利用未経験の先生／経験12年・定型文で使っている先生／経験7年・毎日使う情報主任の先生）はここから開けます。記入例は「自分に近い人」から読むのがおすすめです。</div>
+  </div>
+</section>
+
+<!-- ===== 6 使いみち ===== -->
+<section id="tsukaimichi" class="band">
+  <div class="wrap reveal">
+    <h2><span class="secno">6</span>結局、どれを何に使うか（見取り図）</h2>
+    <p class="lead">「AIはいろいろできます」が、いちばん人を迷わせる言葉です。学校の仕事でよくある「やりたいこと」から、まず使う道具と、きょうの入口を1枚にまとめました。正解の表ではなく、入口の見取り図です。上の3行のどれかから始めれば、まず間違いありません。</p>
+    <div class="tbl-scroll">
+      <table class="tools">
+        <thead><tr><th>やりたいこと</th><th style="width:13em">まず使う道具</th><th style="width:11em">きょうの入口</th><th style="width:9em">地図での段階</th></tr></thead>
+        <tbody>
+          <tr><td>お便り・案内・要項の<b>たたき台</b></td><td>Gemini</td><td><a href="#tsukuru">型1</a></td><td><span class="chip hi">模倣期</span></td></tr>
+          <tr><td>発問・活動・レクの<b>案をたくさん出す</b></td><td>Gemini</td><td><a href="#tsukuru">型2</a></td><td><span class="chip hi">模倣期</span></td></tr>
+          <tr><td>自分の文章の<b>点検</b>（書き直させない）</td><td>Gemini</td><td><a href="#tsukuru">型3</a></td><td><span class="chip hi">言語化期〜</span></td></tr>
+          <tr><td><b>プロンプトそのもの</b>を作ってもらう</td><td>Gemini</td><td><a href="#tsukuru">型4</a></td><td><span class="chip">模倣期〜適合期</span></td></tr>
+          <tr><td>厚い資料から<b>要点を引く</b>（進路資料・手引き・研究資料）</td><td>NotebookLM</td><td><a href="gakko.html">学校の仕事</a></td><td><span class="chip">適合期</span></td></tr>
+          <tr><td><b>自作教材</b>を増やす・作り替える</td><td>Gemini ＋ ドキュメント／スライド</td><td><a href="shakai.html">社会科</a>・<a href="kokugo.html">国語</a></td><td><span class="chip">適合期</span></td></tr>
+          <tr><td>小テスト・アンケートの<b>デジタル化と自動集計</b></td><td>フォーム</td><td><a href="https://a-tozak.github.io/takata-kenshu/workspace/" target="_blank" rel="noopener">Workspaceガイド</a></td><td><span class="chip">構築期の入口</span></td></tr>
+          <tr><td>繰り返す連絡・集計を<b>仕組みにする</b></td><td>Gemの常設 → GAS</td><td><a href="gakko.html">学校の仕事</a></td><td><span class="chip">構築期</span></td></tr>
+          <tr><td>教材の束を、探せる<b>「棚」にする</b></td><td>台帳（スプレッドシート）→ サイト</td><td><a href="shakai.html">社会科</a>＋実例</td><td><span class="chip">構築期〜移転期</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="tip"><b>GeminiとNotebookLMの使い分けは、これだけ覚えれば足ります。</b>ゼロから作らせるならGemini。手元の資料から引き出すならNotebookLM。NotebookLMは渡した資料の中からしか答えず、どの資料のどこを根拠にしたかを示すので、「見きわめる」がぐっと楽になります。</div>
+  </div>
+</section>
+
+<!-- ===== 7 つくる ===== -->
+<section id="tsukuru">
+  <div class="wrap reveal">
+    <h2><span class="secno">7</span>手を動かす（第2部・本日の主役）</h2>
     <p class="lead">ここからが本日の中心です。じゅんびを入れて4つ、順番にいきます。それぞれのプロンプトは、ボタンひとつでコピーできます。「コピーしてGeminiを開く」を押すと、コピーと同時にGeminiが開きます。手が止まったら、その場でお声がけください。</p>
 
     <!-- じゅんび -->
@@ -255,8 +393,8 @@
       </div>
     </div>
 
-    <h3 style="margin-top:44px">持ち帰る型は、あと2本</h3>
-    <p class="sub" style="margin-top:6px">当日ためす時間がなくても、この2本はそのまま持ち帰れます。どちらも〔　〕の差し替えだけで使えます。</p>
+    <h3 style="margin-top:44px">持ち帰る型は、あと3本</h3>
+    <p class="sub" style="margin-top:6px">当日ためす時間がなくても、この3本はそのまま持ち帰れます。〔　〕の差し替えだけで使えます。3本目は少し変わり種で、「プロンプトを作るためのプロンプト」です。</p>
     <div class="prompt">
       <div class="ph"><span class="ttl">型2｜案をたくさん出させる（発問・活動・レク）</span><button class="copy" type="button">コピー</button></div>
       <pre>あなたは中学校〔2〕年〔社会〕の授業づくりの相談相手です。
@@ -274,17 +412,28 @@
 文章：〔　〕</pre>
       <div class="pa"><button class="copyopen" type="button" data-url="https://gemini.google.com/app">コピーしてGeminiを開く</button></div>
     </div>
-    <p style="margin-top:16px">型3が意外と効きます。書かせるのではなく、点検させる。自分の文章のまま、目だけ借りる使い方です。もっと型がほしくなったら、<a href="https://a-tozak.github.io/ai-prompt-library/" target="_blank" rel="noopener"><b>AIプロンプトライブラリ</b></a>（仕事系と、学年・教科系）へ。ぜんぶ〔　〕差し替え式です。まずは1本を選んで、1週間同じ型を使い続けるのがおすすめです。乗り換えないのがコツです。</p>
+    <div class="prompt">
+      <div class="ph"><span class="ttl">型4｜プロンプトを作るためのプロンプト</span><button class="copy" type="button">コピー</button></div>
+      <pre>あなたはプロンプトづくりの相談相手です。私は中学校の教員です。
+やりたい仕事：〔例＝学年集会の進行台本を作りたい〕
+この仕事に合うプロンプトを、①役割 ②条件 ③出力の形 ④〔差し替え欄〕の
+4部品で組み立ててください。進め方：
+・先に、決めておくべきこと（読み手・分量・文体など）を私に質問する。3つまで
+・私の答えを反映して、そのままコピーして使える完成形で出す
+・最後に「このプロンプトに入れてはいけない情報」の注意を1行そえる</pre>
+      <div class="pa"><button class="copyopen" type="button" data-url="https://gemini.google.com/app">コピーしてGeminiを開く</button></div>
+    </div>
+    <p style="margin-top:16px">型3が意外と効きます。書かせるのではなく、点検させる。自分の文章のまま、目だけ借りる使い方です。そして型4を持っていれば、プロンプトを自分で書けるようになる必要はもうありません。やりたい仕事を一言入れると、AIの側があなたに質問しながら、あなた用のプロンプトを作ります。もっと型がほしくなったら、<a href="https://a-tozak.github.io/ai-prompt-library/" target="_blank" rel="noopener"><b>AIプロンプトライブラリ</b></a>（仕事系と、学年・教科系）へ。ぜんぶ〔　〕差し替え式です。まずは1本を選んで、1週間同じ型を使い続けるのがおすすめです。乗り換えないのがコツです。</p>
   </div>
 </section>
 
 <!-- ===== 5 実例 ===== -->
 <section id="jitsurei">
   <div class="wrap reveal">
-    <h2><span class="secno">5</span>外﨑の実例</h2>
+    <h2><span class="secno">8</span>外﨑の実例</h2>
     <p class="lead">「ここまでできる」の上限を先にお見せする時間です。ぜんぶ真似しなくてかまいません。どれかひとつの「入口」だけ持ち帰ってください。</p>
 
-    <div class="shelf">
+    <div class="shelf c2">
       <a class="sh" href="#stock">
         <div class="tag">公開中｜無料・登録不要</div>
         <h3>School Stock（無料教材の棚）</h3>
@@ -295,6 +444,12 @@
         <div class="tag">公開中｜型の棚</div>
         <h3>AIプロンプトライブラリ</h3>
         <p>〔　〕差し替え式の型の棚。仕事系と、学年・教科系。きょうの型3本の続きはここにあります。仕事や教科に合わせた型を選べます。</p>
+        <span class="go">サイトを開く</span>
+      </a>
+      <a class="sh" href="https://a-tozak.github.io/chiiki-kyozai/" target="_blank" rel="noopener">
+        <div class="tag">公開中｜研究会の限定サイト</div>
+        <h3>地域教材活用事例集（Web版）</h3>
+        <p>小学校社会科研究会（筑豊地区）の紙の事例集を、AIとの分業でWebサイトにした実例です。冊子が「探せる棚」になり、関係者限定の公開もできます。くわしくは社会科のページで。</p>
         <span class="go">サイトを開く</span>
       </a>
       <div class="sh">
@@ -330,7 +485,7 @@
 <!-- ===== 6 教材資料 ===== -->
 <section id="stock" class="band">
   <div class="wrap reveal">
-    <h2><span class="secno">6</span>そのまま使える教材資料</h2>
+    <h2><span class="secno">9</span>そのまま使える教材資料</h2>
     <p class="lead">小学校向けに作ってきた教材資料を、Web上に整理して公開しています（作成・公開はいずれも本人によるものです）。登録やログインは不要で、開いて選び、印刷するだけで使えます。解答付きで、あわせて1,300枚以上あります。よく使われているものを9つ並べました。「先生のPDF道具箱」と「支援カード」は、校種を問わずそのまま使えます。</p>
 
     <div class="sgal">
@@ -440,10 +595,10 @@
 <!-- ===== 7 個別 ===== -->
 <section id="kobetsu">
   <div class="wrap reveal">
-    <h2><span class="secno">7</span>自分の仕事へ（第3部・個別の時間）</h2>
-    <p class="lead">ここからは、お一人ずつの時間です。ご自身のページを開いて、いちばん気になるところから読み始めてください。この時間もワークの続きです。どのプロンプトにもコピーのボタンを付けているので、読みながらその場でためせます。</p>
+    <h2><span class="secno">10</span>自分の仕事へ（第3部・個別の時間）</h2>
+    <p class="lead">ここからは、お一人ずつの時間です。ご自身のページと、お三方共通の「学校の仕事」のページを用意しました。いちばん気になるところから読み始めてください。この時間もワークの続きです。どのプロンプトにもコピーのボタンを付けているので、読みながらその場でためせます。</p>
 
-    <div class="doors">
+    <div class="doors three">
       <a class="door" href="kokugo.html">
         <div class="thumb"><img src="img/door_kokugo.webp" alt="本とプリントのフラットイラスト" loading="lazy"></div>
         <div class="k">PAGE 1</div>
@@ -470,6 +625,19 @@
         </ul>
         <span class="go">ページを開く</span>
       </a>
+      <a class="door" href="gakko.html">
+        <div class="thumb ph"><svg viewBox="0 0 300 96" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="5段階の地図の図。5つの箱が矢印でつながる"><g stroke="#22406e" stroke-width="2" fill="#fff"><rect x="8" y="34" width="44" height="30"/><rect x="68" y="34" width="44" height="30"/><rect x="128" y="34" width="44" height="30"/><rect x="188" y="34" width="44" height="30"/><rect x="248" y="34" width="44" height="30" fill="#33513f" stroke="#33513f"/></g><g stroke="#767b83" stroke-width="2"><line x1="53" y1="49" x2="66" y2="49"/><line x1="113" y1="49" x2="126" y2="49"/><line x1="173" y1="49" x2="186" y2="49"/><line x1="233" y1="49" x2="246" y2="49"/></g><g fill="#767b83" font-family="Georgia,serif" font-size="11"><text x="12" y="24">1</text><text x="72" y="24">2</text><text x="132" y="24">3</text><text x="192" y="24">4</text><text x="252" y="24">5</text></g></svg></div>
+        <div class="k">PAGE 3</div>
+        <h3>学校の仕事へ（お三方共通）</h3>
+        <p>教科を問わない、進路と校務と仕組みの話です。地図の右半分（構築期・移転期）は、このページが受け持ちます。</p>
+        <ul>
+          <li>進路指導：募集要項をNotebookLMに（実践例つき）</li>
+          <li>仕事の分解：任せる・自分でやる・行わない</li>
+          <li>自動化の階段：GASまでの7段</li>
+          <li>組織に手渡す：「誰がやっても」の作り方</li>
+        </ul>
+        <span class="go">ページを開く</span>
+      </a>
     </div>
 
     <div class="extra">
@@ -484,8 +652,8 @@
 <!-- ===== 8 配布資料 ===== -->
 <section id="shiryo" class="band">
   <div class="wrap reveal">
-    <h2><span class="secno">8</span>配布資料</h2>
-    <p class="lead">当日お配りする資料（A4×2枚）です。1枚目は型3本と守る線、そして「きょうの一歩」の記入欄。2枚目はお一人ずつの「次の一歩」です。白黒印刷でそのまま使える体裁にしています。</p>
+    <h2><span class="secno">11</span>配布資料</h2>
+    <p class="lead">当日お配りする紙は2種類です。①配布資料（A4×2枚）＝型と守る線、お一人ずつの「次の一歩」。②ワークシート（A4）＝できることチェック15項目と、仕事の分解。どちらも白黒印刷でそのまま使える体裁にしています。</p>
     <div class="take">
       <div class="qr"><img src="qr/sekita_qr.png" alt="本ページのQRコード"></div>
       <div>
@@ -494,7 +662,8 @@
         <div class="url">https://a-tozak.github.io/sekita-kenshu/</div>
         <div class="act">
           <a class="btn primary" href="haifu_shiryo.pdf" target="_blank" rel="noopener">配布資料PDFを開く</a>
-          <a class="btn" href="haifu_shiryo.pdf" download="碩田学園_生成AI研修_配布資料_令和8年8月10日.pdf">ダウンロード</a>
+          <a class="btn" href="worksheet_genzaichi.pdf" target="_blank" rel="noopener">ワークシート（現在地と分解）</a>
+          <a class="btn" href="kinyurei_3nin.pdf" target="_blank" rel="noopener">記入例（実態のちがう3人）</a>
         </div>
       </div>
     </div>
@@ -504,11 +673,15 @@
 <!-- ===== 9 よくある質問 ===== -->
 <section id="qa">
   <div class="wrap reveal">
-    <h2><span class="secno">9</span>よくある質問</h2>
+    <h2><span class="secno">12</span>よくある質問</h2>
     <div class="qa">
       <div class="row">
         <div class="q">無料の範囲でできますか</div>
-        <div class="a">はい。きょうの型3本とGemひとつは、無料の範囲で回ります。課金が要るのは、私のように大量の教材を作り続ける場合だけです。</div>
+        <div class="a">はい。きょうの型とGemひとつは、無料の範囲で回ります。課金が要るのは、私のように大量の教材を作り続ける場合だけです。</div>
+      </div>
+      <div class="row">
+        <div class="q">結局、どのAIを使えばよいですか</div>
+        <div class="a">学校のGoogleアカウントで使える2つ、GeminiとNotebookLMで足ります。ゼロから作らせるならGemini、手元の資料から引き出すならNotebookLM。やりたいこと別の入口は「結局、どれを何に使うか」（6節）の見取り図にまとめました。</div>
       </div>
       <div class="row">
         <div class="q">何から始めればよいですか</div>
@@ -520,7 +693,7 @@
       </div>
       <div class="row">
         <div class="q">プロンプトを考えるのが苦手です</div>
-        <div class="a">ゼロから書かなくてよいように、型を置いています。覚えるのは4つの部品だけで、あとは〔　〕の差し替えです。型の棚（AIプロンプトライブラリ）もそのまま使えます。</div>
+        <div class="a">ゼロから書かなくてよいように、型を置いています。覚えるのは4つの部品だけで、あとは〔　〕の差し替えです。それでも困ったら、型4「プロンプトを作るためのプロンプト」にやりたい仕事を一言入れてください。AIの側が質問しながら、あなた用のプロンプトを作ります。</div>
       </div>
       <div class="row">
         <div class="q">生徒に使わせてもよいですか</div>
@@ -537,13 +710,15 @@
 <!-- ===== 10 参考リンク・つながる先 ===== -->
 <section id="sanko" class="band">
   <div class="wrap reveal">
-    <h2><span class="secno">10</span>参考リンクと、つながる先</h2>
+    <h2><span class="secno">13</span>参考リンクと、つながる先</h2>
     <p class="lead">本研修で紹介したものと、関連する資料の一覧です。いずれも本人が作成し、公開しているものです。</p>
     <div class="tbl-scroll">
       <table class="tools">
         <thead><tr><th>名称</th><th>内容</th></tr></thead>
         <tbody>
           <tr><td class="name"><a href="https://gemini.google.com/app" target="_blank" rel="noopener">Gemini</a></td><td>本日使う生成AI。学校のGoogleアカウントでログインして使います。</td></tr>
+          <tr><td class="name"><a href="https://notebooklm.google.com/" target="_blank" rel="noopener">NotebookLM</a></td><td>手元の資料を読み込ませて、そこからだけ答えさせる道具。根拠の場所を示すので確認がしやすい。進路資料・研究資料の整理に。</td></tr>
+          <tr><td class="name"><a href="https://a-tozak.github.io/chiiki-kyozai/" target="_blank" rel="noopener">地域教材活用事例集（Web版）</a></td><td>研究会の紙の事例集をWebの棚にした実例（関係者限定公開）。「教材の束を棚にする」の到達点の見本です。</td></tr>
           <tr><td class="name"><a href="https://a-tozak.github.io/School_Stock/" target="_blank" rel="noopener">School Stock（教材資料サイト）</a></td><td>教科のプリント、支援の資料、校務の道具、実践アイデア、教材研究ノート。登録不要・無料。</td></tr>
           <tr><td class="name"><a href="https://a-tozak.github.io/ai-prompt-library/" target="_blank" rel="noopener">AIプロンプトライブラリ</a></td><td>校務と授業で使える型の集約。そのまま貼り付けて使えます。</td></tr>
           <tr><td class="name"><a href="https://a-tozak.github.io/School_Stock/tools/pdf-toolbox/" target="_blank" rel="noopener">先生のPDF道具箱</a></td><td>PDFの結合・打ち替え・2面付け・縦書きの書き込み。通信を行わないため校務文書にも使えます。</td></tr>
@@ -619,19 +794,24 @@
         <a href="#nagare">1 本日の流れ</a>
         <a href="#yakusoku">2 さきに、お約束</a>
         <a href="#kihon">3 AIの基本</a>
-        <a href="#tsukuru">4 手を動かす（ワークA・B・C）</a>
-        <a href="#jitsurei">5 外﨑の実例</a>
-        <a href="#stock">6 そのまま使える教材資料</a>
-        <a href="#kobetsu">7 自分の仕事へ</a>
-        <a href="#shiryo">8 配布資料</a>
-        <a href="#qa">9 よくある質問</a>
-        <a href="#sanko">10 参考リンクと、つながる先</a>
+        <a href="#chizu">4 地図：活用力の5段階</a>
+        <a href="#genzaichi">5 いまの現在地</a>
+        <a href="#tsukaimichi">6 結局、どれを何に使うか</a>
+        <a href="#tsukuru">7 手を動かす（ワークA・B・C）</a>
+        <a href="#jitsurei">8 外﨑の実例</a>
+        <a href="#stock">9 そのまま使える教材資料</a>
+        <a href="#kobetsu">10 自分の仕事へ</a>
+        <a href="#shiryo">11 配布資料</a>
+        <a href="#qa">12 よくある質問</a>
+        <a href="#sanko">13 参考リンクと、つながる先</a>
       </div>
       <div class="sm-col">
         <div class="sm-h">個別のページ・つながる先</div>
         <a href="kokugo.html">国語科・研究主任の先生へ</a>
         <a href="shakai.html">社会科の先生へ</a>
+        <a href="gakko.html">学校の仕事へ（お三方共通）</a>
         <a href="haifu_shiryo.pdf" target="_blank" rel="noopener">配布資料（PDF）</a>
+        <a href="worksheet_genzaichi.pdf" target="_blank" rel="noopener">ワークシート（現在地と分解）</a>
         <a href="https://gemini.google.com/app" target="_blank" rel="noopener">Gemini</a>
         <a href="https://note.com/tozaki_edu" target="_blank" rel="noopener">note</a>
         <a href="https://x.com/Tozaki_edu" target="_blank" rel="noopener">X（旧Twitter）</a>

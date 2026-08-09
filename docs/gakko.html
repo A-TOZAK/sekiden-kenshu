@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>学校の仕事へ（お三方共通）｜碩田学園 生成AI研修</title>
+<script>document.documentElement.className += ' js';</script>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ===== top bar ===== -->
+<header class="bar">
+  <div class="wrap">
+    <div class="brand"><a href="index.html">碩田学園　生成AI研修</a></div>
+    <nav class="nav">
+      <a href="index.html#nagare">流れ</a>
+      <a href="index.html#tsukuru">つくる</a>
+      <a href="kokugo.html">国語・研究主任</a>
+      <a href="shakai.html">社会科</a>
+      <a href="gakko.html" class="active">学校の仕事</a>
+      <a class="go-gemini" href="https://gemini.google.com/app" target="_blank" rel="noopener">Geminiを開く</a>
+    </nav>
+  </div>
+</header>
+
+<div class="wrap"><div class="crumb"><a href="index.html">はじめに</a> › 学校の仕事へ（お三方共通）</div></div>
+
+<!-- ===== hero ===== -->
+<div class="page-hero">
+  <div class="wrap">
+    <div class="kicker-ja">個別の時間　PAGE 3（お三方共通）</div>
+    <h1>学校の仕事へ：進路・校務・仕組みづくり</h1>
+    <p class="tagsub">このページは教科を問いません。地図（5段階）の右半分——構築期「仕組みにする」と移転期「組織に手渡す」——を、学校の仕事の実例で歩きます。きょう全部やる必要はありません。「こんなことまでできるのか」をひとつ持ち帰ってもらえたら十分です。</p>
+  </div>
+</div>
+
+<!-- ===== 1 進路指導 ===== -->
+<section class="band">
+  <div class="wrap reveal">
+    <h2><span class="secno">1</span>進路指導：募集要項を、ぜんぶNotebookLMに</h2>
+    <p class="lead">北海道の札幌新陽高校に、号刀（ごうなた）悠貴先生という方がいます。ご本人いわく「ICTもAIも得意ではない」。その号刀先生が、Google本社で開かれた発表会（Gemini for Education アイデアソン 2026）で発表された実践が、この夏、私がいちばん唸ったものでした。私も同じ会で発表していて、この実践を知りました。</p>
+
+    <div class="grid c2">
+      <div class="cell">
+        <div class="cn">困</div>
+        <h3>進路指導は、担任の情報量で差が出る</h3>
+        <p>大学の募集要項は分厚く、入試制度は毎年変わり、生徒の希望は多様です。先生は頑張っている。それでも、同じ生徒でも担任によって勧める学校が変わってしまう。号刀先生はここを問題にしました。「その進路指導、本当に担任次第でいいのか」。</p>
+      </div>
+      <div class="cell">
+        <div class="cn">解</div>
+        <h3>道内すべての大学の募集要項を読み込ませた</h3>
+        <p>やったことは一つです。北海道内の大学の募集要項を、NotebookLMにまとめて読み込ませる。すると「評定平均3.8。得意科目を活かして推薦か2教科で受験できる大学の一覧を」と聞けば、条件に合う入試が根拠つきでその場に出てきます。</p>
+      </div>
+    </div>
+
+    <p style="margin-top:22px; max-width:46em">この仕組みを保護者懇談で実際に使ったところ、経験20年の担任も3年目の担任も「その場で聞かれて、その場で答えられた」。保護者からは「相談した内容がすぐ資料になって出てくるので、家に帰ってから次の行動が取りやすい」。号刀先生のまとめの言葉が2つとも大事です。<b>「誰が担任でも、生徒に最適な進路指導ができる」</b>。そして<b>「AIは先生の代わりにはならない」</b>——出てきた情報を精査・整理して、生徒の前に出すかを決めるのは、最後まで先生の仕事として残る、ということです。</p>
+
+    <div class="extra">
+      <div>
+        <div class="ex-k">地図の上ではどこの話か</div>
+        <p>これは構築期「仕組みにする」の実践です。しかも「誰が担任でも」まで届いているので、移転期「組織に手渡す」の入口に立っています。号刀先生は操作の達人だからできたのではありません。<b>「進路指導のどこが担任次第になっているか」を言葉にできた</b>から、ここまで来ています。</p>
+      </div>
+    </div>
+
+    <h3 style="margin-top:44px">碩田学園の言葉に翻訳すると</h3>
+    <p class="lead" style="margin-top:8px">中学校なら、大学ではなく高校です。県内の高校が公開している募集要項・学校案内・説明会の日程を集めれば、同じ仕組みが作れます。号刀先生も「この仕組みは全国どこでも作れます」と言っていました。手順は4つだけです。</p>
+    <div class="menu">
+      <div class="head"><span class="badge">＊</span><h3>作り方（最初の1回は30分）</h3><span class="lv">NotebookLM</span></div>
+      <div class="body">
+        <ol class="steps">
+          <li>集める。各高校が公式サイトで公開している募集要項PDF・学校案内のURLを集めます（公開資料なので、そのまま読み込ませて問題ありません）。まず3校からで十分です。</li>
+          <li>NotebookLMに読み込ませる。「ソースを追加」にPDFやURLを入れるだけです。</li>
+          <li>聞き方の型で聞く（下の2本）。答えには、どの資料のどこを根拠にしたかが付きます。</li>
+          <li>確認は原本で。要項は毎年変わります。生徒・保護者に渡す前の最終確認だけは、人の仕事です。</li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="prompt">
+      <div class="ph"><span class="ttl">型｜条件に合う学校さがし</span><button class="copy" type="button">コピー</button></div>
+      <pre>読み込ませた募集要項の中から、次の条件に合う学校・学科と入試方式を
+一覧にしてください：〔例＝評定はまん中くらい。吹奏楽を続けたい。通学60分以内〕
+それぞれ、根拠になった資料名とページを付けてください。
+条件に完全に合うものと、「おしい」もの（条件を1つゆるめれば合うもの）を
+分けて示してください。</pre>
+      <div class="pa"><button class="copyopen" type="button" data-url="https://notebooklm.google.com/">コピーしてNotebookLMを開く</button></div>
+    </div>
+    <div class="prompt">
+      <div class="ph"><span class="ttl">型｜三者面談の「その場資料」</span><button class="copy" type="button">コピー</button></div>
+      <pre>いま相談した内容（〔例＝A高校とB高校で迷っている。部活動と学費が気になる〕）を、
+保護者に渡せるA4一枚の比較資料にまとめてください。
+構成：2校の比較表（学科・入試方式・日程・部活動・学費）
+→「次にできること」（見学・説明会・出願準備）を3つ。
+数値や日付には、根拠の資料名を付けてください。</pre>
+      <div class="pa"><button class="copyopen" type="button" data-url="https://notebooklm.google.com/">コピーしてNotebookLMを開く</button></div>
+    </div>
+    <div class="tip"><b>守る線はここです：</b>生徒の実名・成績データは入れません。条件は「評定はこのくらい・◯◯を続けたい・通学60分以内」のような言い換えで渡します。合否の見立てはさせません（材料の整理まで）。そして要項の年度と数字の最終確認は、必ず原本で。</div>
+  </div>
+</section>
+
+<!-- ===== 2 仕事の分解 ===== -->
+<section>
+  <div class="wrap reveal">
+    <h2><span class="secno">2</span>仕事の分解：「結局自分で直した方が早い」の正体</h2>
+    <p class="lead">AIをしばらく使うと、必ずこの壁が来ます。「出てきたものを直すくらいなら、自分で書いた方が早い」。原因はプロンプトの巧拙ではありません。<b>仕事を丸ごと渡して、丸ごと直している</b>ことです。処方箋は、仕事を手順の粒に分解して、粒ごとに「任せる・自分でやる・行わない」の札を付けること。これが地図の第3段階・適合期の中身です。</p>
+
+    <div class="grid c2">
+      <div class="cell">
+        <div class="cn">尺</div>
+        <h3>迷ったときの物差し・その1</h3>
+        <p>「これを任せたら、誰かの学び・誰かとの関係が削れないか」。削れるなら、自分でやるか、行わない。所見の中身の判断、保護者への電話、生徒をほめる言葉は、ここに入ります。</p>
+      </div>
+      <div class="cell">
+        <div class="cn">尺</div>
+        <h3>迷ったときの物差し・その2</h3>
+        <p>「型が決まっていて、直す前提で受け取れるか」。受け取れるなら、任せる候補。下書き・観点出し・分類・体裁の整えは、たいていここに入ります。</p>
+      </div>
+    </div>
+
+    <div class="prompt">
+      <div class="ph"><span class="ttl">型｜仕事の分解を手伝わせる</span><button class="copy" type="button">コピー</button></div>
+      <pre>あなたは業務改善の相談相手です。私は中学校の教員です。
+私の仕事「〔例：学年通信を作る〕」を、手順の粒に分解するのを手伝ってください。
+まず、この仕事を構成する手順を5〜8個、動詞で列挙してください。
+次に、各手順に「AIに任せる候補／人が判断すべき／そもそも省ける可能性」の
+3観点で短い所見を付けてください。
+最後に「最初にAIに渡すと効果が出やすい手順」を1つ選び、理由を添えてください。
+私の職場の実情はあなたには分からないので、判断は候補の提示にとどめてください。</pre>
+      <div class="pa"><button class="copyopen" type="button" data-url="https://gemini.google.com/app">コピーしてGeminiを開く</button></div>
+    </div>
+    <div class="tip"><b>紙でやるなら：</b>配布のワークシートのうら面が、そのままこの分解ワークです。きのう1日の仕事を10件書き出して、3件に札を付けるだけ。「行わない」が1つも思いつかない場合は、全部を抱えている合図です。</div>
+  </div>
+</section>
+
+<!-- ===== 3 自動化の階段 ===== -->
+<section class="band">
+  <div class="wrap reveal">
+    <h2><span class="secno">3</span>自動化の階段：GASは7段の5段目</h2>
+    <p class="lead">「AIでアプリまで作れるんですよ」から話を始めると、たいていの人は自分事になりません。自動化には階段が7段あって、大事なのは<b>いま自分がどの段を踏むか</b>です。きょうのワークでやった型とGemは、この階段の1〜3段目。それで十分に回ります。その先があることだけ、知って帰ってください。</p>
+    <div class="tbl-scroll">
+      <table class="tools">
+        <thead><tr><th style="width:3em">段</th><th style="width:13em">手段</th><th>できること</th><th style="width:9em">地図での段階</th></tr></thead>
+        <tbody>
+          <tr><td>1</td><td class="name">対話での生成</td><td>文書のたたき台・案出し・言い換え</td><td><span class="chip hi">模倣期</span></td></tr>
+          <tr><td>2</td><td class="name">定型文＋差し替え</td><td>繰り返す仕事の下書きを、型で安定して出す</td><td><span class="chip hi">模倣期〜適合期</span></td></tr>
+          <tr><td>3</td><td class="name">前提の常設（Gem）</td><td>毎回書いていた条件（学年・文体・読み手）を省略する</td><td><span class="chip">構築期</span></td></tr>
+          <tr><td>4</td><td class="name">表計算の関数・既製ツール</td><td>集計・整形・差し込みの半自動化</td><td><span class="chip">構築期</span></td></tr>
+          <tr><td>5</td><td class="name">GAS（スクリプト）</td><td>フォーム→集計→文書→通知の自動連携。コードはAIが書き、人が検収する</td><td><span class="chip">構築期</span></td></tr>
+          <tr><td>6</td><td class="name">GAS＋AIの連携</td><td>アンケート自由記述の分類・要約・観点別整理の自動化</td><td><span class="chip">構築期〜移転期</span></td></tr>
+          <tr><td>7</td><td class="name">エージェント・ノーコード</td><td>複数手順の仕事をまとめて任せ、先に決めた基準で検収する</td><td><span class="chip">移転期</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="margin-top:18px; max-width:46em">私の学校で回っている「学級通信・時間割・時数集計を一体にしたアプリ」や「座席表の画面で子どもの見取りを記録するアプリ」は、5段目のGASで作ったものです（<a href="index.html#jitsurei">実例の節</a>）。コードは全部AIが書きました。私がやったのは、要件を日本語で言い切ること（「保護者連絡アプリの3MB制限に収まること」まで含めて）と、動くかを確かめることだけです。<b>プログラミングの知識より、要件を言葉にする力が決め手</b>でした。</p>
+    <div class="prompt">
+      <div class="ph"><span class="ttl">型｜「行わないリスト」の壁打ち（階段をのぼる前に）</span><button class="copy" type="button">コピー</button></div>
+      <pre>私は中学校の教員です。生成AIに「任せない」と決めるべき仕事のリストを
+作っています。私の考えでは〔例：所見の中身の判断、保護者への電話、
+生徒をほめる言葉〕は任せません。
+①この判断の理由づけを、教育の言葉で言語化するのを手伝ってください。
+②逆に「任せない」に入れたもののうち、一部の工程なら任せられる可能性が
+あるものがあれば、工程を分けて示してください。
+最終的にどうするかは私が決めます。</pre>
+      <div class="pa"><button class="copyopen" type="button" data-url="https://gemini.google.com/app">コピーしてGeminiを開く</button></div>
+    </div>
+    <div class="tip"><b>階段をのぼるほど効くのは、実は「行わない」の判断です。</b>自動化できることが増えるほど、「任せてはならない仕事」（生徒の学びを削る仕事・人間関係が本体の仕事）を先に言葉にしておくことが、仕組みの安全装置になります。</div>
+  </div>
+</section>
+
+<!-- ===== 4 組織に手渡す ===== -->
+<section>
+  <div class="wrap reveal">
+    <h2><span class="secno">4</span>組織に手渡す：「誰がやっても」の作り方</h2>
+    <p class="lead">号刀先生の実践のいちばんの値打ちは、道具の腕前ではなく「誰が担任でも」でした。個人の名人芸で終わらせないのが、地図の最終段階・移転期です。逆に、うまく使える人に質問が集中して負担が増えているなら、それは腕の証明ではなく<b>「まだ手渡していない」合図</b>です。</p>
+    <div class="menu">
+      <div class="head"><span class="badge">＊</span><h3>小さく始める：同じ質問が3回来たら、紙にする</h3><span class="lv">A4半分・10分</span></div>
+      <div class="body">
+        <p style="font-size:15px">手順書というと大げさですが、始まりはA4半分で足ります。「よく聞かれること」をひとつ選んで、下の型で下書きを出し、自分の言葉に直して、職員室の共有フォルダに置く。これだけで、あなたが休んだ日にも回る仕事がひとつ増えます。</p>
+      </div>
+    </div>
+    <div class="prompt">
+      <div class="ph"><span class="ttl">型｜同僚に渡す「A4半分の説明書」</span><button class="copy" type="button">コピー</button></div>
+      <pre>私が職場でよく聞かれる質問「〔例：お便りの下書きをAIに頼むやり方〕」について、
+同僚に渡すA4半分の説明書の下書きを作ってください。
+条件：①手順は5つ以内 ②専門用語を使わない
+③「入れてはいけないもの」（生徒の名前・成績・教科書の本文）を必ず含める
+④最後に「困ったら〔自分の名前〕まで」の一行を置く ⑤ですます調
+出力のあとに、この説明書で伝わらない恐れのある箇所を1つ指摘してください。</pre>
+      <div class="pa"><button class="copyopen" type="button" data-url="https://gemini.google.com/app">コピーしてGeminiを開く</button></div>
+    </div>
+    <p style="margin-top:18px; max-width:46em">これを月1回の「研修だより」に載せていくと、1年で12本の手順書になります。だよりの型は<a href="kokugo.html">国語・研究主任のページ</a>に置きました。研究主任の先生の仕事と、このページの話は、ここでつながります。</p>
+
+    <div class="extra">
+      <div>
+        <div class="ex-k">きょうの一歩の例</div>
+        <p>県内の高校の募集要項PDFを3校ぶん集める。仕事をひとつ分解して札を付ける（ワークシートうら面）。よく聞かれる質問を1つ選ぶ。どれも2分で始められる大きさです。</p>
+      </div>
+    </div>
+    <div class="next">
+      <a href="shakai.html"><b>← 社会科の先生へ</b>となりのページ</a>
+      <a href="index.html#kobetsu"><b>はじめにもどる →</b>個別の時間</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== footer ===== -->
+<footer>
+  <div class="wrap">
+    <div class="foot-base">
+      <div><span class="lw">碩田学園　生成AI研修</span>　令和8年8月10日</div>
+      <div>© 2026 外﨑顯博</div>
+    </div>
+    <div class="note-local">本ページの文章はすべて資料作成者の自作です。号刀悠貴先生の実践は、Gemini for Education アイデアソン 2026 Showcase（Google for Education）での発表内容を、ご本人の発表趣旨に沿って資料作成者が要約したものです。発表資料そのものは掲載していません。児童生徒の個人情報、学校内部の資料、教科書の紙面は掲載していません。</div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

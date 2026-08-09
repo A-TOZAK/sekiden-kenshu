@@ -265,3 +265,53 @@ footer{border-top:1px solid var(--line); padding:44px 0 30px; font-size:13px; co
   header.bar{display:none}
   body{font-size:13px}
 }
+
+/* ===== 追補：地図・現在地チェック・使いみち・3枚目の扉（2026-08-09） ===== */
+
+/* 5段階の地図 */
+.stagemap{margin-top:32px; overflow-x:auto}
+.stagemap-inner{min-width:860px; border:1px solid var(--line); background:var(--paper); padding:22px 22px 20px}
+.sm-note{font-size:12.5px; font-weight:800; letter-spacing:.03em}
+.sm-note.top{color:var(--accent); margin-bottom:12px}
+.sm-note.bottom{color:var(--moss); margin-top:12px}
+.sm-row{display:flex; align-items:stretch}
+.sm-st{flex:1; border:1.5px solid var(--ink); background:var(--wash); padding:12px 10px 13px; text-align:center}
+.sm-st+.sm-st{margin-left:26px; position:relative}
+.sm-st+.sm-st::before{content:"→"; position:absolute; left:-23px; top:50%; transform:translateY(-50%); color:var(--sub); font-weight:700}
+.sm-st .no{font-family:var(--font-en); font-size:11px; color:var(--sub); font-weight:700; letter-spacing:.08em}
+.sm-st h4{font-size:16px; margin:2px 0 1px; color:var(--black)}
+.sm-st .m{font-size:12px; color:var(--sub)}
+.sm-cap{font-size:12.5px; color:var(--sub); margin-top:10px}
+
+/* 現在地チェック */
+.ck{margin-top:26px; border:1px solid var(--line); background:var(--paper)}
+.ck .ck-g{border-bottom:1px solid var(--line); padding:16px 20px 14px}
+.ck .ck-h{display:flex; align-items:baseline; gap:10px; margin-bottom:6px; flex-wrap:wrap}
+.ck .ck-h .n{font-family:var(--font-en); font-weight:700; color:var(--accent); font-size:13px}
+.ck .ck-h h4{font-size:16px; margin:0}
+.ck .ck-h .y{margin-left:auto; font-size:12px; color:var(--sub)}
+.ck label.ci{display:flex; gap:10px; align-items:flex-start; padding:5px 0; font-size:14.5px; cursor:pointer}
+.ck label.ci input{margin-top:5px; width:16px; height:16px; accent-color:var(--accent); flex:none}
+.ck label.ci .fn{flex:none; font-size:11px; font-weight:800; letter-spacing:.04em; border:1px solid var(--line); padding:1px 7px; border-radius:3px; color:var(--sub); margin-top:3px; white-space:nowrap}
+.ck label.ci .fn.u{border-color:var(--accent); color:var(--accent)}
+.ck-actions{padding:16px 20px; background:var(--wash); display:flex; gap:12px; flex-wrap:wrap; align-items:center}
+.ck-actions .note{font-size:12.5px; color:var(--sub)}
+.ck-result{display:none; margin:0 20px 18px; border:1.5px solid var(--accent); background:#f3f6fb; padding:16px 18px}
+.ck-result.show{display:block}
+.ck-result h4{color:var(--accent); font-size:16.5px; margin-bottom:4px}
+.ck-result p{font-size:14.5px; margin-top:4px}
+
+/* 段階チップ（使いみちの表） */
+.chip{display:inline-block; font-size:11.5px; font-weight:800; letter-spacing:.03em; border:1px solid var(--sub); border-radius:3px; padding:1px 8px; color:var(--sub); white-space:nowrap}
+.chip.hi{border-color:var(--accent); color:var(--accent)}
+
+/* 3枚の扉 */
+.doors.three{grid-template-columns:repeat(3,1fr)}
+@media(max-width:900px){ .doors.three{grid-template-columns:1fr} }
+.door .thumb.ph{aspect-ratio:3/2; display:grid; place-items:center; background:var(--wash); border-bottom:1px solid var(--line); margin:-26px -26px 16px}
+.door .thumb.ph svg{width:74%; height:auto}
+
+/* 実例スクリーンショット */
+.shot{border:1px solid var(--line); background:#fff; padding:8px; margin-top:20px}
+.shot img{display:block; width:100%; height:auto}
+.shot .cap{font-size:12.5px; color:var(--sub); padding:8px 4px 2px}
