@@ -1,130 +1,80 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-<meta charset="UTF-8">
-<title>配布資料 生成AI研修</title>
-<style>
-@page { size: A4 portrait; margin: 0; }
-:root { --ink:#15181c; --line:#c9c9c4; --sub:#767b83; --accent:#22406e; --wash:#f5f5f3; }
-* { margin:0; padding:0; box-sizing:border-box; }
-body { font-family: "Hiragino Sans","Hiragino Kaku Gothic ProN",sans-serif; color: var(--ink); font-feature-settings:"palt"; }
-.sheet { width: 210mm; height: 297mm; padding: 12mm 14mm 10mm; page-break-after: always; position: relative; }
-.sheet:last-child { page-break-after: auto; }
-.k { font-size: 3mm; letter-spacing: .16em; color: var(--sub); font-weight: 600; }
-h1 { font-size: 6.4mm; font-weight: 800; margin: 1mm 0 2.5mm; }
-h2 { font-size: 4.2mm; font-weight: 800; border-left: 1.4mm solid var(--accent); padding-left: 3mm; margin: 4mm 0 1.5mm; }
-p, li { font-size: 3.3mm; line-height: 1.75; }
-.pr { background: var(--wash); border: 0.25mm solid var(--line); padding: 2.5mm 3.5mm; font-size: 3.1mm; line-height: 1.7; margin: 1.5mm 0; white-space: pre-wrap; }
-.pr b { color: var(--accent); }
-.ng { border: 0.4mm solid var(--ink); padding: 2.5mm 3.5mm; margin: 1.5mm 0; font-size: 3.3mm; line-height: 1.8; }
-.two { display: flex; gap: 5mm; }
-.two > div { flex: 1; }
-footer { position: absolute; bottom: 6mm; left: 14mm; right: 14mm; font-size: 2.7mm; color: var(--sub); display: flex; justify-content: space-between; }
-table { width: 100%; border-collapse: collapse; margin: 1mm 0; }
-th { border-top: 0.4mm solid var(--ink); border-bottom: 0.2mm solid var(--ink); padding: 1.2mm 1.6mm; text-align: left; font-size: 3mm; }
-td { border-bottom: 0.15mm solid var(--line); padding: 1.2mm 1.6mm; font-size: 3.1mm; line-height: 1.6; vertical-align: top; }
-.c1 { font-weight: 700; white-space: nowrap; }
-.line { border-bottom: 0.25mm solid var(--line); height: 7mm; }
-</style>
-</head>
-<body>
-
-<!-- 1枚目：共通（型と線） -->
+<!DOCTYPE html><html lang="ja"><head><meta charset="UTF-8"><title>配布資料</title><style>
+@page{size:A4 portrait;margin:0}
+:root{--ink:#15181c;--line:#c9c9c4;--sub:#767b83;--accent:#22406e;--wash:#f5f5f3}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:"UDデジタル教科書体 ProN","UDデジタル教科書体 Pro","UDデジタル教科書体 StdN","BIZ UDGothic","Hiragino Sans",sans-serif;color:var(--ink);font-feature-settings:"palt"}
+.sheet{width:210mm;height:297mm;padding:15mm 15mm 12mm;page-break-after:always;position:relative}
+.sheet:last-child{page-break-after:auto}
+.k{font-size:3.4mm;letter-spacing:.12em;color:var(--sub)}
+h1{font-size:8mm;font-weight:800;margin:2mm 0 5mm}
+h2{font-size:5.2mm;font-weight:800;border-left:1.8mm solid var(--accent);padding-left:3mm;margin:6.5mm 0 2.5mm}
+p,li{font-size:4.2mm;line-height:1.85}
+.note{font-size:3.7mm;color:var(--sub);line-height:1.8}
+.ng{border:.5mm solid var(--ink);padding:3mm 4mm;margin:1.5mm 0;font-size:4.2mm;line-height:1.9}
+.line{border-bottom:.3mm solid var(--line);height:10mm}
+.stages{display:flex;gap:3mm;margin:3mm 0 1mm}
+.stages div{flex:1;border:.45mm solid var(--ink);border-radius:2mm;text-align:center;padding:4mm 1mm}
+.stages b{display:block;font-size:4.4mm}
+.stages span{font-size:3.2mm;color:var(--sub)}
+table{width:100%;border-collapse:collapse;margin:2mm 0}
+th{border-top:.45mm solid var(--ink);border-bottom:.25mm solid var(--ink);padding:2mm;text-align:left;font-size:3.8mm}
+td{border-bottom:.25mm solid var(--line);padding:2mm;font-size:4.0mm;line-height:1.75;vertical-align:top}
+.c1{font-weight:700;white-space:nowrap}
+footer{position:absolute;bottom:7mm;left:15mm;right:15mm;font-size:3.1mm;color:var(--sub);display:flex;justify-content:space-between}
+</style></head><body>
 <div class="sheet">
-  <div class="k">生成AI研修　2026.8.10　配布資料（1／2）</div>
-  <h1>きょう持ち帰る型と、守る線</h1>
+  <div class="k">碩田学園　生成AI研修　2026.8.10　配布資料（1／2）</div>
+  <h1>きょうの地図と、守る線</h1>
 
-  <h2>🙅 生成AIに入れないもの（机に貼る用）</h2>
-  <div class="ng">①児童生徒の名前・成績・作品・家庭のこと（必要なら「Aさん」に置き換え）　②教科書・市販教材・過去問の本文（要点を自分のメモにしてから）　③学校の内部文書。<b>迷ったら入れない。道具は学校・自治体で認められた範囲で。</b></div>
+  <h2>データとして入れないほうがよいもの</h2>
+  <div class="ng">① 具体的な個人情報（生徒の名前・成績・家庭のこと）<br>② 他者の著作権にふれるもの（教科書・市販教材・過去問の本文）<br>③ 取扱注意の内部情報（行事の予定くらいは大丈夫）<br><b>迷ったら入れない。道具は学校・自治体で認められた範囲で。</b></div>
 
-  <h2>活用力の5段階（地図）──現在地はワークシートで</h2>
-  <p><b>1 言語化期</b>（目的をことばにする）→<b>2 模倣期</b>（型を借りる）→<b>3 適合期</b>（自分の仕事に合わせる）→<b>4 構築期</b>（仕組みにする）→<b>5 移転期</b>（組織に手渡す）。進むのは「使う」の列だけ。「決める」（何が終われば終わりか・どこまで任せるか）と「見きわめる」（事実と出力の確認）は全段階で毎回はたらく。<b>段階が人で違うのは当然。低い段階は恥ではない。</b></p>
+  <h2>活用力の5段階（いまの自分に、ひとつ◯）</h2>
+  <div class="stages">
+    <div><b>1 言語化期</b><span>目的をことばに</span></div>
+    <div><b>2 模倣期</b><span>型を借りる</span></div>
+    <div><b>3 適合期</b><span>仕事に合わせる</span></div>
+    <div><b>4 構築期</b><span>仕組みにする</span></div>
+    <div><b>5 移転期</b><span>組織に手渡す</span></div>
+  </div>
+  <p class="note">進むのは「使う」の力だけ。「決める」（目的とゴールの設定）と「見きわめる」（確かめること）は、どの段階でも毎回はたらきます。</p>
 
-  <h2>プロンプトは4つの部品（ゼロから書かない）</h2>
-  <p><b>①役割</b>（誰として）＋<b>②条件</b>（読み手・文体）＋<b>③出力の形</b>（長さ・構成）＋<b>④〔差し替え〕</b>（毎回の中身）。直すときは言葉を飾らず、足りない部品を足す。プロンプトづくり自体をAIに頼む「型4」は研修サイトに。</p>
-
-  <h2>型1｜本時の発問とつまずきのたたき台</h2>
-  <div class="pr">あなたは中学校〔2〕年〔社会〕の授業づくりの相談相手です。
-単元〔　〕の本時のねらい：〔　〕
-①導入の発問2つ ②中心発問1つ（2案） ③生徒がつまずきそうな点2つと手当て
-を、教室でそのまま言える言い方で出してください。</div>
-
-  <h2>型2｜案をたくさん出させる</h2>
-  <div class="pr">あなたは中学校〔2〕年〔社会〕の授業づくりの相談相手です。
-単元〔　〕の導入で、生徒が「調べたい」と思う問いかけの案を10個、
-短い一文でください。実在の資料が要るものには（要資料）と付けてください。</div>
-
-  <h2>型3｜自分の文章の点検役</h2>
-  <div class="pr">次の文章は私が書いた〔　〕です。
-①誤字・わかりにくい箇所 ②読み手が不安になりそうな言い回し ③抜けている情報、
-の3点だけ指摘してください。<b>書き直しはしないでください。</b>
-文章：〔　〕</div>
-
-  <h2>AIの育て方（5歩）</h2>
-  <p>1 会話で直す（2〜3往復）→ 2 効いた型を保存 → 3 前提を常設（Gem：学年・文体・読み手）→ 4 <b>自作物だけ</b>手本として渡す → 5 「任せる・自分でやる・頼まない」の札を決める</p>
-
-  <h2>わたしの現在地と、きょうの一歩（2分でできるものを1つだけ）</h2>
-  <p>現在地：第（　　）段階・（　　　　）期</p>
+  <h2>きょうの一歩（2分で始められる大きさで、ひとつ）</h2>
   <div class="line"></div>
-
-  <footer><span>研修サイト（この内容の続き・型の棚へのリンク）は当日ご案内します</span><span>外﨑顯博（飯塚市立菰田小学校／LiFE with）</span></footer>
-</div>
-
-<!-- 2枚目：個別 -->
-<div class="sheet">
-  <div class="k">生成AI研修　2026.8.10　配布資料（2／2）</div>
-  <h1>お一人ずつの「次の一歩」</h1>
-
-  <div class="two">
-  <div>
-  <h2>国語科・研究主任の先生へ</h2>
-  <table>
-    <tr><th>やりたいこと</th><th>入口の一歩</th></tr>
-    <tr><td class="c1">教材づくり</td><td>本文ごと自作する（教科書本文は入れない）。型は研修サイトに。続きの型の棚＝中学校 Geminiプロンプト集</td></tr>
-    <tr><td class="c1">研究主任の校務</td><td>昨年度の要項（自作）を手本に渡して骨子から</td></tr>
-    <tr><td class="c1">研修だより</td><td>「1枚1ネタ」の型で、研修当日の放課後に10分で発行</td></tr>
-  </table>
-  <div class="pr" style="margin-top:2mm"><b>研修だよりの型</b>
-あなたは校内研修の「研修だより」の編集係です。
-読み手は本校の先生方。ですます調。押しつけない。
-次のメモから、A4半分の記事の下書きを：
-見出し（15字以内）→本文（200字）→「まずこれだけ」（1行）
-メモ：〔　〕</div>
-  </div>
-  <div>
-  <h2>社会科の先生へ</h2>
-  <table>
-    <tr><th>やりたいこと</th><th>入口の一歩</th></tr>
-    <tr><td class="c1">自作教材の量産</td><td>自信作1枚をテキスト化→設計を言語化させ→別単元へ。<b>自作物だからできる方法</b></td></tr>
-    <tr><td class="c1">台帳（DB）化</td><td>スプレッドシート1枚（学年・単元・種類・ねらい・リンク・手応え）から</td></tr>
-    <tr><td class="c1">サイト化</td><td>Drive共有→Googleサイト（校内限定）→外部公開は最後</td></tr>
-    <tr><td class="c1">授業の相談相手Gem</td><td>「ほめ言葉は不要」と役を与える（指示文は研修サイト「社会科」のページに）</td></tr>
-  </table>
-  <div class="pr" style="margin-top:2mm"><b>量産の型（冒頭のみ）</b>
-次のプリントは私が自作した社会科の教材です。
-【手順1】設計を言語化：①ねらい ②問いの型
-③資料の使わせ方 ④解答欄 ⑤難度の階段
-【手順2】その設計のまま、単元〔　〕版を。
-資料は「教科書p.〔　〕参照」にとどめること。</div>
-  </div>
-  </div>
-
-  <h2>お三方共通：学校の仕事（くわしくは研修サイト「学校の仕事」ページ）</h2>
-  <table>
-    <tr><th>やりたいこと</th><th>入口の一歩</th></tr>
-    <tr><td class="c1">進路指導</td><td>県内高校の募集要項PDFをGemini Notebookへ（まず3校）。条件で聞くと根拠つきで返る。<b>生徒名・成績は入れない。最終確認は原本</b></td></tr>
-    <tr><td class="c1">仕事の分解</td><td>きのうの仕事を10件書き、3件に「任せる・自分でやる・行わない」の札（ワークシートうら面）</td></tr>
-    <tr><td class="c1">組織に手渡す</td><td>同じ質問が3回来たものを、A4半分の紙にする（下書きの型はサイトに）</td></tr>
-  </table>
-
-  <h2>共通：社会科も国語も、検品はここだけ人の仕事</h2>
-  <p>①数字・年号・固有名詞は一次資料で確認　②語彙・漢字の水準が学年に合うか　③声に出して読んでつかえないか。この3つを通れば配ってよし。</p>
 
   <h2>メモ</h2>
-  <div class="line"></div>
+  <div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div>
 
-  <footer><span>続き・質問はいつでもどうぞ</span><span>外﨑顯博（飯塚市立菰田小学校／LiFE with）</span></footer>
+  <footer><span>型とプロンプトは、研修サイトと「中学校 Geminiプロンプト集」にあります</span><span>外﨑顯博</span></footer>
 </div>
 
-</body>
-</html>
+<div class="sheet">
+  <div class="k">碩田学園　生成AI研修　2026.8.10　配布資料（2／2）</div>
+  <h1>お一人ずつの「次の一歩」</h1>
+
+  <h2>国語科・研究主任の先生へ</h2>
+  <table>
+    <tr><td class="c1" style="width:38mm">教材づくり</td><td>本文から自分で書いてしまう（教科書本文は入れない）</td></tr>
+    <tr><td class="c1">研究主任の校務</td><td>昨年度の要項（自作）を手本に渡して、骨子から</td></tr>
+    <tr><td class="c1">研修だより</td><td>1枚1ネタの型で、研修当日の放課後に発行</td></tr>
+  </table>
+
+  <h2>社会科の先生へ</h2>
+  <table>
+    <tr><td class="c1" style="width:38mm">自作教材の量産</td><td>自信作1枚→設計を言葉にさせ→別単元へ（自作物だからできる）</td></tr>
+    <tr><td class="c1">台帳→棚</td><td>スプレッドシート1枚から。事例集のWeb化の実物はサイトに</td></tr>
+  </table>
+
+  <h2>お三方共通</h2>
+  <table>
+    <tr><td class="c1" style="width:38mm">進路指導</td><td>県内高校の募集要項をGemini Notebookへ（まず3校）。最終確認は原本</td></tr>
+    <tr><td class="c1">仕事の分解</td><td>ワークシートのうら面で。任せられる部分と、自分に残す部分</td></tr>
+    <tr><td class="c1">組織に手渡す</td><td>同じ質問が3回来たものを、A4半分の紙にする</td></tr>
+  </table>
+
+  <h2>メモ</h2>
+  <div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div>
+
+  <footer><span>続き・質問は、サイト右下の相談窓口からいつでもどうぞ</span><span>外﨑顯博</span></footer>
+</div>
+</body></html>

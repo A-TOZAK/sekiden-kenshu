@@ -1,28 +1,31 @@
 <!DOCTYPE html><html lang="ja"><head><meta charset="UTF-8"><title>ワークシート</title><style>
 @page{size:A4 portrait;margin:0}
-:root{--ink:#15181c;--line:#c9c9c4;--sub:#767b83;--accent:#22406e;--moss:#33513f;--wash:#f5f5f3}
+:root{--ink:#15181c;--line:#c9c9c4;--sub:#767b83;--accent:#22406e;--wash:#f5f5f3}
 *{margin:0;padding:0;box-sizing:border-box}
-body{font-family:"Hiragino Sans","Hiragino Kaku Gothic ProN",sans-serif;color:var(--ink);font-feature-settings:"palt"}
-.sheet{width:210mm;height:297mm;padding:16mm 16mm 12mm;page-break-after:always;position:relative}
+body{font-family:"UDデジタル教科書体 ProN","UDデジタル教科書体 Pro","UDデジタル教科書体 StdN","BIZ UDGothic","Hiragino Sans",sans-serif;color:var(--ink);font-feature-settings:"palt"}
+.sheet{width:210mm;height:297mm;padding:15mm 15mm 12mm;page-break-after:always;position:relative}
 .sheet:last-child{page-break-after:auto}
-.k{font-size:3.2mm;letter-spacing:.14em;color:var(--sub);font-weight:600}
-h1{font-size:7mm;font-weight:800;margin:2mm 0 6mm}
-h2{font-size:4.6mm;font-weight:800;border-left:1.6mm solid var(--accent);padding-left:3mm;margin:7mm 0 3mm}
-p,li{font-size:3.5mm;line-height:1.9}
-.note{font-size:3.1mm;color:var(--sub)}
-.line{border-bottom:.3mm solid var(--line);height:9mm}
-.ck{margin:1mm 0 2mm}
-.ck .g{font-weight:800;font-size:3.6mm;margin:3.5mm 0 1mm}
-.ck label{display:block;font-size:3.4mm;line-height:1.9;padding-left:7mm;position:relative}
-.ck label::before{content:"";position:absolute;left:1mm;top:1.6mm;width:3.4mm;height:3.4mm;border:.35mm solid var(--ink)}
+.k{font-size:3.4mm;letter-spacing:.12em;color:var(--sub)}
+h1{font-size:8mm;font-weight:800;margin:2mm 0 5mm}
+h2{font-size:5.2mm;font-weight:800;border-left:1.8mm solid var(--accent);padding-left:3mm;margin:6.5mm 0 2.5mm}
+p,li{font-size:4.2mm;line-height:1.85}
+.note{font-size:3.7mm;color:var(--sub);line-height:1.8}
+.ng{border:.5mm solid var(--ink);padding:3mm 4mm;margin:1.5mm 0;font-size:4.2mm;line-height:1.9}
+.line{border-bottom:.3mm solid var(--line);height:10mm}
 .stages{display:flex;gap:3mm;margin:3mm 0 1mm}
-.stages div{flex:1;border:.4mm solid var(--ink);border-radius:2mm;text-align:center;padding:3.5mm 1mm}
-.stages b{display:block;font-size:3.8mm}
-.stages span{font-size:2.9mm;color:var(--sub)}
+.stages div{flex:1;border:.45mm solid var(--ink);border-radius:2mm;text-align:center;padding:4mm 1mm}
+.stages b{display:block;font-size:4.4mm}
+.stages span{font-size:3.2mm;color:var(--sub)}
 table{width:100%;border-collapse:collapse;margin:2mm 0}
-th{border-top:.4mm solid var(--ink);border-bottom:.2mm solid var(--ink);padding:1.6mm 2mm;text-align:left;font-size:3.2mm}
-td{border-bottom:.2mm solid var(--line);padding:1.6mm 2mm;font-size:3.4mm;vertical-align:top}
-footer{position:absolute;bottom:7mm;left:16mm;right:16mm;font-size:2.8mm;color:var(--sub);display:flex;justify-content:space-between}
+th{border-top:.45mm solid var(--ink);border-bottom:.25mm solid var(--ink);padding:2mm;text-align:left;font-size:3.8mm}
+td{border-bottom:.25mm solid var(--line);padding:2mm;font-size:4.0mm;line-height:1.75;vertical-align:top}
+.c1{font-weight:700;white-space:nowrap}
+footer{position:absolute;bottom:7mm;left:15mm;right:15mm;font-size:3.1mm;color:var(--sub);display:flex;justify-content:space-between}
+</style><style>
+.ck{margin:1mm 0}
+.ck .g{font-weight:800;font-size:4.3mm;margin:3.5mm 0 1mm}
+.ck label{display:block;font-size:4.0mm;line-height:1.85;padding-left:8mm;position:relative}
+.ck label::before{content:"";position:absolute;left:1mm;top:2mm;width:4mm;height:4mm;border:.4mm solid var(--ink)}
 </style></head><body>
 <div class="sheet">
   <div class="k">碩田学園　生成AI研修　ワークシート（1／2）</div>
@@ -31,7 +34,7 @@ footer{position:absolute;bottom:7mm;left:16mm;right:16mm;font-size:2.8mm;color:v
   <h2>できることチェック（いまの正直なところに ✓）</h2>
   <div class="ck">
     <div class="g">1　言語化期：目的をことばにする</div>
-    <label>AIに向かう前に「この仕事は何が終われば終わりか」を一文で言える</label>
+    <label>「この仕事は何が終われば終わりか」を一文で言える</label>
     <label>AIと対話を重ねて、出力を注文どおりに変えられる</label>
     <label>出てきた事実（日付・数字・名前）を確かめてから使う</label>
     <div class="g">2　模倣期：型を借りる</div>
@@ -41,7 +44,7 @@ footer{position:absolute;bottom:7mm;left:16mm;right:16mm;font-size:2.8mm;color:v
     <div class="g">3　適合期：自分の仕事に合わせる</div>
     <label>人がやることとAIにさせることを、言葉で分けられる</label>
     <label>定型文を目的に合わせて足し引きできる</label>
-    <label>任せ所を判断でき、入れてはいけない情報を即答できる</label>
+    <label>入れてはいけない情報を即答できる</label>
     <div class="g">4　構築期：仕組みにする</div>
     <label>仕組みにする仕事を選べる（繰り返す仕事から）</label>
     <label>Gemなどで、繰り返す仕事を仕組みにできる</label>
@@ -60,10 +63,9 @@ footer{position:absolute;bottom:7mm;left:16mm;right:16mm;font-size:2.8mm;color:v
     <div><b>4 構築期</b><span>仕組みにする</span></div>
     <div><b>5 移転期</b><span>組織に手渡す</span></div>
   </div>
-  <p class="note">となりの人と違って当然です。低い段階は恥ではありません。経験年数と段階は比例しません。</p>
 
-  <h2>メモ（気づいたこと・ためしたいこと、自由に）</h2>
-  <div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div>
+  <h2>メモ</h2>
+  <div class="line"></div><div class="line"></div><div class="line"></div>
 
   <footer><span>碩田学園 生成AI研修（令和8年8月10日）</span><span>外﨑顯博</span></footer>
 </div>
@@ -71,26 +73,26 @@ footer{position:absolute;bottom:7mm;left:16mm;right:16mm;font-size:2.8mm;color:v
 <div class="sheet">
   <div class="k">碩田学園　生成AI研修　ワークシート（2／2）</div>
   <h1>仕事を、手順の粒に分ける</h1>
-  <p>きのう（またはきょう）やった仕事を、思い出せる順に書いてください。「連絡帳の返事」「丸つけ」くらいの粒で。</p>
+  <p>きのう（またはきょう）やった仕事を、思い出せる順に。「連絡帳の返事」「丸つけ」くらいの粒で。</p>
   <table>
-    <tr><td style="width:8mm">1</td><td></td><td style="width:8mm">6</td><td></td></tr>
-    <tr><td>2</td><td></td><td>7</td><td></td></tr>
-    <tr><td>3</td><td></td><td>8</td><td></td></tr>
-    <tr><td>4</td><td></td><td>9</td><td></td></tr>
-    <tr><td>5</td><td></td><td>10</td><td></td></tr>
+    <tr><td style="width:9mm">1</td><td style="height:9mm"></td><td style="width:9mm">6</td><td></td></tr>
+    <tr><td>2</td><td style="height:9mm"></td><td>7</td><td></td></tr>
+    <tr><td>3</td><td style="height:9mm"></td><td>8</td><td></td></tr>
+    <tr><td>4</td><td style="height:9mm"></td><td>9</td><td></td></tr>
+    <tr><td>5</td><td style="height:9mm"></td><td>10</td><td></td></tr>
   </table>
 
   <h2>その中から1つ選んで、考えてみる</h2>
   <table>
-    <tr><th style="width:34mm">選んだ仕事</th><td style="height:10mm"></td></tr>
-    <tr><th>AIに任せられそうな部分</th><td style="height:14mm"></td></tr>
-    <tr><th>自分に残す部分</th><td style="height:14mm"></td></tr>
+    <tr><th style="width:44mm">選んだ仕事</th><td style="height:11mm"></td></tr>
+    <tr><th>AIに任せられそうな部分</th><td style="height:16mm"></td></tr>
+    <tr><th>自分に残す部分</th><td style="height:16mm"></td></tr>
   </table>
   <p class="note">迷ったときの物差し：①これを任せたら、誰かの学び・誰かとの関係が削れないか（削れるなら自分に残す）　②型が決まっていて、直す前提で受け取れるか（受け取れるなら任せる候補）</p>
 
   <h2>メモ</h2>
-  <div class="line"></div><div class="line"></div><div class="line"></div>
+  <div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div>
 
-  <footer><span>続き・質問はいつでもどうぞ（サイト右下の相談窓口から）</span><span>外﨑顯博</span></footer>
+  <footer><span>続き・質問は、サイト右下の相談窓口からいつでもどうぞ</span><span>外﨑顯博</span></footer>
 </div>
 </body></html>
