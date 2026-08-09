@@ -43,6 +43,7 @@ async function copyText(pre){
   <nav class="drawer" aria-label="サイト全体のメニュー">
     <div class="dh">碩田学園 生成AI研修</div>
     <div class="dg">研修本編（きょうの問い）</div>
+    <a href="slide/">スライド版（投影用・24枚）</a>
     <a href="index.html#nagare">本日の流れ</a>
     <a href="index.html#kihon">問い1｜AIを使うとは</a>
     <a href="index.html#chizu">　地図：活用力の5段階</a>
@@ -56,7 +57,7 @@ async function copyText(pre){
     <div class="dg">じてん（辞書）</div>
     <a href="jiten/">じてんの目次</a>
     <a href="jiten/gemini.html">Gemini</a>
-    <a href="jiten/notebooklm.html">NotebookLM</a>
+    <a href="jiten/notebooklm.html">Gemini Notebook</a>
     <a href="jiten/docs.html">ドキュメント</a>
     <a href="jiten/sheets.html">スプレッドシート</a>
     <a href="jiten/slides.html">スライド</a>

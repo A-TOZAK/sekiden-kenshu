@@ -16,6 +16,7 @@
   <div class="wrap">
     <div class="brand">碩田学園　生成AI研修</div>
     <nav class="nav">
+      <a href="slide/" >スライド</a>
       <a href="#nagare">流れ</a>
       <a href="#chizu">地図</a>
       <a href="#genzaichi">現在地</a>
@@ -51,6 +52,7 @@
 <section id="nagare">
   <div class="wrap reveal">
     <h2><span class="secno">1</span>本日の流れ</h2>
+    <div class="tip" style="margin-top:14px"><b>投影用スライド：</b>きょうの進行は<a href="slide/"><b>スライド版（1枚1メッセージ・24枚）</b></a>でも進められます。各スライドから、このサイトの該当ページに飛べます。</div>
     <p class="lead">このサイトは、お三方のための研修サイトです。前半は共通、後半はお一人ずつのページに分かれます。話を聞く時間は短く、手を動かす時間を長く。その場で書き取っていただく必要はありません。</p>
     <div class="flow">
       <div class="step">
@@ -208,7 +210,7 @@
           <tr>
             <td class="name">4 構築期<span>目安：1年目</span></td>
             <td>仕組みにする仕事を選べる。<br>例）毎週の連絡・時数集計のように、繰り返す仕事から選ぶ</td>
-            <td>Gem・GAS等で仕組みを組める。<br>例）通信のGemを常設する。集計をGASでアプリにする。NotebookLMで資料を焦点化する</td>
+            <td>Gem・GAS等で仕組みを組める。<br>例）通信のGemを常設する。集計をGASでアプリにする。Gemini Notebookで資料を焦点化する</td>
             <td>仕組みを検査できる。<br>例）出力をときどき抜き取りで確かめ、ずれてきたら設計を直す</td>
           </tr>
           <tr>
@@ -302,14 +304,15 @@
           <li>出てきた2案から、良い方を選びます。「選ぶのは、直すより速い」が実感できたら成功です。</li>
         </ol>
         <div class="prompt">
-          <div class="ph"><span class="ttl">型1｜お便り・案内のたたき台</span><button class="copy" type="button">コピー</button></div>
-          <pre>あなたは中学校のお便りの編集係です。
-読み手は〔保護者〕。ですます調で、あたたかく、しかし大げさにしない。
-次のメモをもとに、〔150〕字の本文を2案作ってください。
-メモ：〔校外学習の予定。雨天時は行程を一部変更。お弁当と水筒。しおりは金曜配布〕</pre>
+          <div class="ph"><span class="ttl">型1｜本時の発問とつまずきのたたき台</span><button class="copy" type="button">コピー</button></div>
+          <pre>あなたは中学校〔2〕年〔社会〕の授業づくりの相談相手です。
+単元〔江戸時代の産業〕の本時のねらい：〔交通網の発達が各地の産業を変えたことを説明できる〕
+この本時について、次の3点を教室でそのまま言える言い方で出してください。
+①導入の発問2つ ②中心発問1つ（2案）
+③生徒がつまずきそうな点2つと、その場でできる手当て</pre>
           <div class="pa"><button class="copyopen" type="button" data-url="https://gemini.google.com/app">コピーしてGeminiを開く</button></div>
         </div>
-        <div class="tip"><b>つまずき対策：</b>ぼんやり頼むと、ぼんやり返ってきます。学年・読み手・長さを〔　〕に入れるだけで、返ってくるものが変わります。メモの中身はぜんぶ自分の言葉で。個人名は入れません。</div>
+        <div class="tip"><b>つまずき対策：</b>ぼんやり頼むと、ぼんやり返ってきます。学年・単元・ねらいを〔　〕に入れるだけで、返ってくるものが変わります。ねらいは自分の言葉で。生徒の個人名は入れません。</div>
       </div>
     </div>
 
@@ -398,7 +401,7 @@
 ・最後に「このプロンプトに入れてはいけない情報」の注意を1行そえる</pre>
       <div class="pa"><button class="copyopen" type="button" data-url="https://gemini.google.com/app">コピーしてGeminiを開く</button></div>
     </div>
-    <p style="margin-top:16px">型3が意外と効きます。書かせるのではなく、点検させる。自分の文章のまま、目だけ借りる使い方です。そして型4を持っていれば、プロンプトを自分で書けるようになる必要はもうありません。やりたい仕事を一言入れると、AIの側があなたに質問しながら、あなた用のプロンプトを作ります。もっと型がほしくなったら、<a href="https://a-tozak.github.io/ai-prompt-library/" target="_blank" rel="noopener"><b>AIプロンプトライブラリ</b></a>（仕事系と、学年・教科系）へ。ぜんぶ〔　〕差し替え式です。まずは1本を選んで、1週間同じ型を使い続けるのがおすすめです。乗り換えないのがコツです。</p>
+    <p style="margin-top:16px">型3が意外と効きます。書かせるのではなく、点検させる。自分の文章のまま、目だけ借りる使い方です。そして型4を持っていれば、プロンプトを自分で書けるようになる必要はもうありません。やりたい仕事を一言入れると、AIの側があなたに質問しながら、あなた用のプロンプトを作ります。もっと型がほしくなったら、<a href="https://a-tozak.github.io/School_Stock/ai/jhs.html" target="_blank" rel="noopener"><b>中学校 Geminiプロンプト集</b></a>へ。学年・教科・場面（単元計画・本時の展開・発問・つまずき・評価・授業改善）から選んで、貼り付けるだけです。まずは1本を選んで、1週間同じ型を使い続けるのがおすすめです。乗り換えないのがコツです。</p>
   </div>
 </section>
 
@@ -415,7 +418,7 @@
           <tr><td>発問・活動・レクの<b>案をたくさん出す</b></td><td>Gemini</td><td><a href="#tsukuru">型2</a></td><td><span class="chip hi">模倣期</span></td></tr>
           <tr><td>自分の文章の<b>点検</b>（書き直させない）</td><td>Gemini</td><td><a href="#tsukuru">型3</a></td><td><span class="chip hi">言語化期〜</span></td></tr>
           <tr><td><b>プロンプトそのもの</b>を作ってもらう</td><td>Gemini</td><td><a href="#tsukuru">型4</a></td><td><span class="chip">模倣期〜適合期</span></td></tr>
-          <tr><td>厚い資料から<b>要点を引く</b>（進路資料・手引き・研究資料）</td><td>NotebookLM</td><td><a href="gakko.html">学校の仕事</a></td><td><span class="chip">適合期</span></td></tr>
+          <tr><td>厚い資料から<b>要点を引く</b>（進路資料・手引き・研究資料）</td><td>Gemini Notebook</td><td><a href="gakko.html">学校の仕事</a></td><td><span class="chip">適合期</span></td></tr>
           <tr><td><b>自作教材</b>を増やす・作り替える</td><td>Gemini ＋ ドキュメント／スライド</td><td><a href="shakai.html">社会科</a>・<a href="kokugo.html">国語</a></td><td><span class="chip">適合期</span></td></tr>
           <tr><td>小テスト・アンケートの<b>デジタル化と自動集計</b></td><td>フォーム</td><td><a href="https://a-tozak.github.io/takata-kenshu/workspace/" target="_blank" rel="noopener">Workspaceガイド</a></td><td><span class="chip">構築期の入口</span></td></tr>
           <tr><td>繰り返す連絡・集計を<b>仕組みにする</b></td><td>Gemの常設 → GAS</td><td><a href="gakko.html">学校の仕事</a></td><td><span class="chip">構築期</span></td></tr>
@@ -423,7 +426,7 @@
         </tbody>
       </table>
     </div>
-    <div class="tip"><b>GeminiとNotebookLMの使い分けは、これだけ覚えれば足ります。</b>ゼロから作らせるならGemini。手元の資料から引き出すならNotebookLM。NotebookLMは渡した資料の中からしか答えず、どの資料のどこを根拠にしたかを示すので、「見きわめる」がぐっと楽になります。</div>
+    <div class="tip"><b>GeminiとGemini Notebookの使い分けは、これだけ覚えれば足ります。</b>ゼロから作らせるならGemini。手元の資料から引き出すならGemini Notebook。Gemini Notebookは渡した資料の中からしか答えず、どの資料のどこを根拠にしたかを示すので、「見きわめる」がぐっと楽になります。</div>
   </div>
 </section>
 
@@ -466,7 +469,7 @@
         <h3>学校の仕事へ（お三方共通）</h3>
         <p>教科を問わない、進路と校務と仕組みの話です。地図の右半分（構築期・移転期）は、このページが受け持ちます。</p>
         <ul>
-          <li>進路指導：募集要項をNotebookLMに（実践例つき）</li>
+          <li>進路指導：募集要項をGemini Notebookに（実践例つき）</li>
           <li>仕事の分解：任せる・自分でやる・行わない</li>
           <li>自動化の階段：GASまでの7段</li>
           <li>組織に手渡す：「誰がやっても」の作り方</li>
@@ -497,10 +500,10 @@
         <p>国語の読解プリント115枚（小1〜6・自作本文）、算数の演習88単元、理科、動く解説教材など。すべて生成AIとの分業で作った自作教材です。「AIで作った教材の完成形」の見本として、次の節でくわしく紹介します。</p>
         <span class="go">教材資料の節へ</span>
       </a>
-      <a class="sh" href="https://a-tozak.github.io/ai-prompt-library/" target="_blank" rel="noopener">
+      <a class="sh" href="https://a-tozak.github.io/School_Stock/ai/jhs.html" target="_blank" rel="noopener">
         <div class="tag">公開中｜型の棚</div>
-        <h3>AIプロンプトライブラリ</h3>
-        <p>〔　〕差し替え式の型の棚。仕事系と、学年・教科系。きょうの型3本の続きはここにあります。仕事や教科に合わせた型を選べます。</p>
+        <h3>中学校 Geminiプロンプト集</h3>
+        <p>学年・教科・場面から選ぶ、中学校専用の型の棚。単元計画・本時の展開・発問・つまずき・評価・授業改善の6場面。貼り付けるだけで使えます。</p>
         <span class="go">サイトを開く</span>
       </a>
       <a class="sh" href="https://a-tozak.github.io/chiiki-kyozai/" target="_blank" rel="noopener">
@@ -530,7 +533,7 @@
           <tr><td class="name">教材の生産ライン</td><td>問題の中身（本文・設問）だけを書けば、組版・ふりがな・解答面・確認画像まで自動で出る仕組み。AIの役目は「文章を書く」から「型に部品を納める」へ。体裁は人でなく仕組みが守ります。</td></tr>
           <tr><td class="name">学級通信・時間割・時数のWebアプリ</td><td>学級通信づくり・翌週の時間割・時数の集計を一度に済ませる自作アプリ（GAS）。ワンクリックでPDF化して印刷でき、保護者連絡アプリの3MB制限に収まる設計。作ったのはAI、要件（3MBも要件のうち）を言葉にしたのが私。</td></tr>
           <tr><td class="name">座席表型の見取り・記録アプリ</td><td>授業中、座席表の画面で子どもの様子を見取り、席を長押しするとその子の頑張りのコメントが残る自作アプリ（GAS）。日々の記録が所見の材料になり、評価の説明にも使えます。成績そのものには使いません。次の指導に生かす専用です。</td></tr>
-          <tr><td class="name">振り返りの焦点化（NotebookLM）</td><td>集めた振り返りの記述を資料として渡し、個人の振り返りを焦点化して拾い上げる使い方。成績には使いません。次の授業に生かす専用です。</td></tr>
+          <tr><td class="name">振り返りの焦点化（Gemini Notebook）</td><td>集めた振り返りの記述を資料として渡し、個人の振り返りを焦点化して拾い上げる使い方。成績には使いません。次の授業に生かす専用です。</td></tr>
           <tr><td class="name">検品の仕組み</td><td>AIの出力を信じない、を根性でなく工程でやります。一次資料を先に見る。数字・固有名詞は機械で検査する。公開前にチェックの関門を置く。失敗もたくさんしました。器具の図を2回作り直した話などは当日に。</td></tr>
         </tbody>
       </table>
@@ -664,7 +667,7 @@
       <thead><tr><th style="width:13em">項目</th><th>ひとことで</th></tr></thead>
       <tbody>
         <tr><td class="name"><a href="jiten/gemini.html">Gemini</a></td><td>本研修の主役。対話で作る生成AI。自分専用の係「Gem」もここで。</td></tr>
-        <tr><td class="name"><a href="jiten/notebooklm.html">NotebookLM</a></td><td>手元の資料からだけ答えさせる道具。根拠つきで確認しやすい。進路資料に。</td></tr>
+        <tr><td class="name"><a href="jiten/notebooklm.html">Gemini Notebook</a></td><td>手元の資料からだけ答えさせる道具。根拠つきで確認しやすい。進路資料に。</td></tr>
         <tr><td class="name"><a href="jiten/docs.html">ドキュメント</a></td><td>Wordにあたる文書の道具。「保存して送る」が「置いて共有する」に変わる。</td></tr>
         <tr><td class="name"><a href="jiten/sheets.html">スプレッドシート</a></td><td>Excelにあたる表計算。同時入力と自動集計が強み。</td></tr>
         <tr><td class="name"><a href="jiten/slides.html">スライド</a></td><td>PowerPointにあたるスライド。班で1つを同時編集できる。</td></tr>
@@ -728,7 +731,7 @@
       </div>
       <div class="row">
         <div class="q">結局、どのAIを使えばよいですか</div>
-        <div class="a">学校のGoogleアカウントで使える2つ、GeminiとNotebookLMで足ります。ゼロから作らせるならGemini、手元の資料から引き出すならNotebookLM。やりたいこと別の入口は「結局、どれを何に使うか」（7節）の見取り図にまとめました。</div>
+        <div class="a">学校のGoogleアカウントで使える2つ、GeminiとGemini Notebookで足ります。ゼロから作らせるならGemini、手元の資料から引き出すならGemini Notebook。やりたいこと別の入口は「結局、どれを何に使うか」（7節）の見取り図にまとめました。</div>
       </div>
       <div class="row">
         <div class="q">何から始めればよいですか</div>
@@ -764,12 +767,12 @@
         <thead><tr><th>名称</th><th>内容</th></tr></thead>
         <tbody>
           <tr><td class="name"><a href="https://gemini.google.com/app" target="_blank" rel="noopener">Gemini</a></td><td>本日使う生成AI。学校のGoogleアカウントでログインして使います。</td></tr>
-          <tr><td class="name"><a href="https://notebooklm.google.com/" target="_blank" rel="noopener">NotebookLM</a></td><td>手元の資料を読み込ませて、そこからだけ答えさせる道具。根拠の場所を示すので確認がしやすい。進路資料・研究資料の整理に。</td></tr>
-          <tr><td class="name"><a href="https://lessonlibrary.withgoogle.com/intl/ALL_jp/" target="_blank" rel="noopener">Google for Education 活用ライブラリ</a></td><td>全国の先生の活用事例集。GeminiやNotebookLMの実例を場面から探せます。</td></tr>
+          <tr><td class="name"><a href="https://notebooklm.google.com/" target="_blank" rel="noopener">Gemini Notebook</a></td><td>手元の資料を読み込ませて、そこからだけ答えさせる道具。根拠の場所を示すので確認がしやすい。進路資料・研究資料の整理に。</td></tr>
+          <tr><td class="name"><a href="https://lessonlibrary.withgoogle.com/intl/ALL_jp/" target="_blank" rel="noopener">Google for Education 活用ライブラリ</a></td><td>全国の先生の活用事例集。GeminiやGemini Notebookの実例を場面から探せます。</td></tr>
           <tr><td class="name"><a href="https://sites.google.com/view/gemini-tozaki/home" target="_blank" rel="noopener">Geminiアイデア村</a></td><td>外﨑がアイデアソンで発表した企画のサイト。</td></tr>
           <tr><td class="name"><a href="https://a-tozak.github.io/chiiki-kyozai/" target="_blank" rel="noopener">地域教材活用事例集（Web版）</a></td><td>研究会の紙の事例集をWebの棚にした実例（関係者限定公開）。「教材の束を棚にする」の到達点の見本です。</td></tr>
           <tr><td class="name"><a href="https://a-tozak.github.io/School_Stock/" target="_blank" rel="noopener">School Stock（教材資料サイト）</a></td><td>教科のプリント、支援の資料、校務の道具、実践アイデア、教材研究ノート。登録不要・無料。</td></tr>
-          <tr><td class="name"><a href="https://a-tozak.github.io/ai-prompt-library/" target="_blank" rel="noopener">AIプロンプトライブラリ</a></td><td>校務と授業で使える型の集約。そのまま貼り付けて使えます。</td></tr>
+          <tr><td class="name"><a href="https://a-tozak.github.io/School_Stock/ai/jhs.html" target="_blank" rel="noopener">中学校 Geminiプロンプト集</a></td><td>学年・教科・場面から選ぶ中学校専用の型の棚。そのまま貼り付けて使えます。</td></tr>
           <tr><td class="name"><a href="https://a-tozak.github.io/School_Stock/tools/pdf-toolbox/" target="_blank" rel="noopener">先生のPDF道具箱</a></td><td>PDFの結合・打ち替え・2面付け・縦書きの書き込み。通信を行わないため校務文書にも使えます。</td></tr>
           <tr><td class="name"><a href="https://a-tozak.github.io/takata-kenshu/workspace/" target="_blank" rel="noopener">Google Workspace 使い方ガイド（図解）</a></td><td>ドキュメント・スプレッドシート・スライド・フォーム・Classroom・ドライブの図解。別の研修用に作ったものですが、そのまま使えます。</td></tr>
           <tr><td class="name"><a href="https://a-tozak.github.io/ikimono-zukan-gemini/" target="_blank" rel="noopener">生き物図かん 学習サポートサイト</a></td><td>小4国語の実例。児童が生成AIを使う際の、たずね方を限定した形。考え方は中学校でも同じです。</td></tr>
@@ -862,6 +865,7 @@
         <a href="shakai.html">社会科の先生へ</a>
         <a href="gakko.html">学校の仕事へ（お三方共通）</a>
         <a href="jiten/">じてん（Gemini・Workspace図解）</a>
+        <a href="slide/">スライド版（16:9・24枚）</a>
         <a href="haifu_shiryo.pdf" target="_blank" rel="noopener">配布資料（PDF）</a>
         <a href="worksheet_genzaichi.pdf" target="_blank" rel="noopener">ワークシート（現在地と分解）</a>
         <a href="https://gemini.google.com/app" target="_blank" rel="noopener">Gemini</a>
