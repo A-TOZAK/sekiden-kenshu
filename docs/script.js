@@ -166,3 +166,36 @@ document.querySelectorAll('.prompt').forEach(box=>{
   let z=1; try{z=localStorage.getItem('sekiden_fs')||1}catch(e){}
   apply(z);
 })();
+
+
+// QR表示ボタン＋右下の相談窓口
+(function(){
+  const R=location.pathname.includes('/jiten/')?'../':'';
+  const css=`.qr-btn{font-family:inherit;font-weight:800;font-size:12px;color:#22406e;background:none;border:1px solid #22406e;border-radius:4px;padding:5px 10px;cursor:pointer;margin-left:8px;white-space:nowrap}
+.qr-btn:hover{background:#eceff5}
+.qr-modal{position:fixed;inset:0;z-index:200;display:none;place-items:center;background:rgba(14,15,17,.55)}
+.qr-modal.open{display:grid}
+.qr-card{background:#fff;border-radius:8px;padding:28px 30px;text-align:center;max-width:88vw}
+.qr-card img{width:min(340px,70vw);height:auto;display:block;margin:0 auto}
+.qr-card .u{font-size:13px;color:#767b83;margin-top:12px;word-break:break-all}
+.qr-card .c{margin-top:14px;font-weight:800;font-size:13px;color:#22406e;cursor:pointer;border:1px solid #22406e;border-radius:4px;padding:6px 16px;background:none;font-family:inherit}
+.soudan-fab{position:fixed;right:18px;bottom:18px;z-index:90;background:#33513f;color:#fff;font-weight:800;font-size:14px;padding:12px 18px;border-radius:999px;text-decoration:none;box-shadow:0 4px 16px rgba(0,0,0,.25);white-space:nowrap}
+.soudan-fab:hover{background:#274031;color:#fff;text-decoration:none}
+@media(max-width:600px){.soudan-fab{font-size:13px;padding:10px 15px}}`;
+  const st=document.createElement('style'); st.textContent=css; document.head.appendChild(st);
+  const bar=document.querySelector('header.bar .wrap');
+  if(bar){
+    const b=document.createElement('button'); b.className='qr-btn'; b.type='button'; b.textContent='QR';
+    const fs=bar.querySelector('.fs-btns');
+    if(fs) fs.appendChild(b); else bar.appendChild(b);
+    const m=document.createElement('div'); m.className='qr-modal';
+    m.innerHTML=`<div class="qr-card"><img src="${R}qr/sekita_qr.png" alt="このサイトのQRコード"><div class="u">a-tozak.github.io/sekiden-kenshu</div><button class="c" type="button">とじる</button></div>`;
+    document.body.appendChild(m);
+    b.addEventListener('click',()=>m.classList.add('open'));
+    m.addEventListener('click',e=>{ if(e.target===m||e.target.classList.contains('c')) m.classList.remove('open'); });
+  }
+  const fab=document.createElement('a'); fab.className='soudan-fab';
+  fab.href='https://lin.ee/Tay8XPQ'; fab.target='_blank'; fab.rel='noopener';
+  fab.textContent='相談窓口';
+  document.body.appendChild(fab);
+})();

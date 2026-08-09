@@ -1,0 +1,54 @@
+<!DOCTYPE html><html lang="ja"><head><meta charset="UTF-8"><title>講師用進行メモ</title><style>
+@page{size:A4 portrait;margin:0}
+:root{--ink:#15181c;--line:#c9c9c4;--sub:#767b83;--accent:#22406e;--moss:#33513f;--wash:#f5f5f3}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:"Hiragino Sans","Hiragino Kaku Gothic ProN",sans-serif;color:var(--ink);font-feature-settings:"palt"}
+.sheet{width:210mm;height:297mm;padding:16mm 16mm 12mm;page-break-after:always;position:relative}
+.sheet:last-child{page-break-after:auto}
+.k{font-size:3.2mm;letter-spacing:.14em;color:var(--sub);font-weight:600}
+h1{font-size:7mm;font-weight:800;margin:2mm 0 6mm}
+h2{font-size:4.6mm;font-weight:800;border-left:1.6mm solid var(--accent);padding-left:3mm;margin:7mm 0 3mm}
+p,li{font-size:3.5mm;line-height:1.9}
+.note{font-size:3.1mm;color:var(--sub)}
+.line{border-bottom:.3mm solid var(--line);height:9mm}
+.ck{margin:1mm 0 2mm}
+.ck .g{font-weight:800;font-size:3.6mm;margin:3.5mm 0 1mm}
+.ck label{display:block;font-size:3.4mm;line-height:1.9;padding-left:7mm;position:relative}
+.ck label::before{content:"";position:absolute;left:1mm;top:1.6mm;width:3.4mm;height:3.4mm;border:.35mm solid var(--ink)}
+.stages{display:flex;gap:3mm;margin:3mm 0 1mm}
+.stages div{flex:1;border:.4mm solid var(--ink);border-radius:2mm;text-align:center;padding:3.5mm 1mm}
+.stages b{display:block;font-size:3.8mm}
+.stages span{font-size:2.9mm;color:var(--sub)}
+table{width:100%;border-collapse:collapse;margin:2mm 0}
+th{border-top:.4mm solid var(--ink);border-bottom:.2mm solid var(--ink);padding:1.6mm 2mm;text-align:left;font-size:3.2mm}
+td{border-bottom:.2mm solid var(--line);padding:1.6mm 2mm;font-size:3.4mm;vertical-align:top}
+footer{position:absolute;bottom:7mm;left:16mm;right:16mm;font-size:2.8mm;color:var(--sub);display:flex;justify-content:space-between}
+</style></head><body>
+<div class="sheet">
+  <div class="k">碩田学園　生成AI研修　講師用（本人用・配らない）</div>
+  <h1>進行メモ　——　問い3つで一本道</h1>
+
+  <h2>始まる前に（5分）</h2>
+  <p>□ サイトとスライドを開いておく（sekiden-kenshu／slide）　□ 紙3種＝配布資料・ワークシート・記入例　□ 3人のGeminiログイン確認　□ 詰まったら：となりの画面をのぞく形でよい、と先に言う</p>
+
+  <h2>進行（90分想定。45分なら★だけ）</h2>
+  <table>
+    <tr><th style="width:16mm">時間</th><th style="width:44mm">やること</th><th>ひとこと・道具</th></tr>
+    <tr><td>5分★</td><td>あいさつ・QR配布</td><td>ヘッダーの「QR」ボタンでサイトを配る。「きょうは話しながら一緒に。忘れたらまたこのサイトへ」</td></tr>
+    <tr><td>10分★</td><td>問い1の話（スライド3〜7）</td><td>「AIは次に来そうな言葉を予測して書く道具」→だから確かめてから使う。入れないもの3つ</td></tr>
+    <tr><td>10分★</td><td>現在地チェック（紙①）</td><td>読み上げながら✓→「だいたいここ」に◯1つ。「となりと違って当然。低くて恥はない」を先に言う。記入例は「自分に近い人」から</td></tr>
+    <tr><td>20分★</td><td>問い2＝ワークA→B→C</td><td>型1を貼って送信→注文2〜3回→Gemづくり。手が止まった人にはこちらから画面をのぞきに行く</td></tr>
+    <tr><td>10分</td><td>問い3の話（見取り図）</td><td>「道具は2つで足りる。作るならGemini、資料から引くならGemini Notebook」。号刀先生の進路の話はここ</td></tr>
+    <tr><td>20分</td><td>じっくり試す（個別ページ）</td><td>国語・研究主任／社会科／学校の仕事。ここは対話の時間。紙②（仕事の分解）はこの中で面談風に</td></tr>
+    <tr><td>10分★</td><td>きょうの一歩＋アンケート</td><td>配布資料に一歩を書く（2分サイズまで小さく）→サイト最下部のアンケート3分</td></tr>
+  </table>
+
+  <h2>紙②「仕事の分解」の回し方</h2>
+  <p>①きのうの仕事を10件、口で言ってもらいながらこちらが書いてもよい　②1つ選ぶ（繰り返す仕事・文書の仕事が選びやすい）　③「この仕事のどこなら、下書きを出してもらって直す形で受け取れますか」と聞く——это「任せられそうな部分」。「ここは人の仕事」と言われたらそのまま「自分に残す部分」へ。札の用語（任せる・自分でやる・行わない）は使わなくてよい</p>
+
+  <h2>詰まったときの逃げ道</h2>
+  <p>□ Geminiが開けない→となりの画面で続行、あとでサイトから再挑戦　□ Wi-Fiが不安定→紙のワークシートと配布資料だけで診断→一歩まで行ける　□ 時間が足りない→★の行だけで45分成立。個別ページは「あとで開いてください。右下の相談窓口からいつでも」</p>
+
+  <footer><span>碩田学園 生成AI研修（令和8年8月10日）</span><span>講師用・非配布</span></footer>
+</div>
+</body></html>
