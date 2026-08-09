@@ -30,6 +30,53 @@ async function copyText(pre){
     catch(e2){ return false; }
   }
 }
+// 左メニュー（サイト全体の階層ドロワー）
+(function(){
+  const bar=document.querySelector('header.bar .wrap');
+  if(!bar) return;
+  const btn=document.createElement('button');
+  btn.className='menu-btn'; btn.type='button'; btn.setAttribute('aria-label','メニューを開く');
+  btn.innerHTML='☰<span> メニュー</span>';
+  bar.insertBefore(btn,bar.firstChild);
+  const wrap=document.createElement('div'); wrap.className='drawer-wrap';
+  wrap.innerHTML=`<div class="drawer-bg"></div>
+  <nav class="drawer" aria-label="サイト全体のメニュー">
+    <div class="dh">碩田学園 生成AI研修</div>
+    <div class="dg">研修本編（きょうの問い）</div>
+    <a href="index.html#nagare">本日の流れ</a>
+    <a href="index.html#kihon">問い1｜AIを使うとは</a>
+    <a href="index.html#chizu">　地図：活用力の5段階</a>
+    <a href="index.html#genzaichi">　いまの現在地チェック</a>
+    <a href="index.html#tsukuru">問い2｜プロンプトはどう書くか</a>
+    <a href="index.html#tsukaimichi">問い3｜どれを何に使うか</a>
+    <div class="dg">じっくり試す（個別）</div>
+    <a href="kokugo.html">国語科・研究主任の先生へ</a>
+    <a href="shakai.html">社会科の先生へ</a>
+    <a href="gakko.html">学校の仕事へ（お三方共通）</a>
+    <div class="dg">じてん（辞書）</div>
+    <a href="jiten/">じてんの目次</a>
+    <a href="jiten/gemini.html">Gemini</a>
+    <a href="jiten/notebooklm.html">NotebookLM</a>
+    <a href="jiten/docs.html">ドキュメント</a>
+    <a href="jiten/sheets.html">スプレッドシート</a>
+    <a href="jiten/slides.html">スライド</a>
+    <a href="jiten/forms.html">フォーム</a>
+    <a href="jiten/classroom.html">Classroom</a>
+    <a href="jiten/drive.html">ドライブ</a>
+    <a href="jiten/index.html#kyoyu">共有権限のしくみ</a>
+    <a href="jiten/prompts.html">プロンプト集</a>
+    <div class="dg">資料とアンケート</div>
+    <a href="haifu_shiryo.pdf" target="_blank" rel="noopener">配布資料（PDF）</a>
+    <a href="worksheet_genzaichi.pdf" target="_blank" rel="noopener">ワークシート（現在地と分解）</a>
+    <a href="kinyurei_3nin.pdf" target="_blank" rel="noopener">記入例（実態のちがう3人）</a>
+    <a href="index.html#anketo">研修アンケート</a>
+  </nav>`;
+  document.body.appendChild(wrap);
+  btn.addEventListener('click',()=>wrap.classList.add('open'));
+  wrap.querySelector('.drawer-bg').addEventListener('click',()=>wrap.classList.remove('open'));
+  wrap.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>wrap.classList.remove('open')));
+})();
+
 // 現在地チェック（15項目・「使う」の列で最初に外れた段階が現在地の見立て）
 const ckBox=document.getElementById('cklist');
 if(ckBox){

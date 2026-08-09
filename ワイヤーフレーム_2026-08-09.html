@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>碩田学園研修サイト ワイヤーフレーム（2026-08-09）</title>
+<style>
+body{font-family:"Hiragino Sans",sans-serif;margin:0;padding:40px 24px;background:#eceff1;color:#263238;line-height:1.6}
+h1{font-size:22px}h2{font-size:17px;margin:44px 0 10px;border-left:5px solid #37474f;padding-left:10px}
+.note{font-size:13px;color:#546e7a;max-width:52em}
+.frame{background:#fff;border:2px solid #90a4ae;max-width:860px;padding:14px;margin-top:14px}
+.box{border:1.5px dashed #90a4ae;background:#f5f7f8;padding:8px 12px;margin:8px 0;font-size:13px}
+.box b{color:#263238}.box .d{color:#78909c;font-size:12px;display:block}
+.row{display:flex;gap:8px}.row .box{flex:1}
+.dark{background:#37474f;color:#fff;border:none}.dark .d{color:#b0bec5}
+.acc{border-left:5px solid #22406e}
+.tree{font-family:Menlo,monospace;font-size:13px;background:#fff;border:2px solid #90a4ae;padding:18px;max-width:860px;white-space:pre;overflow-x:auto;line-height:1.9}
+.tag{display:inline-block;font-size:11px;background:#22406e;color:#fff;border-radius:3px;padding:0 6px;margin-left:6px}
+.new{background:#33513f}
+</style></head><body>
+<h1>碩田学園 生成AI研修サイト｜ワイヤーフレーム（改訂版・2026-08-09）</h1>
+<p class="note">公開URL＝ <b>https://a-tozak.github.io/sekiden-kenshu/</b>（せきでん・リポジトリ新設）。設計思想＝<b>①解決したい問い3つを最初に掲げる ②本編は問い1→2→3の一本道（研修の進行台本） ③左メニューから開く「じてん」層が辞書（研修後もずっと使う） ④最後はアンケートで閉じる</b>。対話は口頭でやるので、サイトは「手元で見ながら進める地図＋あとで戻れる棚」に徹する。</p>
+
+<h2>A. サイト全体の階層（メニューの構造）</h2>
+<div class="tree">ホーム index.html …… 研修本編（問い1→2→3の一本道）
+├─ 個別ページ（問い3の行き先）
+│   ├─ kokugo.html  国語科・研究主任の先生へ
+│   ├─ shakai.html  社会科の先生へ（地域教材Web化の実物つき）
+│   └─ gakko.html   学校の仕事へ＝お三方共通（進路×NotebookLM・分解・自動化・手渡す）
+├─ じてん（辞書層。左メニューから常時開ける）<span class="tag new">新設</span>
+│   ├─ jiten/index.html      じてんの目次
+│   ├─ jiten/gemini.html     Geminiとは（Gem・使える範囲）
+│   ├─ jiten/notebooklm.html NotebookLMとは
+│   ├─ jiten/docs.html       Googleドキュメント（Wordとの違い）
+│   ├─ jiten/sheets.html     スプレッドシート（Excelとの違い）
+│   ├─ jiten/slides.html     スライド（PowerPointとの違い）
+│   ├─ jiten/forms.html      フォーム（小テスト・アンケート）
+│   ├─ jiten/drive.html      ドライブ（ファイルの置き場）
+│   ├─ jiten/classroom.html  Classroom（配る・集める）
+│   ├─ jiten/kyoyu.html      共有権限のしくみ（閲覧者/編集者・リンク共有）<span class="tag new">新設</span>
+│   └─ jiten/prompts.html    プロンプト集（型の棚の使い方）<span class="tag new">新設</span>
+├─ 配布物  haifu_shiryo.pdf／worksheet_genzaichi.pdf／kinyurei_3nin.pdf
+└─ アンケート（Googleフォームへ・QRつき）<span class="tag new">新設</span></div>
+
+<h2>B. ホーム（index.html）のワイヤー＝研修の進行そのもの</h2>
+<div class="frame">
+  <div class="box dark"><b>ヘッダー</b><span class="d">［☰ メニュー］碩田学園 生成AI研修｜（右）Geminiを開くボタン。☰で左からメニューが開き、上のA階層が全部出る</span></div>
+  <div class="box dark acc"><b>ヒーロー：きょう解決したい問いは、3つです。</b><span class="d">問い1 AIを使うとは、どういうことか／問い2 プロンプトは、どう書けばいいか／問い3 自分の教科・仕事で、どう使うか。——話しながら、一緒に手を動かして進めます。このサイトは手元の地図です</span></div>
+  <div class="box"><b>1 本日の流れ</b><span class="d">第1部=問い1／第2部=問い2／第3部=問い3（お一人ずつ）。到達点3つ</span></div>
+  <div class="box"><b>2 さきに、お約束</b><span class="d">入れないもの3つ（現行のまま）</span></div>
+  <div class="box acc"><b>問い1｜AIを使うとは、どういうことか</b><span class="d">3-1 AIの基本（なぜ間違えるか・得意苦手）／3-2 地図＝活用力の5段階（系統表）／3-3 いまの現在地（15項目チェック・その場で判定）→「使う道具は2つだけ（Gemini・NotebookLM）」で問い2へ橋渡し</span></div>
+  <div class="box acc"><b>問い2｜プロンプトは、どう書けばいいか</b><span class="d">4-1 4つの部品／4-2 ワークA（型をためす）→B（注文をつける）→C（Gemを作る）／4-3 持ち帰る型2・3・4（型4=プロンプトを作るためのプロンプト）／じてん「プロンプト集」への入口</span></div>
+  <div class="box acc"><b>問い3｜自分の教科・仕事で、どう使うか</b><span class="d">5-1 見取り図（やりたいこと×道具×段階）／5-2 じっくり試す時間の説明（ここからは個別に対話しながら）／5-3 3枚の扉＝国語・研究主任／社会科／学校の仕事（お三方共通）</span></div>
+  <div class="box"><b>6 事例：ここまでできる</b><span class="d">実物の棚：School Stock／地域教材事例集（Web化の実物）／プロンプトライブラリ／研修だより（紙）＋外部：Google活用ライブラリ・Geminiアイデア村（外﨑の発表）・号刀先生の実践（→学校の仕事ページ）</span></div>
+  <div class="box"><b>7 じてん（辞書）の案内</b><span class="d">カード一覧＝Gemini/NotebookLM/ドキュメント/スライド/スプレッドシート/フォーム/ドライブ/Classroom/共有権限/プロンプト集。「研修後、忘れたらここ」</span></div>
+  <div class="box"><b>8 配布資料</b><span class="d">配布PDF・ワークシート・記入例（現行のまま）</span></div>
+  <div class="box dark acc"><b>9 おわりに：アンケート</b><span class="d">「きょうの一歩」を書いてから、3分のアンケートへ。大ボタン＋QR（その場でスマホ回答）。Googleフォームに飛ぶ</span></div>
+  <div class="box"><b>10 Q&A／つながる先／フッター（全ページの階層一覧）</b></div>
+</div>
+
+<h2>C. じてんページの型（jiten/◯◯.html 共通）</h2>
+<div class="frame">
+  <div class="box dark"><b>ヘッダー</b><span class="d">［☰ メニュー］碩田学園 生成AI研修｜じてん　（右）研修トップへ戻る</span></div>
+  <div class="box"><b>パンくず＋ページ名</b><span class="d">例：じてん ／ Google ドキュメント。1行の定義（「Wordと同じ文書の道具。違いは…」）</span></div>
+  <div class="row">
+    <div class="box"><b>きほん</b><span class="d">この道具は何か（図1枚）</span></div>
+    <div class="box"><b>Microsoftとの違い</b><span class="d">比較表（Docs vs Word 等）</span></div>
+  </div>
+  <div class="box"><b>授業・校務での使いどころ</b><span class="d">箇条書き3〜5個＋つまずき対策1行</span></div>
+  <div class="box"><b>前後ページャ＋じてん目次へ</b></div>
+</div>
+<p class="note">→ 高田小研修で作った図解ガイド（docs/sheets/slides/forms/drive/classroom の6本・写真図版つき）をこの型のまま移植し、碩田学園の体裁に直す。新規に書くのは Gemini／NotebookLM／共有権限／プロンプト集 の4本。</p>
+
+<h2>D. 個別ページの型（問い3の行き先・現行を維持）</h2>
+<div class="frame">
+  <div class="box"><b>ページ名＋「この時間の進め方」3歩</b></div>
+  <div class="box"><b>その先生の仕事に絞った節×3〜4</b><span class="d">各節にコピーできる型。読みながらその場で試す（対話はここで口頭）</span></div>
+  <div class="box"><b>きょうの一歩の例 → となりのページ／アンケートへ</b></div>
+</div>
+
+<p class="note" style="margin-top:36px">備考：ワイヤーフレームは画像生成でなくHTML自作図で作成（日本語の文字精度のため）。このワイヤーで「おかしい」箇所があれば、直す場所を言ってください。ここを直してから実装に反映します。</p>
+</body></html>
