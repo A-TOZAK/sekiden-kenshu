@@ -57,6 +57,7 @@ async function copyText(pre){
     <a href="kokugo.html">国語科・研究主任の先生へ</a>
     <a href="shakai.html">社会科の先生へ</a>
     <a href="gakko.html">学校の仕事へ（お三方共通）</a>
+    <a href="googlesite.html">研究の棚をつくる（おおきた×Googleサイト）</a>
     <div class="dg">辞典（辞書）</div>
     <a href="jiten/">辞典の目次</a>
     <a href="jiten/gemini.html">Gemini</a>
