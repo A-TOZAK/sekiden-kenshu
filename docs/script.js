@@ -51,6 +51,8 @@ async function copyText(pre){
     <a href="index.html#genzaichi">　いまの現在地チェック</a>
     <a href="index.html#tsukuru">問い2｜プロンプトはどう書くか</a>
     <a href="index.html#tsukaimichi">問い3｜どれを何に使うか</a>
+    <div class="dg">自作アプリ（さわれます）</div>
+    <a href="planner.html">テスト勉強プランナー</a>
     <div class="dg">じっくり試す（個別）</div>
     <a href="kokugo.html">国語科・研究主任の先生へ</a>
     <a href="shakai.html">社会科の先生へ</a>

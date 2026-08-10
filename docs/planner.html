@@ -1,0 +1,473 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>テスト勉強プランナー（自作アプリを、そのまま触る）｜碩田学園 生成AI研修</title>
+<meta name="description" content="スプレッドシートとGASだけで作った、生徒がテスト勉強の計画を立てて進み具合を確かめるWebアプリ。研修に参加された先生が、その場で試せるようにIDとパスワードを置いています。">
+<script>document.documentElement.className += ' js';</script>
+<link rel="stylesheet" href="style.css">
+<style>
+/* このページだけの調整 */
+.idtable{width:100%; border-collapse:collapse; margin-top:18px; font-size:16px}
+.idtable th,.idtable td{border-bottom:1px solid var(--line); padding:11px 14px; text-align:left; vertical-align:middle}
+.idtable thead th{font-size:12px; letter-spacing:.06em; color:var(--sub); border-bottom:2px solid var(--ink)}
+.idtable code{font-family:var(--font-mono); font-size:15px; background:var(--wash); padding:2px 7px; border-radius:3px}
+.shots2{display:grid; grid-template-columns:1fr 1fr; gap:18px; margin-top:22px; align-items:start}
+@media(max-width:760px){ .shots2{grid-template-columns:1fr} }
+.shots2 .shot{margin-top:0}
+.illust{margin:30px auto 6px; max-width:760px}
+.illust img{display:block; width:100%; height:auto}
+.who{display:grid; grid-template-columns:1fr 1fr; gap:0; border:1px solid var(--line); margin-top:26px}
+.who > div{padding:22px 24px}
+.who > div + div{border-left:1px solid var(--line)}
+.who h3{margin-bottom:10px}
+.who ul{margin:0; padding-left:1.2em; font-size:16px; color:var(--ink)}
+.who li{margin:6px 0}
+@media(max-width:700px){ .who{grid-template-columns:1fr} .who > div + div{border-left:0; border-top:1px solid var(--line)} }
+</style>
+</head>
+<body>
+
+<!-- ===== top bar ===== -->
+<header class="bar">
+  <div class="wrap">
+    <div class="brand"><a href="index.html">碩田学園　生成AI研修</a></div>
+    <nav class="nav">
+      <a href="kokugo.html">国語</a>
+      <a href="shakai.html">社会</a>
+      <a href="gakko.html">学校の仕事</a>
+      <a class="go-gemini" href="https://script.google.com/macros/s/AKfycby--SObxQoXuh3jwR2YYeRrOQEVanThjBQs_gWJ3TCAIEfRRNkzwlVFQJXy4M6mMkeVUQ/exec" target="_blank" rel="noopener">アプリを開く</a>
+    </nav>
+  </div>
+</header>
+
+<div class="wrap"><div class="crumb"><a href="index.html">はじめに</a> › テスト勉強プランナー</div></div>
+
+<!-- ===== hero ===== -->
+<div class="hero">
+  <div class="wrap">
+    <div class="hero-body">
+      <div class="kicker-ja">研修のあとに｜自作アプリの実物</div>
+      <h1>テスト勉強プランナー</h1>
+      <p class="tagsub">生徒がテスト勉強の計画を立てて、どこまで終わったかを確かめる。先生は範囲と一言を渡す。それだけのアプリです。使っているのは<b>Googleスプレッドシートと、その中で動くプログラム（GAS）だけ</b>。研修でお話しした「AIに作らせた自作アプリ」の実物を、そのまま触れるようにしました。</p>
+      <p class="tagsub" style="color:var(--sub); font-size:16px">試していただくためのIDとパスワードを、このページに置いています。生徒は架空の8人です。パソコンでもスマートフォンでも開きます。</p>
+      <div class="meta">
+        <span>作った日 <b>令和8年8月10日</b></span>
+        <span>使ったもの <b>スプレッドシート＋GAS</b></span>
+        <span>費用 <b>なし</b></span>
+      </div>
+    </div>
+    <div class="hero-art"><img src="img/planner/hero.webp" alt="テスト2週間前の机。教科書とワークが積まれ、まだ何も書かれていないノートに鉛筆が置かれている水彩画" width="1400" height="933"></div>
+  </div>
+</div>
+
+<!-- ===== 1 まず触る ===== -->
+<section id="try">
+  <div class="wrap reveal">
+    <h2><span class="secno">1</span>まず、さわってみてください</h2>
+    <p class="lead">説明より先に、開いていただくのが早いと思います。下のボタンかQRコードから開いて、生徒のIDでログインしてみてください。3分あればひとまわりできます。</p>
+
+    <div class="take">
+      <div class="qr"><img src="qr/planner_qr.png" alt="テスト勉強プランナーのQRコード"></div>
+      <div>
+        <h3>テスト勉強プランナー（お試し用）</h3>
+        <p>スマートフォンでこのQRコードを読み取ると、そのまま開きます。Googleアカウントでのログインは要りません。下のIDとパスワードだけで入れます。</p>
+        <div class="act">
+          <a class="btn primary" href="https://script.google.com/macros/s/AKfycby--SObxQoXuh3jwR2YYeRrOQEVanThjBQs_gWJ3TCAIEfRRNkzwlVFQJXy4M6mMkeVUQ/exec" target="_blank" rel="noopener">アプリを開く</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="tbl-scroll">
+      <table class="idtable">
+        <thead><tr><th style="width:10.5em">だれとして入るか</th><th>ログインID</th><th>パスワード</th><th>見えるもの</th></tr></thead>
+        <tbody>
+          <tr>
+            <td><b>生徒</b></td>
+            <td><code>s001</code> 〜 <code>s008</code></td>
+            <td><code>study2026</code></td>
+            <td>自分の計画・進み具合・テスト範囲</td>
+          </tr>
+          <tr>
+            <td><b>先生</b></td>
+            <td><code>t-yamaguchi</code></td>
+            <td><code>sensei2026</code></td>
+            <td>範囲づくり・連絡・生徒全員の進み具合</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="sub" style="font-size:15px; margin-top:10px">生徒は s001＝佐藤陽菜、s002＝田中悠斗…と8人分あります。s001は計画が進んでいる状態、s004はまだ何も立てていない状態です。先生は <code style="font-family:var(--font-mono)">t-mori</code>／<code style="font-family:var(--font-mono)">t-okada</code> でも入れます。</p>
+
+    <div class="tip" style="margin-top:22px"><b>お試し用の共有アプリです。</b>参加された先生みんなで、同じひとつを触っています。どなたかが計画を直すと、ほかの方の画面にもそれが出ます。壊れても私が入れ直すので、遠慮なく触ってください。ただし、<b>実在する児童生徒の名前や、学校の中の情報は入れないでください</b>。ここに入れたものは、開いた全員に見えます。</div>
+
+    <h3 style="margin-top:44px">3分のひとまわり</h3>
+    <div class="flow">
+      <div class="step">
+        <div class="t">STEP</div><div class="n">1</div>
+        <h3>生徒で入って、計画を作る</h3>
+        <p><code style="font-family:var(--font-mono)">s004</code>／<code style="font-family:var(--font-mono)">study2026</code> で入ると、計画がまだ空です。「計画を自動でつくる」を押して、1日の勉強時間を選んで作ってみてください。</p>
+      </div>
+      <div class="step">
+        <div class="t">STEP</div><div class="n">2</div>
+        <h3>チェックを付けて、日をずらす</h3>
+        <p>終わったものは左の四角を押すだけ。上のバーが伸びます。行を押すと中が開くので、「1日おくらせる」も試してみてください。</p>
+      </div>
+      <div class="step">
+        <div class="t">STEP</div><div class="n">3</div>
+        <h3>先生で入り直して、見る</h3>
+        <p>いったんログアウトして <code style="font-family:var(--font-mono)">t-yamaguchi</code> で入り、「生徒の進み具合」を開きます。さっき自分が付けたチェックが、先生の一覧に出ています。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 2 生徒の画面 ===== -->
+<section id="student" class="band">
+  <div class="wrap reveal">
+    <h2><span class="secno">2</span>生徒の画面</h2>
+    <p class="lead">生徒がすることは4つだけです。<b>計画を作る／チェックを付ける／日をずらす／範囲を見る</b>。最初の画面に、テストまであと何日か、全体の何％が終わったかが出ます。</p>
+
+    <div class="shot">
+      <img src="img/planner/04_made.webp" alt="計画を自動で作った直後の生徒画面。日付ごとに、その日にやることが1件ずつ並んでいる" loading="lazy">
+      <div class="cap">「計画を自動でつくる」を押した直後。先生が入れたテスト範囲が45分くらいのかたまりに分けられ、テスト前日までの日に配られます。同じ教科が続かないように、国語・数学・英語…と交互に並びます。</div>
+    </div>
+
+    <div class="shots2">
+      <div class="shot">
+        <img src="img/planner/03_auto.webp" alt="計画を自動でつくる画面。1日にどれくらい勉強するか、いつから始めるかを選ぶ" loading="lazy">
+        <div class="cap">選ぶのは2つだけ。「1日にどれくらい勉強する？」と「いつから始める？」。日数に余裕があれば、1日の量は自動で薄くなります。</div>
+      </div>
+      <div class="shot">
+        <img src="img/planner/02_plan.webp" alt="進んだ状態の生徒画面。終わったものに線が引かれ、上のバーが33％まで伸びている" loading="lazy">
+        <div class="cap">進めていくと、終わったものに線が引かれ、上のバーが伸びます。予定日を過ぎて終わっていないものは、いちばん上に「やり残し」としてまとまります。</div>
+      </div>
+      <div class="shot">
+        <img src="img/planner/05_edit.webp" alt="やることを直す画面。教科・予定日・やること・時間・状態・ふりかえりを直せる" loading="lazy">
+        <div class="cap">行を押すと開きます。「きょう」「あした」「1日おくらせる」で日付を動かせます。計画は狂うものなので、直すのを軽くしました。</div>
+      </div>
+      <div class="shot">
+        <img src="img/planner/06_range.webp" alt="テスト範囲と先生からの連絡が並んだ画面" loading="lazy">
+        <div class="cap">もうひとつのタブに、先生が入れた範囲と連絡が並びます。範囲ごとに先生のアドバイスが付き、「この範囲を計画に足す」で自分の計画に入れられます。</div>
+      </div>
+    </div>
+
+    <div class="shots2" style="margin-top:26px">
+      <div class="shot">
+        <img src="img/planner/12_made_mobile.webp" alt="スマートフォンで見た生徒の計画画面" loading="lazy">
+        <div class="cap">スマートフォンでも同じことができます。生徒が家で開くのはこちらだと思います。</div>
+      </div>
+      <div style="align-self:center">
+        <div class="extra" style="margin-top:0">
+          <div>
+            <div class="ex-k">ここだけは工夫したところ</div>
+            <p>計画づくりのアプリは、たいてい「立てるところ」が重くて続きません。ここでは、立てるのはボタン1つ、直すのは1タップ、進めるのはチェックだけにしました。数字を入力させる場面を、できるだけ減らしています。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 3 先生の画面 ===== -->
+<section id="teacher">
+  <div class="wrap reveal">
+    <h2><span class="secno">3</span>先生の画面</h2>
+    <div class="illust"><img src="img/planner/teacher.webp" alt="職員室の机。ノートパソコンと、範囲を書き出した紙と赤ペン、湯のみが置かれている水彩画" loading="lazy" width="1400" height="933"></div>
+    <p class="lead">先生がすることも4つです。<b>テストを作る／範囲を入れる／連絡を書く／進み具合を見る</b>。範囲を入れる作業は、ふだん紙に書き出しているものを、そのまま打ち込む感覚です。</p>
+
+    <div class="shot">
+      <img src="img/planner/07_teacher.webp" alt="先生画面。テストと、教科ごとの出題範囲が並んでいる" loading="lazy">
+      <div class="cap">教科ごとに範囲が並びます。テストは「非公開」のまま準備できるので、全教科そろってから公開できます。</div>
+    </div>
+
+    <div class="shots2">
+      <div class="shot">
+        <img src="img/planner/08_teacherrange.webp" alt="範囲を編集する画面。教科・目安の時間・単元・教科書ページ・ワーク・生徒へのアドバイスを入れる" loading="lazy">
+        <div class="cap">入れるのは、教科・単元・教科書ページ・ワーク・目安の時間、そして<b>生徒へのアドバイス</b>。この一言が、生徒の画面ではいちばん大きく出ます。</div>
+      </div>
+      <div class="shot">
+        <img src="img/planner/10_message.webp" alt="連絡を書く画面。全体向けか教科別かを選んで本文を書く" loading="lazy">
+        <div class="cap">「ワークの提出は前日まで」のような連絡は、全体向け・教科別で書き分けられます。</div>
+      </div>
+    </div>
+
+    <div class="shot">
+      <img src="img/planner/09_progress.webp" alt="生徒の進み具合の一覧。全体の％、やり残し、学習時間、教科別の進み具合が並ぶ" loading="lazy">
+      <div class="cap">生徒全員の進み具合。ここで見たいのは順位ではなく、<b>0/0のまま動いていない子</b>と、<b>やり残しがたまっている子</b>です。「計画を見る」を押すと、その子の計画がそのまま開きます。</div>
+    </div>
+
+    <div class="tip"><b>成績には使わない前提で作っています。</b>入っているのは「やると決めたことを、やったかどうか」だけで、正答や点数は入りません。声をかける相手を見つけるための画面です。</div>
+  </div>
+</section>
+
+<!-- ===== 4 使えそうな場面 ===== -->
+<section id="scene" class="band">
+  <div class="wrap reveal">
+    <h2><span class="secno">4</span>どんな場面で使えそうか</h2>
+    <p class="lead">私が思いついた範囲で7つ挙げます。全部やる必要はありません。「これなら二学期にできそう」がひとつあれば十分です。</p>
+
+    <div class="grid c3">
+      <div class="cell">
+        <div class="cn">1</div>
+        <h3>定期テスト2週間前の学活</h3>
+        <p class="d">範囲が配られた日に、10分だけ時間を取ります。開いて、ボタンを押して、1日の勉強時間を選ぶ。それだけで全員の手元に計画ができます。「計画を立てなさい」と言うより早いです。</p>
+      </div>
+      <div class="cell">
+        <div class="cn">2</div>
+        <h3>計画の立て方そのものを教える</h3>
+        <p class="d">自動で出た計画を「たたき台」にして、部活の日・習い事の日を避けて自分で動かします。ゼロから紙に書かせるより、動かす作業のほうが取りかかりやすいようです。</p>
+      </div>
+      <div class="cell">
+        <div class="cn">3</div>
+        <h3>ワーク・提出物の締切管理</h3>
+        <p class="d">範囲に「ワーク p.16-29（提出はテスト前日）」と入れておけば、提出物も計画の中に混ざります。別々に管理しなくてよくなります。</p>
+      </div>
+      <div class="cell">
+        <div class="cn">4</div>
+        <h3>欠席・別室・保健室の子</h3>
+        <p class="d">範囲と先生の一言が、教室にいなくても同じように届きます。どこまで進んだかも、本人が入れた分だけ先生に見えます。呼び出さなくても様子が分かるのは、この形の利点だと思います。</p>
+      </div>
+      <div class="cell">
+        <div class="cn">5</div>
+        <h3>部活動や行事と重なる時期</h3>
+        <p class="d">「大会が近い週は0分」と決めて、その日をよけて計画を組み直せます。時間が足りないことが目に見えるので、あきらめる話ではなく前倒しの話にできます。</p>
+      </div>
+      <div class="cell">
+        <div class="cn">6</div>
+        <h3>三者面談・保護者への説明</h3>
+        <p class="d">「がんばっていません」ではなく、画面を一緒に見ながら「立てた計画のここで止まっています」と話せます。責める材料ではなく、次の一手を決める材料として。</p>
+      </div>
+      <div class="cell">
+        <div class="cn">7</div>
+        <h3>長期休業中の課題</h3>
+        <p class="d">「テスト初日」を「始業式」に読み替えれば、夏休みの宿題の計画にそのまま使えます。8月に入ってから慌てる子の様子も、先生の一覧で見えます。</p>
+      </div>
+      <div class="cell">
+        <div class="cn">8</div>
+        <h3>先生自身の仕事に転用する</h3>
+        <p class="d">これは「範囲」を「工程」に読み替えれば、行事準備でも研究発表の準備でも同じ形です。作り替えるのはAIの仕事なので、思いついたら注文するだけで済みます。</p>
+      </div>
+    </div>
+
+    <div class="illust"><img src="img/planner/calendar.webp" alt="卓上カレンダーに少しずつ印が増えていき、横に付箋が3枚並んでいる水彩画" loading="lazy" width="1400" height="933"></div>
+  </div>
+</section>
+
+<!-- ===== 5 どう作ったか ===== -->
+<section id="howto">
+  <div class="wrap reveal">
+    <h2><span class="secno">5</span>これを、どうやって作ったか</h2>
+    <p class="lead">ここが研修の本題とつながるところです。私が書いたのはプログラムではなく、<b>注文</b>です。プログラムはAIが書きました。研修でお話しした「4つの部品」が、そのまま使えます。</p>
+
+    <div class="prompt">
+      <div class="ph"><div class="ttl">実際にお願いした内容（要点）</div></div>
+      <pre>Googleスプレッドシートを使って、生徒のテスト勉強の計画を進捗管理したり、
+先生が指示を出したり、範囲を指定したりするためのWebアプリを作りたい。
+
+【条件】
+・使うのはスプレッドシートとGASだけ。それ以外のツールは使わない
+・バックエンドはGAS、表に出てくる画面はHTML
+・ログインIDとパスワードで入れるようにする
+・先生側の画面には、先生用のパスワードを別に作る
+・先生は、教科を選び、テストの範囲を選び、
+　「こういうことを勉強しておいた方がいいよ」という備考を入れられる
+・生徒側は分かりやすい画面で、計画を立て、どこまで終わったかを確認し、
+　計画を簡単に修正できる
+
+【出してほしいもの】
+・コード一式
+・スプレッドシートを実際にセットアップするもの
+・架空の生徒の名前を入れておく</pre>
+    </div>
+
+    <p style="margin-top:22px">この注文を、部品に分けると次のようになります。<b>①役割</b>＝（今回は省略）、<b>②条件</b>＝「スプレッドシートとGASだけ」「IDとパスワードで入る」「先生用は別」、<b>③出力の形</b>＝「コード一式とセットアップするもの」、<b>④差し替え</b>＝「テスト勉強の計画」の部分。<b>ここを『学級の係活動』『行事の準備』に差し替えれば、別のアプリの注文になります。</b></p>
+
+    <div class="tbl-scroll">
+      <table class="tools">
+        <thead><tr><th style="width:11em">工程</th><th>やったこと</th><th style="width:9.5em">だれが</th></tr></thead>
+        <tbody>
+          <tr><td class="name">何を作るか決める</td><td>「生徒が計画を立てて進み具合を見る」「先生は範囲と一言を渡す」。ここを言葉にするのがいちばん時間がかかりました。</td><td>人</td></tr>
+          <tr><td class="name">設計とコードを書く</td><td>シートの構成、ログインのしくみ、画面、計画を自動で組む計算。全部AI。</td><td>AI</td></tr>
+          <tr><td class="name">動かして直す</td><td>「1日の勉強時間を90分にしたのに30分ずつしか入らない」など、動かして気づいたことを注文として返す。</td><td>人が指摘・AIが直す</td></tr>
+          <tr><td class="name">スプレッドシートに入れる</td><td>コードを貼り、初期セットアップを1回実行。架空の生徒8人とテスト1本が自動で入る。</td><td>人（5分）</td></tr>
+          <tr><td class="name">公開する</td><td>「ウェブアプリとして公開」を選び、出てきたURLを配る。サーバーもドメインも要りません。</td><td>人（3分）</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="extra">
+      <div>
+        <div class="ex-k">正直な時間の話</div>
+        <p>最初に動くものが出るまでは1時間かかっていません。ただ、そこから「使えるもの」にするまでに、直しのやり取りが何度かありました。作るのは速く、詰めるのに時間がかかる。これはどの自作ツールでも同じです。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 6 裏側 ===== -->
+<section id="sheet" class="band">
+  <div class="wrap reveal">
+    <h2><span class="secno">6</span>裏側は、ただのスプレッドシートです</h2>
+    <p class="lead">特別なデータベースは使っていません。アプリが読み書きしているのは、Googleドライブの中にあるスプレッドシート1つです。シートは6枚。<b>先生が直接シートを書き換えても、アプリにそのまま反映されます</b>。</p>
+
+    <div class="shot">
+      <img src="img/planner/sheet_students.webp" alt="生徒シート。生徒ID・氏名・学年・クラス・ログインID・暗号化されたパスワード・有効の列が並ぶ" loading="lazy">
+      <div class="cap">「生徒」シート。名簿はここです。パスワードは暗号化して保存しているので、シートを見ても元のパスワードは分かりません（忘れた子には、先生画面から新しいものを発行します）。名前はすべて架空です。</div>
+    </div>
+
+    <div class="shot">
+      <img src="img/planner/sheet_hani.webp" alt="出題範囲シート。教科・単元・教科書ページ・ワーク・目安時間・先生からのアドバイスの列が並ぶ" loading="lazy">
+      <div class="cap">「出題範囲」シート。先生が画面から入れたものが、この行になります。逆に、この表に直接貼り付けても構いません。教科主任が作った範囲表をコピーして貼る、という使い方ができます。</div>
+    </div>
+
+    <div class="shot">
+      <img src="img/planner/sheet_plan.webp" alt="学習計画シート。生徒ごとの、やること・予定日・予定時間・状態が1行ずつ並ぶ" loading="lazy">
+      <div class="cap">「学習計画」シート。生徒がボタンを押した瞬間に、この行が増えます。チェックを付けると「状態」の列が「完了」に変わるだけ。中で起きているのは、その程度のことです。</div>
+    </div>
+
+    <div class="tip"><b>データの置き場所について。</b>入っているのは、そのスプレッドシートを作った先生のGoogleドライブの中だけです。外部のサービスには行きません。とはいえ名簿を置く場所であることに変わりはないので、実際の名前を入れる前に、校内の情報担当・管理職に運用を確認してください。</div>
+  </div>
+</section>
+
+<!-- ===== 7 自分の学校で使うには ===== -->
+<section id="own">
+  <div class="wrap reveal">
+    <h2><span class="secno">7</span>自分の学校で使ってみたいときは</h2>
+    <p class="lead">このお試し用のものは、みんなで触る見本です。実際に学級で使うなら、自分のGoogleドライブに自分のものを1つ作ります。手順は3つです。</p>
+
+    <div class="flow">
+      <div class="step">
+        <div class="t">STEP</div><div class="n">1</div>
+        <h3>スプレッドシートを1つ作る</h3>
+        <p>新しいスプレッドシートを作り、「拡張機能 → Apps Script」を開いて、コードを貼ります。コードは私からお渡しします。</p>
+      </div>
+      <div class="step">
+        <div class="t">STEP</div><div class="n">2</div>
+        <h3>セットアップを1回実行する</h3>
+        <p>用意してある <span style="font-family:var(--font-mono);font-size:14px">initialSetup</span> を1回実行すると、シート6枚と見本のデータがそろいます。ここまで5分ほどです。</p>
+      </div>
+      <div class="step">
+        <div class="t">STEP</div><div class="n">3</div>
+        <h3>公開して、IDを配る</h3>
+        <p>「デプロイ → ウェブアプリ」で公開し、出てきたURLを配ります。生徒の名簿を入れ、パスワードを発行して手渡せば始められます。</p>
+      </div>
+    </div>
+
+    <div class="tip" style="margin-top:26px"><b>実際の名簿を入れる前に、3つだけ。</b><br>
+    ① 校内の情報担当・管理職に、置き場所と使い方を確認する。<br>
+    ② 公開の設定は「アクセスできるユーザー＝学校のドメイン内」にしておく（学校のGoogle Workspaceがある場合）。「全員」にすると、URLを知っていればログイン画面までは誰でも開けます。<br>
+    ③ 「次のユーザーとして実行＝自分」を選ぶ。生徒側にスプレッドシートの権限は渡りません。</div>
+
+    <div class="extra">
+      <div>
+        <div class="ex-k">コードについて</div>
+        <p>コード一式と手順書はお渡しできます。研修のアンケートの自由記述か、メールでお知らせください。中身を書き換えて使っていただいてかまいません。「ここが自分の学校に合わない」という話をいただければ、直したものをお返しすることもできます。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 8 よくある質問 ===== -->
+<section id="qa" class="band">
+  <div class="wrap reveal">
+    <h2><span class="secno">8</span>よくある質問</h2>
+    <div class="qa">
+      <div class="row">
+        <div class="q">お金はかかりますか</div>
+        <div class="a">かかりません。Googleアカウントがあれば動きます。サーバーを借りる必要も、アプリを買う必要もありません。</div>
+      </div>
+      <div class="row">
+        <div class="q">生徒にGoogleアカウントは必要ですか</div>
+        <div class="a">要りません。このアプリのIDとパスワードだけで入ります。学校のアカウントを配っていない学年でも、家庭の端末からでも使えます。</div>
+      </div>
+      <div class="row">
+        <div class="q">スマートフォンでも使えますか</div>
+        <div class="a">使えます。生徒が家で開くのはスマートフォンだろうと考えて、そちらを先に作りました。アプリのインストールは要りません。ブラウザで開くだけです。</div>
+      </div>
+      <div class="row">
+        <div class="q">名簿はどうやって入れますか</div>
+        <div class="a">2つの方法があります。①「生徒」シートに、氏名・学年・クラス・ログインIDを貼り付ける。②先生画面の「生徒」タブから1人ずつ追加する。どちらの場合も、パスワードは「パスワード再発行」を押すと自動で作られ、その場に一度だけ表示されます。</div>
+      </div>
+      <div class="row">
+        <div class="q">パスワードを忘れた子がいます</div>
+        <div class="a">先生画面の「生徒」タブから再発行してください。暗号化して保存しているので、シートを見ても元のパスワードは分かりません。先生にも分からない、という作りです。</div>
+      </div>
+      <div class="row">
+        <div class="q">何人まで使えますか</div>
+        <div class="a">学年1つ分（100〜200人）なら動きます。ただしこれは試作なので、まずは1学級で試していただくのがよいと思います。人数が増えたときに遅くなる場合は、そのとき直します。</div>
+      </div>
+      <div class="row">
+        <div class="q">生徒どうしの進み具合は見えますか</div>
+        <div class="a">見えません。生徒が見られるのは自分の計画だけです。一覧が見えるのは先生の画面だけです。</div>
+      </div>
+      <div class="row">
+        <div class="q">テスト範囲が途中で変わったら</div>
+        <div class="a">先生が直せば、生徒の画面はすぐ変わります。生徒がすでに立てた計画は消えません。増えた範囲は「この範囲を計画に足す」で自分の計画に入れられます。</div>
+      </div>
+      <div class="row">
+        <div class="q">先生が複数いる場合は</div>
+        <div class="a">「先生」シートに行を足せば何人でも入れます。教科ごとに範囲とアドバイスを入れられるので、教科担任がそれぞれ自分の教科を入れる使い方ができます。</div>
+      </div>
+      <div class="row">
+        <div class="q">成績に使えますか</div>
+        <div class="a">使わない前提で作っています。入っているのは「やると決めたことをやったかどうか」だけで、正答や点数は入りません。次の指導に生かすための画面です。</div>
+      </div>
+      <div class="row">
+        <div class="q">同じ作り方で、ほかのものも作れますか</div>
+        <div class="a">作れます。このアプリでいう「テスト範囲」を「係の仕事」「行事の準備」「部活の練習計画」に読み替えれば、同じ形です。作り替えるのはAIの仕事なので、注文を言葉にできるかどうかが分かれ目になります。</div>
+      </div>
+      <div class="row">
+        <div class="q">お試し用のアプリが、変になっています</div>
+        <div class="a">みんなで同じひとつを触っているので、日によって中身が変わります。おかしくなったら、私が見本のデータを入れ直します。アンケートかメールでお知らせください。</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 9 正直なところ ===== -->
+<section id="genkai">
+  <div class="wrap reveal">
+    <h2><span class="secno">9</span>正直なところ、これは試作です</h2>
+    <p class="lead">よく見せるために書かないでおく、ということはしたくないので、今できていないことを書いておきます。</p>
+    <div class="grid c3">
+      <div class="cell">
+        <div class="cn">—</div>
+        <h3>できていないこと</h3>
+        <p class="d">学級やグループ単位でのテストの割り当て（いまは学年で分けています）。生徒から先生への質問。前回のテストとの比較。保護者向けの画面。どれも作れますが、まだ作っていません。</p>
+      </div>
+      <div class="cell">
+        <div class="cn">—</div>
+        <h3>試していないこと</h3>
+        <p class="d">実際の学級で、生徒40人が一斉に使う状況をまだ試していません。使ってみて分かることのほうが多いはずなので、試された方の「ここが使いにくい」を聞かせていただけると直せます。</p>
+      </div>
+      <div class="cell">
+        <div class="cn">—</div>
+        <h3>大事にしたこと</h3>
+        <p class="d">アプリを配れば計画が立つ、とは思っていません。計画の立て方は人が教えるものです。ここでやっているのは、書き写す手間と、どこまで進んだか分からなくなる不安を減らすところまでです。</p>
+      </div>
+    </div>
+
+    <div class="next">
+      <a href="index.html#jitsurei"><b>← 研修サイトに戻る</b>外﨑の実例の節へ</a>
+      <a href="gakko.html"><b>学校の仕事へ →</b>お三方共通のページ</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== footer ===== -->
+<footer>
+  <div class="wrap">
+    <div class="foot-base">
+      <div><span class="lw">碩田学園　生成AI研修</span>　令和8年8月10日</div>
+      <div>© 2026 外﨑顯博</div>
+    </div>
+    <div class="note-local">本ページの文章・図版はすべて資料作成者の自作です。アプリの画面に出てくる生徒名・テスト範囲・連絡はすべて架空のもので、実在の児童生徒の個人情報、学校内部の資料、教科書の紙面は含みません。</div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
